@@ -1,0 +1,50 @@
+#FullScreenSidebar {
+  /* position: fixed; */
+  left: 0;
+  top: 0;
+  display: Flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #141414;
+  width: 20vw;
+}
+
+#FullScreenSidebar-head { 
+  position: absolute;
+  top: 5vh;
+
+}
+
+#fullScreenSidebar-links {
+  width: 80%;
+}
+
+#FullScreenSidebar ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  list-style-type: none;
+  line-height: 5vh;
+  padding: 0;
+  text-align: left;
+  border-top: 1px solid ghostwhite;
+}
+
+#FullScreenSidebar ul li {
+  border-bottom: 1px solid ghostwhite;
+  font-size: 18px;;
+}
+
+#FullScreenSidebar ul li:hover {
+  cursor: pointer;
+  color:#235391;
+
+  transition: .3s;
+}
+
+@media (max-width: 480px) {
+  #FullScreenSidebar {
+    display: none;
+  }
+}

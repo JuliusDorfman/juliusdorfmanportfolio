@@ -1,0 +1,80 @@
+#homepage-component {
+  width: 75vw;
+}
+
+#homepage-component .contact-me {
+  margin-top: 10vh;;
+  box-shadow: none;
+  color: #A7BCD6;
+  border: 2px solid #A7BCD6;
+  background: transparent;
+  transition: .2s;
+  border-radius: 6px;
+  height: 40px;
+}
+
+#homepage-component .contact-me:hover {
+  background: #235391;
+  border: 2px solid black;
+  box-shadow: none;
+  transition: .2s;
+  color: ghostwhite;
+  cursor: pointer;
+}
+
+.landing-nav-top {
+  height: 20vh;
+}
+
+.landing-intro {
+  text-align: left;
+  padding: 0 0 0 10vw;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.landing-intro h1 span{
+  font-size: 2rem;  
+}
+
+.landing-flavor {
+  font-size: small;
+  color: gray;
+  font-weight: bold;
+}
+
+/* Indication Text Flavor */
+
+.vertical-orientation-left,
+.vertical-orientation-right {
+  writing-mode: vertical-lr;
+  animation: scrollBounce infinite ease-in-out 10s;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 8px;
+}
+
+.vertical-orientation-left{
+  margin: 5vh 0 5vh 5vw;
+}
+
+.vertical-orientation-right{
+  margin: 5vh 5vw 5vh 0;
+}
+
+.indication-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  width: inherit;
+  height: 20vh;
+  overflow: hidden;
+}
+
+@keyframes scrollBounce {
+  0% {transform: translateY(5vh)}
+  50% {transform: translateY(-5vh)}
+  100% {transform: translateY(5vh)}
+}
+

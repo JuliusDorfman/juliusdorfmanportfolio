@@ -1,0 +1,145 @@
+.navbar-component {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #1d1d1d;
+  transition: .5s;
+  z-index: 8;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  background-color: #01020a;
+}
+
+/* Initials */
+
+.initials-icon {
+  display: inline-block;
+  position: relative;
+  transition: .55s;
+}
+
+.initials-icon:hover {
+  background: #A7BCD6;
+}
+
+.initials-subscript {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.initials-subscript span {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.nav-comp-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* 
+.initials-icon:after {
+  position: absolute;
+  content: "Julius Dorfman";
+  font-size: 10px;
+  left: 1px;
+}  */
+
+.icon-card-initials-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border: 1.5px solid rgba(100, 100, 100, 1);
+  transition: .45s;
+}
+
+.icon-card-initials {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: 'Julius Sans One', sans-serif;
+  /* color: rgba(50, 50, 50, 1); */
+  color: ghostwhite;
+  transition: .55s;
+}
+
+.icon-card-initials-wrapper:hover {
+  cursor: pointer;
+  border: 1.5px solid ghostwhite;
+}
+
+.icon-card-initials-wrapper:hover > .icon-card-initials {
+  color: black;
+}
+
+.icon-fill {
+  background: gainsboro;
+}
+
+.initials-name {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.initials-subscript {
+  font-size: .75rem;
+  font-weight: lighter;
+  margin-top: 2vh;
+}
+
+/* Navigation Styles */
+
+.navigation-links-wrapper {
+}
+
+.navigation-links {
+  border-top: 1px solid black;
+  padding: 0;
+  margin-top: 5vh;
+  list-style: none;
+}
+
+.navigation-links > li {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.navigation-links > li:hover {
+  cursor: pointer;
+  color:#235391;
+
+  transition: .3s;
+}
+
+.nav-socials-wrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 5vh;  
+}
+
+.nav-socials-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0px;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: .5s;
+}
+.fade-out{
+  opacity: 0;
+  transition: 5s;
+}
+
+

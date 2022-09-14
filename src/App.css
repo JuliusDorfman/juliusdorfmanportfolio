@@ -1,0 +1,166 @@
+/** App Component **/
+
+#page-rendered {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+}
+
+/* Navigation Styles*/
+#nav-button {
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  z-index: 10;
+  top: 5vh;
+  right: 10vw;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease-in-out;
+}
+
+.nav-border {
+  border: 1px solid ghostwhite;
+  border-radius: 5px;
+}
+
+.nav-border-transparent {
+  border: 2px solid transparent;
+}
+
+#nav-button {
+  cursor: pointer;
+}
+
+#nav-button .nav-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 2px;
+  background: ghostwhite;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+#nav-button .nav-burger::before,
+#nav-button .nav-burger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: ghostwhite;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+#nav-button .nav-burger::before {
+  transform: translateY(-12px);
+}
+
+#nav-button .nav-burger::after {
+  transform: translateY(12px);
+}
+
+.nav-active {
+  display: block
+}
+
+.nav-inactive {
+  display: none;
+}
+
+/* Navigation Animations */
+
+#nav-button .burgerAnimate {
+  transform: translateX(50px);
+  background: transparent;
+}
+
+#nav-button .burgerAnimate::before {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+
+#nav-button .burgerAnimate::after {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+
+/** Global Styles **/
+
+
+/* Global Colors */
+.theme-gray {
+  background-color: #121214;
+}
+
+.theme-black {
+  background-color: #01020a;
+}
+
+.theme-powder-blue {
+  background-color: #A7BCD6;
+}
+
+.theme-dark-blue {
+  background-color: #235391;
+}
+
+.theme-purple {
+  background-color: #8850bf;
+}
+
+.theme-fullscreen-sidebar {
+ background-color: #202124;
+}
+
+.theme-pages-background {
+  background-color: #3C4042;
+}
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #121214;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: ghostwhite;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
