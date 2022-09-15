@@ -1,8 +1,7 @@
 #FullScreenSidebar {
-  /* position: fixed; */
+  display: Flex;
   left: 0;
   top: 0;
-  display: Flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -11,7 +10,7 @@
 }
 
 #FullScreenSidebar-head { 
-  position: absolute;
+  position: fixed;
   top: 5vh;
 
 }
@@ -21,6 +20,9 @@
 }
 
 #FullScreenSidebar ul {
+  position: fixed;
+  top: 30vh;
+  width: 16vw;
   display: flex;
   justify-content: space-between;
   flex-direction: column;

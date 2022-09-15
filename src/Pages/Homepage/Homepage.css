@@ -36,7 +36,12 @@
   font-size: 2rem;  
 }
 
-.landing-flavor {
+.landing-intro .landing-flavor {
+  color: ghostwhite;
+  font-size: 1.5rem;
+}
+
+.landing-title {
   font-size: small;
   color: gray;
   font-weight: bold;
@@ -78,3 +83,20 @@
   100% {transform: translateY(5vh)}
 }
 
+/* Homepage Element Tag Flavors */
+
+
+.flavor-tag-open,
+.flavor-tag-close {
+  position: relative;
+  height: 8px;
+  width: 20px;
+  transform: translateX(-40px);
+}
+
+.landing-intro .h1-flavor-open {
+  transform: translate(-40px, 20px);
+}
+.landing-intro .h1-flavor-close {
+  transform: translate(-40px, -30px);
+}

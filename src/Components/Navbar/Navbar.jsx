@@ -4,7 +4,7 @@ import './Navbar.css';
 export default class Navbar extends Component {
 render() {
   return (
-    <div className={`navbar-component`}>
+    <div className="navbar-component">
       <div className="nav-header">
         <div className="nav-icon">
           <div className="initials-icon">

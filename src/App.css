@@ -10,7 +10,8 @@
 /* Navigation Styles*/
 #nav-button {
   background-color: rgba(0, 0, 0, .5);
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   z-index: 10;
   top: 5vh;
   right: 10vw;
@@ -163,4 +164,3 @@
     transform: rotate(360deg);
   }
 }
-
