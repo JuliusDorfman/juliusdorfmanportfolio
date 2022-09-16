@@ -85,7 +85,6 @@
 
 /* Homepage Element Tag Flavors */
 
-
 .flavor-tag-open,
 .flavor-tag-close {
   position: relative;
@@ -99,4 +98,21 @@
 }
 .landing-intro .h1-flavor-close {
   transform: translate(-40px, -30px);
+}
+
+.section-tag-flavor-close {
+  position: absolute;
+  transform: translate(25px, 40px);
+}
+
+/* Homescreen Flavor Animations */
+
+.flavor-tags-fade-out {
+  opacity: 0;
+  transition: .2s;
+}
+
+.flavor-tags-slide-down-fade-out {
+  opacity: 0;
+  transition: .2s;
 }

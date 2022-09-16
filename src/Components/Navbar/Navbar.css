@@ -142,3 +142,11 @@
   opacity: 0;
   transition: 5s;
 }
+
+/* Flavor Tags */
+.html-tag-open,
+.html-tag-close {
+  position: absolute;
+  display: inherit;
+  transform: translate(18px, 20px);
+}

@@ -6,13 +6,28 @@ export default class FullScreenSidebar extends Component {
   constructor(props){
     super(props);
     this.state = {
-      sidebarState: 'visible'
+      sidebarState: 'visible',
+      currentPage: this.props.currentPage
     }
   }
+
   render() {
-    const sidebarState = this.state.sidebarState;
+   
+  const handlePageClicked = (e) => {
+    let pageValue = e.target.getAttribute('pagevalue');
+    if (pageValue === 'home') {
+      if(window.pageYOffset > 200) {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+      }
+    };
+    this.setState({currentPage: pageValue}, ()=> {
+      this.props.handleCurrentPage(pageValue);
+    });
+  }
+
+    document.getElementById("fullScreenSidebar")
     return( 
-      <div id="FullScreenSidebar" className={`sidebar-${sidebarState}`}>
+      <div id="FullScreenSidebar" className={`sidebar-${this.props.toggleHide}`}>
         <div id="FullScreenSidebar-head">
           <div className="initials-icon">
             <a href="/portfolio" className="icon-card-initials-wrapper" value="portfolio" onClick={this.handleClick}>
@@ -31,11 +46,11 @@ export default class FullScreenSidebar extends Component {
         </div>
         <div id="fullScreenSidebar-links">
           <ul>
-            <li value="about">About</li>
-            <li value="skills">My Skills</li>
-            <li value="work">Work</li>
-            <li value="contact">Contact</li>
-            {/* <li value="blog">Blog</li> */}
+            <li onClick={(e) => handlePageClicked(e)} pagevalue="homepage">Home</li>
+            <li onClick={(e) => handlePageClicked(e)} pagevalue="about">About</li>
+            <li onClick={(e) => handlePageClicked(e)} pagevalue="skills">My Skills</li>
+            <li onClick={(e) => handlePageClicked(e)} pagevalue="work">Work</li>
+            <li onClick={(e) => handlePageClicked(e)} pagevalue="contact">Contact</li>
           </ul>
         </div>
       </div>

@@ -7,6 +7,7 @@
   align-items: center;
   background: #141414;
   width: 20vw;
+  transition: .5s;
 }
 
 #FullScreenSidebar-head { 
@@ -43,6 +44,12 @@
   color:#235391;
 
   transition: .3s;
+}
+
+/* Fullscreen Sidebar Animations */
+
+.sidebar-fade-out {
+transform: translateX(-20vw);
 }
 
 @media (max-width: 480px) {
