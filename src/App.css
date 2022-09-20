@@ -126,11 +126,16 @@
 }
 
 /* Fullpage Animations */
-
-.fullpage-animations-out {
-  transform: translate(-100vw, 0);
-  transition: 1s;
+/* 
+.fullpage-animations-page-in {
+  opacity: 1;
+  transition: .5s;
 }
+.fullpage-animations-page-out {
+  opacity: 0;
+  transition: .5s;
+} */
+
 
 
 

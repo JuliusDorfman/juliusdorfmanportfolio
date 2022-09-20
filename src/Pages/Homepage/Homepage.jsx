@@ -4,7 +4,7 @@ import pTagClose from '../../Assets/p-tag-close-2.png';
 import h1TagOpen from '../../Assets/h1-tag-open-2.png';
 import h1TagClose from '../../Assets/h1-tag-close-2.png';
 import htmlTag from '../../Assets/html-tag-open-2.png';
-import sectionTag from '../../Assets/section-tag-close-2.png';
+import sectionTagClose from '../../Assets/section-tag-close-2.png';
 import './Homepage.css';
 
 export default class Homepage extends Component {
@@ -13,24 +13,13 @@ export default class Homepage extends Component {
     this.state = {
       buttonClass: 'nav-inactive',
       navigation: false,
-      page: 'homepage',
-      fullpageAnimation: 'page-in'
+      page: 'homepage'
     };
-
-    if (this.props.currentPage !== 'homepage') {
-      this.setState({fullpageAnimation: 'page-out'});
-    } else {
-      this.setState({fullpageAnimation: 'page-in'});
-    }
   };
 
-  
-
   render() {
-    
     return(
       <div id="homepage-component"> 
-      <section className={`fullpage-animations-${this.fullpageAnimation}`}>
           <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html"/>
           <div className="landing-nav-top">
             <button className="nav-inactive"></button>
@@ -55,9 +44,64 @@ export default class Homepage extends Component {
           <div className="indication-wrapper">
             <div></div>
             <div className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
-            <img src={sectionTag} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
+            <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
           </div>
-        </section>
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
+          <br></br>
+          <div>scroll </div> 
       </div>
     )
   }

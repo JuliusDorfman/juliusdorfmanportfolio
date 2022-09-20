@@ -12,20 +12,22 @@ export default class FullScreenSidebar extends Component {
   }
 
   render() {
-   
   const handlePageClicked = (e) => {
     let pageValue = e.target.getAttribute('pagevalue');
-    if (pageValue === 'home') {
+    console.log(' ');
+    if (pageValue === 'homepage') {
       if(window.pageYOffset > 200) {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
       }
     };
     this.setState({currentPage: pageValue}, ()=> {
       this.props.handleCurrentPage(pageValue);
     });
-  }
+    // TODO ACTIVE MENU ITEM SHOW WHAT PAGE YOURE ON
+    // e.target.classList.add("active-menu-item")
+    // console.log('classList', e.target.classList);
+  };
 
-    document.getElementById("fullScreenSidebar")
     return( 
       <div id="FullScreenSidebar" className={`sidebar-${this.props.toggleHide}`}>
         <div id="FullScreenSidebar-head">
@@ -46,11 +48,11 @@ export default class FullScreenSidebar extends Component {
         </div>
         <div id="fullScreenSidebar-links">
           <ul>
-            <li onClick={(e) => handlePageClicked(e)} pagevalue="homepage">Home</li>
-            <li onClick={(e) => handlePageClicked(e)} pagevalue="about">About</li>
-            <li onClick={(e) => handlePageClicked(e)} pagevalue="skills">My Skills</li>
-            <li onClick={(e) => handlePageClicked(e)} pagevalue="work">Work</li>
-            <li onClick={(e) => handlePageClicked(e)} pagevalue="contact">Contact</li>
+            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="homepage">Home</li>
+            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="about">About</li>
+            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="skills">My Skills</li>
+            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li>
+            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="contact">Contact</li>
           </ul>
         </div>
       </div>

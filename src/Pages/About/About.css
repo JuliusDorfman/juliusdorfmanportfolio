@@ -1,0 +1,12 @@
+#about-component {
+  display: flex;
+  height: 60vh;
+  width: 75vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtext {
+  font-size: .75rem;
+  color: gray;
+}

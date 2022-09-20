@@ -22,6 +22,15 @@
   cursor: pointer;
 }
 
+#homepage-component .contact-me:active {
+  background-color: #A7BCD6;
+  color: black;
+  font-size: 17px;
+  font-weight: bolder;
+  transform: translate(-15px, -7px);
+  transition: .5s;;
+}
+
 .landing-nav-top {
   height: 20vh;
 }
@@ -81,6 +90,17 @@
   0% {transform: translateY(5vh)}
   50% {transform: translateY(-5vh)}
   100% {transform: translateY(5vh)}
+}
+
+/* Fullpage Animations */
+
+.fullpage-animations-page-in {
+  opacity: 1;
+  transition: .5s;
+}
+.fullpage-animations-page-out {
+  opacity: 0;
+  transition: .5s;
 }
 
 /* Homepage Element Tag Flavors */

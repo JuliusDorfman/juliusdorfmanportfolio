@@ -140,7 +140,7 @@
 }
 .fade-out{
   opacity: 0;
-  transition: 5s;
+  transition: .5s;
 }
 
 /* Flavor Tags */

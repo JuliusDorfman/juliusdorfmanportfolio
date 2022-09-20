@@ -48,6 +48,15 @@
 
 /* Fullscreen Sidebar Animations */
 
+.active-menu-item {
+  color: #235391
+}
+
+#fullScreenSidebar-links ul li:active {
+  /* color: #235391 */
+  color: #A7BCD6;
+}
+
 .sidebar-fade-out {
 transform: translateX(-20vw);
 }
