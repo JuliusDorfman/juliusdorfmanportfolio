@@ -4,9 +4,35 @@
   width: 75vw;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .subtext {
   font-size: .75rem;
   color: gray;
 }
+
+.about-me-page-intro {
+  height: 160px;
+  padding: 0 10vw;
+  font-size: .95rem;
+  text-align: left;
+}
+
+.about-me-page-intro::before {
+  position: absolute;
+  /* top: 0px; */
+  /* left: 5px; */
+  transform: translateX(-20px);
+  content: "";
+  height: inherit;
+  width: 7px;
+  background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
+}
+
+/* About Component Flavor Styles */
+
+#about-component .section-tag-flavor-open {
+  position: absolute;
+  transform: translate(-238px, -200px);
+} 

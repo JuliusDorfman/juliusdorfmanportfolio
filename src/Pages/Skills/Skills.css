@@ -1,7 +1,150 @@
-#skills-component{
+#skills-component {
   display: flex;
   height: 60vh;
   width: 75vw;
   justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  margin-top: 25vh;
+}
+
+#skills-component::after {
+  position: absolute;
+  top: 27vh;
+  right: 5vw;
+  content: "";
+  height: inherit;
+  width: 3px;
+  background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
+}
+
+.skills-content-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cloud-wrapper-bubble {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cloud-wrapper-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cloud-wrapper-bubble:hover .list-skills {
+  padding: 10px;
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, .9);
+}
+
+.cloud-wrapper-bubble:hover .list-skills-head-hide {
+  font-size: 2.5rem;
+  background: #23539199;
+}
+
+.skills-cloud .skills-bubble {
+  display: none;
+  opacity: 0;
+  z-index: 5;
+}
+.skills-cloud .skills-bubble:nth-child(1) {
+  position: absolute;
+  display: block;
+  opacity: 1;
+}
+
+.tagcloud--item {
+  transition: .5s;
+}
+
+.tagcloud--item:hover {
+  display: flex;
+  flex-direction: column;
+  transition: .5s;
+}
+
+.list-skills-head-hide {
+  position: absolute;
+  z-index: 5;
+  transition: .5s;
+  background-color: rgba(20, 20, 20, 0.95);
+  border: 2px solid gray;
+  padding: 5px;
+  border-radius: 3px;
+  color: ghostwhite;
+  font-size: 1.2em;
+}
+
+.list-skills-head-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  transition: .5s;
+  background-color: rgba(20, 20, 20, 0.95);
+  border: 2px solid gray;
+  padding: 5px;
+  border-radius: 3px;
+  color: ghostwhite;
+  opacity: 0;
+  font-size: 1px;
+}
+
+.formation-bubble {
+  opacity: 1;
+}
+
+.formation-list {
+  opacity: 0;
+  width: 0;
+  transform: translateX(-400px);
+}
+
+.skills-list-wrapper {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  transform: translateY(-300px);
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.list-skills-items {
+  list-style: none;
+  padding: 0;
+  font-size: .9rem;
+}
+
+.list-skills-items > * {
+  margin-top: 2vh;
+}
+
+.list-skills-items >*:nth-child(1) {
+  font-size: 2rem;
+}
+
+.skills-hide {
+  list-style: none;
+  padding: 0;
+  opacity: 0;
+  transition: .5s;
+}
+
+.skills-show {
+  position: relative;
+  transition: .5s;
 }

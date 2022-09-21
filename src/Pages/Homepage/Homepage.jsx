@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import About from '../../Pages/About';
+import Skills from '../../Pages/Skills';
+import Work from '../../Pages/Work';
+import Contact from '../../Pages/Contact';
 import pTagOpen from '../../Assets/p-tag-open-2.png';
 import pTagClose from '../../Assets/p-tag-close-2.png';
 import h1TagOpen from '../../Assets/h1-tag-open-2.png';
@@ -46,63 +50,13 @@ export default class Homepage extends Component {
             <div className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
             <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
           </div>
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-          <br></br>
-          <div>scroll </div> 
-      </div>
+          <div className="homepage-components-wrapper">
+            <About />
+            <Skills />
+            <Work />
+            <Contact />
+          </div>
+      </div>  
     )
   }
 }

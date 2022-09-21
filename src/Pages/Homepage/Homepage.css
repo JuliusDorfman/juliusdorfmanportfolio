@@ -56,6 +56,9 @@
   font-weight: bold;
 }
 
+.homepage-components-wrapper > * {
+  margin-top: 35vh;
+}
 /* Indication Text Flavor */
 
 .vertical-orientation-left,
