@@ -1,7 +1,81 @@
 #contact-component{
   display: flex;
+  position: relative;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
   height: 60vh;
   width: 75vw;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-form {
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.form-top {
+  display: flex;
+  width: 100%;
+}
+
+.form-top * {
+  width: 90%;
+}
+
+.form-top input {
+  width: inherit;
+}
+
+.contact-text {
+  position:absolute;
+  top: 0;
+  left: 0;
+  font-size: 25rem;
+  color:rgba(167, 188, 214, .02);
+  white-space: nowrap;
+  z-index: 0!important;
+  transform: translateY(-10vh);
+}
+
+.contact-form input {
+  color: ghostwhite;
+  background:rgb(51, 52, 53);
+  height: 40px;
+  transition: .5s;
+  margin: 20px 0 20px 0;
+}
+
+.contact-form input::placeholder {
+  font-size: 1em;
+  color: gray;
+  background:rgb(51, 52, 53)
+}
+
+.form-bottom {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.form-bottom * {
+  width: 100%;
+}
+
+.form-submit-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.contact-submit {
+  width: 30%;
 }

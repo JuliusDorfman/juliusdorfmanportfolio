@@ -52,6 +52,7 @@ export default class Skills extends Component {
     const skillsList = this.state.skillsList;
     return(
       <div id="skills-component">
+        <div className="skills-text">SKILLS</div>
         <h1><span className="subtext">a few of</span> My Skills</h1>
         <span className="skills-content-wrapper" onClick={(e)=> {this.toggleSkillsFormation(e)}}>
           <div className={`cloud-wrapper-${skillsFormation}`}>

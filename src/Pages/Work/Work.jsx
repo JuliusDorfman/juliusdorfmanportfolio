@@ -13,6 +13,7 @@ export default class Work extends React.Component {
   render() {
     return (
       <div id="work-component">
+        <div className="work-text">WORK</div>
         <h1><span className="subtext">some of</span> My Work</h1>
         {/* <div className="indication-wrapper">
           <div></div>

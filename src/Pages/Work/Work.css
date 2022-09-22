@@ -1,7 +1,19 @@
 #work-component {
   display: flex;
+  position: relative;
   height: 60vh;
-  width: 75vw;
+  /* width: 75vw; */
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.work-text {
+  position:absolute;
+  top: 0;
+  left: 0;
+  font-size: 25rem;
+  color:rgba(167, 188, 214, .02);
+  white-space: nowrap;
+  z-index: 0!important;
 }

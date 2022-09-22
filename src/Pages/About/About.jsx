@@ -18,6 +18,7 @@ export default class About extends React.Component {
     return(
       <div id="about-component">
         <img src={sectionTagOpen} className={`flavor-tag-open section-tag-flavor-open flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
+        <div className="about-text">ABOUT ME</div>
         <h1 className="about-me-header"><span className="subtext">a little</span> About Me</h1>
         {/* <div className="indication-wrapper">
           <div></div>

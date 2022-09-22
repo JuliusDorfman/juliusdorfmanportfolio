@@ -1,12 +1,28 @@
 #about-component {
   display: flex;
-  height: 60vh;
-  width: 75vw;
+  position: relative;
+  height: 80vh;
+  margin-top: 10vh;
+  /* width: 75vw; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
+  overflow: hidden;
 }
 
+.about-text {
+  position:absolute;
+  top: 0;
+  left: 0;
+  font-size: 25rem;
+  color:rgba(167, 188, 214, .02);
+  white-space: nowrap;
+  z-index: 0!important;
+}
+
+#about-component > * {
+  z-index: 1;
+}
 .subtext {
   font-size: .75rem;
   color: gray;
@@ -19,14 +35,14 @@
   text-align: left;
 }
 
-.about-me-page-intro::before {
+#about-component::before {
   position: absolute;
-  /* top: 0px; */
-  /* left: 5px; */
+  left: 7vw;
+  top: 15vh;
   transform: translateX(-20px);
   content: "";
   height: inherit;
-  width: 7px;
+  width: 3px;
   background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
 }
 

@@ -24,6 +24,7 @@ export default class Homepage extends Component {
   render() {
     return(
       <div id="homepage-component"> 
+        <div className="landing-page-wrapper">
           <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html"/>
           <div className="landing-nav-top">
             <button className="nav-inactive"></button>
@@ -50,12 +51,13 @@ export default class Homepage extends Component {
             <div className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
             <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
           </div>
-          <div className="homepage-components-wrapper">
-            <About />
-            <Skills />
-            <Work />
-            <Contact />
-          </div>
+        </div>
+        <div className="homepage-components-wrapper">
+          <About />
+          <Skills />
+          <Work />
+          <Contact />
+        </div>
       </div>  
     )
   }
