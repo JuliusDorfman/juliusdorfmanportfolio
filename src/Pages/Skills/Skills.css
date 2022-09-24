@@ -13,6 +13,7 @@
 
 #skills-component h1{
   margin-top: 17vh;
+  transform: translateX(-145px);
 }
 
 #skills-component::after {
@@ -46,16 +47,39 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  padding: 2vw;
+  width: 75%;
   overflow: hidden;
+  text-align: left;
+  font-size: .70em;
 }
+
+.skills-list-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.skills-list-wrapper ul {
+  list-style: none;
+  padding: 0;
+} 
+
+.skills-list-wrapper li {
+  font-size: .5em;
+  margin-bottom: .75vh;
+} 
+
+.skills-list-wrapper li:nth-child(1) {
+  font-size: .9em;
+} 
 
 .cloud-wrapper-bubble {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .cloud-wrapper-list {
@@ -140,16 +164,6 @@
   width: 0;
   /* transform: translateX(-400px); */
 }
-
-.skills-list-wrapper {
-  display: flex;
-  justify-content: space-around;
-  cursor: pointer;
-  transform: translateY(-300px);
-  overflow: hidden;
-  width: 100%;
-}
-
 
 .list-skills-items {
   list-style: none;

@@ -61,10 +61,10 @@ export default class About extends React.Component {
         </div> */}
         <div className="page-split">
           <div className="about-me-section">
-            <p className="about-me-page-intro"> Hello! I'm Julius. I engineer and develop applications and websites with a focus on web technologies.
+            <p className="about-me-page-intro"> I'm a Front-End Developer located in the United States. I have serious passion for creating intuitive, dynamic, and aesthetically pleasing user experiences.
             <br />
             <br />
-            This website is where I publish my works; an expression of my creativity through design, code, and writing. This site will hold the bookmarks of my life in: projects, articles, and career history. While you're here, thank you for being a part of it.</p>
+            This website is where I publish my works; an expression of my creativity through design, code, and writing. While you're here, thanks for being a part of it.</p>
           </div>
           <div className="about-me-animation-wrapper">
             <div className={`cloud-wrapper-${skillsFormation}`}>

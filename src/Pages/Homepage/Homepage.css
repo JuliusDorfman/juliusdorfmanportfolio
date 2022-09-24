@@ -84,6 +84,11 @@
   font-weight: lighter;
   font-size: 14px;
   letter-spacing: 8px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .vertical-orientation-left{
@@ -136,6 +141,11 @@
   height: 8px;
   width: 20px;
   transform: translateX(-5vw);
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .landing-intro .h1-flavor-open {
