@@ -6,9 +6,23 @@ export default class Contact extends React.Component {
     super(props);
     this.state = {
       currentPage: this.props.currentPage,
-      page: "contact"
+      page: "contact",
+      inputName: '',
+      inputEmail: '',
+      inputSubject: '',
+      inputMessage: ''
     }
   }
+
+  handleInput = (e) => {
+
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    
+  }
+
 
 
 render() {
@@ -18,25 +32,25 @@ render() {
       <h1>Contact Me</h1>
       <form className="contact-form">
         <div className="form-top">
-          <label for="name">
-            <input type="text" name="name" placeholder="Name"></input>
+          <label htmlFor="name">
+            <input type="text" name="name" placeholder="Name" onChange={(e)=>{this.handleInput(e)}}></input>
           </label>
-          <label for="email">
-            <input type="text" name="email" placeholder="Email"></input>
+          <label htmlFor="email">
+            <input type="text" name="email" placeholder="Email" onChange={(e)=>{this.handleInput(e)}}></input>
           </label>
         </div>
         <div className="form-bottom">
-          <label for="subject">
-            <input type="text" name="subject" placeholder="Subject"></input>
+          <label htmlFor="subject">
+            <input type="text" name="subject" placeholder="Subject" onChange={(e)=>{this.handleInput(e)}}></input>
           </label>
-          <label for="message">
-            <input type="text" name="message" placeholder="Message"></input>
+          <label htmlFor="message">
+            <textarea type="text" name="message" placeholder="Message" onChange={(e)=>{this.handleInput(e)}}></textarea>
           </label>
         </div>
         <div className="form-submit-wrapper">
           <div> </div>
           <div> </div>
-          <input className="contact-submit"for="submit" type="submit" value="Submit" />
+          <input className="contact-submit" htmlFor="submit" type="submit" value="Submit" onClick={(e)=> {this.handleSubmit(e)}} />
         </div>
       </form>
     </div>

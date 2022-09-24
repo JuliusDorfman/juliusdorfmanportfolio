@@ -86,7 +86,7 @@ class App extends React.Component {
               case 'about':
               return (
                 <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
-                  <About currentPage={currentPage} pageRender={this.state.pageRender} />
+                  <About currentPage={currentPage} pageRender={this.state.pageRender} handleCurrentPage={this.handleCurrentPage}/>
                 </section>
               );
               case 'skills':

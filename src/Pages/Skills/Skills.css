@@ -34,6 +34,10 @@
   white-space: nowrap;
   z-index: 0!important;
   transform: translateY(-10vh);
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .skills-content-wrapper {
@@ -64,7 +68,7 @@
 
 .cloud-wrapper-bubble:hover .list-skills {
   padding: 10px;
-  font-size: 1.5em;
+  font-size: .75em;
   background: rgba(0, 0, 0, .9);
 }
 
@@ -86,6 +90,11 @@
 
 .tagcloud--item {
   transition: .5s;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .tagcloud--item:hover {
@@ -129,7 +138,7 @@
 .formation-list {
   opacity: 0;
   width: 0;
-  transform: translateX(-400px);
+  /* transform: translateX(-400px); */
 }
 
 .skills-list-wrapper {

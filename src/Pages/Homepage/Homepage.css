@@ -120,10 +120,12 @@
 .fullpage-animations-page-in {
   opacity: 1;
   transition: .5s;
+  width: inherit;
 }
 .fullpage-animations-page-out {
   opacity: 0;
   transition: .5s;
+  width: inherit;
 }
 
 /* Homepage Element Tag Flavors */
@@ -158,4 +160,10 @@
 .flavor-tags-slide-down-fade-out {
   opacity: 0;
   transition: .2s;
+}
+
+@media (max-width: 1000px) {
+  .landing-page-wrapper {
+    height: 100vh;
+  }
 }

@@ -18,6 +18,10 @@
   color:rgba(167, 188, 214, .02);
   white-space: nowrap;
   z-index: 0!important;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 #about-component > * {
@@ -52,3 +56,21 @@
   position: absolute;
   transform: translate(-238px, -200px);
 } 
+
+.page-split {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-split > * {
+  flex-basis: 50%;
+}
+
+@media (max-width:1000px) {
+  .page-split {
+    flex-direction: column;
+  }
+  .about-me-animation-wrapper{
+    margin-top: 5vh;
+  }
+}
