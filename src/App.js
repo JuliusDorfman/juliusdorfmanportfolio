@@ -59,7 +59,6 @@ class App extends React.Component {
 
   render(){
 
-
     const currentPage = this.state.currentPage;
     const fadeClass = this.state.fadeIn === 'fade-out' ? 'fade-in' : 'fade-out';
     const pageRender = this.state.pageRender;
@@ -106,9 +105,12 @@ class App extends React.Component {
                   <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>  
                     <Contact currentPage={currentPage} pageRender={this.state.pageRender} />
                   </section>
-              );                    
-              default: <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />;
-              }
+              );     
+              default: 
+                return (
+                  <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />
+                )
+              };
             })()
           }
           </div>
