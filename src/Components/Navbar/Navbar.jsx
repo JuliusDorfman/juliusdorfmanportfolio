@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import './Navbar.css';
 
 export default class Navbar extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      currentPage: this.props.currentPage
+    }
+  }
+
+
+  handleClick = (e) => {
+    let pageValue = e.target.getAttribute('pagevalue');
+    console.log('nav click', pageValue)
+    this.setState({currentPage: pageValue}, ()=> {
+      this.props.handleCurrentPage(pageValue);
+      this.props.toggleNav();
+    });
+  }
+
+
 render() {
   return (
     <div className="navbar-component">
@@ -24,19 +42,19 @@ render() {
       </div>
       <div className="navigation-links-wrapper">
       <ul className="navigation-links">
-        <li value="home">Home</li>
-        <li value="about">About</li>
-        <li value="skills">My Skills</li>
-        <li value="work">Work</li>
-        <li value="contact">Contact</li>
+        <li pagevalue="home" onClick={(e)=> {this.handleClick(e)}}>Home</li>
+        <li pagevalue="about" onClick={(e)=> {this.handleClick(e)}}>About</li>
+        <li pagevalue="skills" onClick={(e)=> {this.handleClick(e)}}>My Skills</li>
+        <li pagevalue="work" onClick={(e)=> {this.handleClick(e)}}>Work</li>
+        {/* <li value="contact">Contact</li> */}
         {/* <li value="blog">Blog</li> */}
       </ul>  
       </div>
       <div className="nav-socials-wrapper">
         <ul className="nav-socials-links">
-          <li>Icon 1</li>
-          <li>Icon 2</li>
-          <li>Icon 3</li>
+          <li><a href="https://www.linkedin.com/in/juliusgdorfman/" rel="noreferrer" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+          {/* <li>Icon 2</li>
+          <li>Icon 3</li> */}
         </ul>
       </div>
     </div> 

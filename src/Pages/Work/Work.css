@@ -21,3 +21,14 @@
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
 }
+
+#work-component::before {
+  position: absolute;
+  left: 7vw;
+  top: 15vh;
+  transform: translateX(-20px);
+  content: "";
+  height: inherit;
+  width: 3px;
+  background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
+}

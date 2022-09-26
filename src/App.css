@@ -178,3 +178,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Footer Styles */
+
+#footer-component{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: #121214;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ghostwhite;
+  font-weight: bolder;
+
+}

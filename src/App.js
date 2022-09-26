@@ -70,7 +70,7 @@ class App extends React.Component {
           <button id="nav-button" className={`nav-border${this.state.navBorderToggle}`} onClick={this.toggleNav}><div className={`nav-burger ${this.state.burgerClass}`}></div></button>
           {this.state.menuOpen ? 
             <div className={`nav-comp-wrap ${fadeClass}`}>
-              <Navbar currentPage={currentPage} />
+              <Navbar currentPage={currentPage} handleCurrentPage={this.handleCurrentPage} toggleNav={this.toggleNav}/>
             </div> : null}
           <div id="page-rendered">
             <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage}/>
@@ -100,21 +100,26 @@ class App extends React.Component {
                     <Work currentPage={currentPage} pageRender={this.state.pageRender} />
                   </section>
               );    
-              case 'contact':
-                return (
-                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>  
-                    <Contact currentPage={currentPage} pageRender={this.state.pageRender} />
-                  </section>
-              );     
+              // case 'contact':
+              //   return (
+              //     <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>  
+              //       <Contact currentPage={currentPage} pageRender={this.state.pageRender} />
+              //     </section>
+              // );                    
               default: 
-                return (
-                  <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />
-                )
-              };
+                  return(
+                    <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />
+                  );
+              }
             })()
           }
           </div>
         </header>
+        <footer id="footer-component">
+            <div className="footer-content-wrapper">
+              <p>Julius G. Dorfman &copy;</p>
+            </div>
+          </footer>
       </div>
     );
   }
