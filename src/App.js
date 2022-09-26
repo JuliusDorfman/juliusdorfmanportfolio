@@ -107,12 +107,20 @@ class App extends React.Component {
                     <Contact currentPage={currentPage} pageRender={this.state.pageRender} />
                   </section>
               );                    
-              default: <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />;
+              default: 
+                  return(
+                    <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />
+                  );
               }
             })()
           }
           </div>
         </header>
+        <footer id="footer-component">
+            <div className="footer-content-wrapper">
+              <p>Julius G. Dorfman &copy;</p>
+            </div>
+          </footer>
       </div>
     );
   }

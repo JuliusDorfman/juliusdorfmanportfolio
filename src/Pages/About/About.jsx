@@ -10,7 +10,9 @@ const TagCloud = require('TagCloud');
 const container = '.skills-cloud';
 const skillsList = [
   'ReactJS', 'Javascript', 'jQuery', 'SQL', 
-  'Node.js', 'HTML', 'Agile', 'JIRA', 'JSON', 'SASS', 'Bootstrap', 'npm', 'CSS', 'REST', 'GIT', '_lodash'
+  'Node.js', 'HTML', 'Agile', 'JIRA', 'JSON', 
+  'SASS', 'Bootstrap', 'npm', 'CSS', 'REST', 'GIT', 
+  '_lodash'
 ];
 
 const options = {
