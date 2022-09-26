@@ -150,3 +150,50 @@
   display: inherit;
   transform: translate(18px, 20px);
 }
+
+.fa-linkedin-square {
+  font-size:70px;
+  color: gray;
+  transition: .5s;
+}
+
+
+.nav-socials-links:hover .fa-linkedin-square {
+  font-size: 100px;
+  transition: .5s;
+  color: #A7BCD6;
+  transform: translateY(10px);
+}
+
+@media (min-width: 1000px) {
+  .navbar-component {
+    display: fixed;
+    right: 0;
+    top: 15vh;
+    width: 250px;
+    height: 50vh;
+  }
+
+  .navigation-links {
+    font-size: 1rem;
+  }
+
+  .nav-socials-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .fa-linkedin-square {
+    font-size:48px;
+    color: gray;
+  }
+
+  .nav-socials-links:hover .fa-linkedin-square {
+    font-size: 55px;
+    color: #A7BCD6;
+    transform: translateY(10px);
+  }
+}

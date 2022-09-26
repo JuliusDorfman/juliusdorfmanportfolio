@@ -45,27 +45,27 @@ export default class Skills extends Component {
           </div> */}
         </span>
         
-        <div class="progressbars-container">
-          <div class="container__progressbars">
-            <div class="progressbar">
-              <svg class="progressbar__svg">
-                <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-frontend shadow-frontend"> </circle>
+        <div className="progressbars-container">
+          <div className="container__progressbars">
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-frontend shadow-frontend"> </circle>
               </svg>
-              <span class="progressbar__text shadow-frontend">Frontend</span>
+              <span className="progressbar__text shadow-frontend">Frontend</span>
             </div>
 
-            <div class="progressbar">
-              <svg class="progressbar__svg">
-                <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-backend shadow-backend"> </circle>
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-backend shadow-backend"> </circle>
               </svg>
-              <span class="progressbar__text shadow-backend">Backend</span>
-            </div>
+              <span className="progressbar__text shadow-backend">Backend</span>
+            </div>  
 
-            <div class="progressbar">
-              <svg class="progressbar__svg">
-                <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-passion shadow-passion"> </circle>
+            <div className="progressbar">
+              <svg className="progressbar__svg">
+                <circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-passion shadow-passion"> </circle>
               </svg>
-              <span class="progressbar__text shadow-passion">Passion</span>
+              <span className="progressbar__text shadow-passion">Passion</span>
             </div>
           </div>
         </div>
