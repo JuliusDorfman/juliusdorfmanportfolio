@@ -54,6 +54,7 @@ export default class FullScreenSidebar extends Component {
             <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li>
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="contact">Contact</li> */}
           </ul>
+            <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">The floating thingies are bothering me</div></div>
         </div>
       </div>
     )

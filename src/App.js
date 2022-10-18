@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Navbar from './Components/Navbar';
 import FullScreenSidebar from './Components/FullScreenSidebar';
 import Skills from './Pages/Skills';
+import Appbackground from './Components/Appbackground';
 import Contact from './Pages/Contact';
 import './App.css';
 
@@ -22,7 +23,8 @@ class App extends React.Component {
       currentPage: "homepage",
       pageRender: "not-rendered",
       pageToRender: this.props.currentPage,
-      fullpageAnimation: 'page-in'
+      fullpageAnimation: 'page-in',
+      floaters: true,
     };
   }
 
@@ -57,6 +59,14 @@ class App extends React.Component {
     }
   }
 
+  handleToggleFloaters = () => {
+    let floaters = this.state.floaters ? false : true
+    
+    this.setState({floaters: floaters});
+  }
+ 
+
+
   render(){
 
     const currentPage = this.state.currentPage;
@@ -73,7 +83,7 @@ class App extends React.Component {
               <Navbar currentPage={currentPage} handleCurrentPage={this.handleCurrentPage} toggleNav={this.toggleNav}/>
             </div> : null}
           <div id="page-rendered">
-            <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage}/>
+            <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} toggleFloaters={this.handleToggleFloaters}/>
             {(() => {
             switch(this.state.currentPage) {
               case 'homepage':
@@ -120,6 +130,12 @@ class App extends React.Component {
               <p>Julius G. Dorfman &copy;</p>
             </div>
           </footer>
+          {this.state.floaters 
+          ? 
+          <Appbackground />
+          :
+          null
+          }
       </div>
     );
   }

@@ -13,12 +13,22 @@ export default class Work extends React.Component {
   render() {
     return (
       <div id="work-component">
-        <div className="work-text">WORK</div>
-        <h1><span className="subtext">some of</span> My Work</h1>
-        {/* <div className="indication-wrapper">
-          <div></div>
-          <div className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
-        </div> */}
+          <div className="work-text">WORK</div>
+          <h1><span className="subtext">some of</span> My Work</h1>
+        <div className="work-component-content">
+          <div className="work-panels-wrapper">
+          <div id="art-of-twitch" className="work-panel"></div>
+            <div className="work-panel">Get Excited...</div>
+           </div> 
+          <div className="work-panels-wrapper">
+            <div className="work-panel">In Development...</div>
+            <div className="work-panel">Stay Tuned...</div>
+          </div>
+          {/* <div className="indication-wrapper">
+            <div></div>
+            <div className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
+          </div> */}
+        </div>
       </div>
     )
   }

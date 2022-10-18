@@ -12,7 +12,7 @@ const skillsList = [
   'ReactJS', 'Javascript', 'jQuery', 'SQL', 
   'Node.js', 'HTML', 'Agile', 'JIRA', 'JSON', 
   'SASS', 'Bootstrap', 'npm', 'CSS', 'REST', 'GIT', 
-  '_lodash'
+  '_lodash', 'AWS: EC2', 'AWS: S3'
 ];
 
 const options = {

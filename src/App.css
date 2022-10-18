@@ -5,6 +5,7 @@
   height: 100%;
   width: 100%;
   min-height: inherit;
+  z-index: 100;
 }
 
 
@@ -196,5 +197,24 @@
   align-items: center;
   color: ghostwhite;
   font-weight: bolder;
+}
 
+
+.floater-button {
+  position: fixed;
+  left: 2%;
+  bottom: 2%;
+  cursor: pointer;
+  width: 100px;
+  opacity: .2;
+  transition: .5s;
+}
+
+.floater-button:hover {
+  opacity: 1;
+  transition: .5s;
+}
+
+.smaller {
+  font-size: .5em;
 }

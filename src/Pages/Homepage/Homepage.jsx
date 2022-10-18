@@ -57,6 +57,7 @@ export default class Homepage extends Component {
           <Skills />
           <Work />
           {/* <Contact /> */}
+          
         </div>
       </div>  
     )
