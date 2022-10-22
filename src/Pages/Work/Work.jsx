@@ -1,6 +1,6 @@
 import React from 'react';
 import './Work.css';
-import AOTT from '../../../src/Assets/SoTA.png';
+import AOTT from '../../../src/Assets/AOTT.png';
 
 export default class Work extends React.Component {
   constructor(props) {
