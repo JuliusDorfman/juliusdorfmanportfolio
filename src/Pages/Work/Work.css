@@ -71,25 +71,22 @@
 }
 
 #art-of-twitch {
-  background: url('../../Assets/SoTA.PNG');
   background-position-x: 50%;
   background-size: 100%;
   transition: .5s;
-  border: 1px solid gray
 }
 
 #art-of-twitch:hover {
-  /* background-size: cover; */
   transition: .5s;
 }
 
+#art-of-twitch img, a {
+  height: 100%;
+}
+
+
+
+
 @media (max-width: 1000px) {
-  #art-of-twitch {
-    background: url('../../Assets/SoTA.PNG');
-    background-size: cover;
-    background-position-x: 58%;
-  }
-  #art-of-twitch {
-    background-size: 100%;
-  }
+
 }

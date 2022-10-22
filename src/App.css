@@ -12,9 +12,9 @@
 /* Navigation Styles*/
 #nav-button {
   background-color: rgba(0, 0, 0, .5);
-  /* position: absolute; */
+  box-shadow: 0 0 2px 5px rgba(0, 0, 0, .5);
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   top: 5vh;
   right: 10vw;
   height: 50px;
@@ -23,6 +23,7 @@
   justify-content: center;
   align-items: center;
   transition: all .5s ease-in-out;
+  cursor: pointer;
 }
 
 .nav-border {
@@ -34,9 +35,6 @@
   border: 2px solid transparent;
 }
 
-#nav-button {
-  cursor: pointer;
-}
 
 #nav-button .nav-burger {
   display: flex;
