@@ -16,12 +16,22 @@
 #homepage-component .contact-me {
   margin-top: 10vh;;
   box-shadow: none;
-  color: #A7BCD6;
   border: 2px solid #A7BCD6;
   background: transparent;
   transition: .2s;
   border-radius: 6px;
   height: 40px;
+  text-decoration: none;
+}
+#homepage-component .contact-me a {
+  color: #A7BCD6;
+  text-decoration: none;
+}
+
+#homepage-component .contact-me button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #homepage-component .contact-me:hover {
@@ -31,6 +41,9 @@
   transition: .2s;
   color: ghostwhite;
   cursor: pointer;
+}
+#homepage-component .contact-me:hover a {
+  color: ghostwhite;
 }
 
 #homepage-component .contact-me:active {

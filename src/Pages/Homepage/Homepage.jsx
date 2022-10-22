@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+// eslint-disable-next-line no-undef
 import React, { Component } from 'react';
 import About from '../../Pages/About';
 import Skills from '../../Pages/Skills';
@@ -21,7 +22,6 @@ export default class Homepage extends Component {
       page: 'homepage',
     };
   }
-
 
 
   render() {
@@ -47,7 +47,14 @@ export default class Homepage extends Component {
               <br />
               <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} />
             </p>
-            <button href="#page-rendered" className="contact-me">Contact Me</button>
+            <button href="https://www.linkedin.com/in/juliusgdorfman/"
+              target="_blank" rel="noreferrer"
+              className="contact-me">
+              <a href="https://www.linkedin.com/in/juliusgdorfman/"
+                target="_blank" rel="noreferrer">
+                Contact Me
+              </a>
+            </button>
           </div>
           <div className="indication-wrapper">
             <div></div>

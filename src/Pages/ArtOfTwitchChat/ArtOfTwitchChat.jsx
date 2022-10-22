@@ -18,7 +18,7 @@ export default class ArtOfTwitchChat extends Component {
     return (
       <div id="artoftwitchchat-component" className="product-section">
         <a href="https://state-of-twitch-art.herokuapp.com/" target="_blank" rel="noreferrer"><h1>Art Of Twitch Chat</h1></a>
-        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Render Art from your favorite streamer&apos;s chat room.</p>
+        <p>Render Art from your favorite streamer&apos;s chat room.</p>
         <br />
         <h3>Mission</h3>
         <p>
