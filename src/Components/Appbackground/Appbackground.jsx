@@ -1,6 +1,6 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { useCallback } from 'react';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 import './Appbackground.sass';
 
 export const Appbackground = () => {
@@ -12,14 +12,16 @@ export const Appbackground = () => {
     await loadFull(engine);
   }, []);
 
+  // eslint-disable-next-line no-unused-vars
   const particlesLoaded = useCallback(async (container) => {
     // await console.log("container 2", container);
   }, []);
 
   const randomNumber = (num) => {
-    Math.floor(Math.random() * num)
-  }
+    Math.floor(Math.random() * num);
+  };
   return (
+    // eslint-disable-next-line react/react-in-jsx-scope
     <Particles
       id="tsparticles"
       init={particlesInit}
@@ -27,9 +29,9 @@ export const Appbackground = () => {
       options={{
         background: {
           color: {
-            value: "transparent",
+            value: 'transparent',
           },
-          size: "cover"
+          size: 'cover'
         },
         ZIndex: -100,
         fpsLimit: 90,
@@ -37,11 +39,11 @@ export const Appbackground = () => {
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              mode: 'push',
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: 'repulse',
             },
             resize: true,
           },
@@ -57,10 +59,10 @@ export const Appbackground = () => {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: '#ffffff',
           },
           links: {
-            color: "#ffffff",
+            color: '#ffffff',
             distance: 150,
             enable: true,
             opacity: .2,
@@ -70,10 +72,10 @@ export const Appbackground = () => {
             enable: true,
           },
           move: {
-            directions: "none",
+            directions: 'none',
             enable: true,
             outModes: {
-              default: "bounce",
+              default: 'bounce',
             },
             random: true,
             speed: 1,
@@ -90,7 +92,7 @@ export const Appbackground = () => {
             value: .1,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             value: { min: 1, max: 7 },

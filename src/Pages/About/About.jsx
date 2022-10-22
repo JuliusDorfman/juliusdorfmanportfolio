@@ -1,17 +1,19 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './About.css';
-import pTagOpen from '../../Assets/p-tag-open-2.png';
-import pTagClose from '../../Assets/p-tag-close-2.png';
-import h1TagOpen from '../../Assets/h1-tag-open-2.png';
-import h1TagClose from '../../Assets/h1-tag-close-2.png';
+// import pTagOpen from '../../Assets/p-tag-open-2.png';
+// import pTagClose from '../../Assets/p-tag-close-2.png';
+// import h1TagOpen from '../../Assets/h1-tag-open-2.png';
+// import h1TagClose from '../../Assets/h1-tag-close-2.png';
 import sectionTagOpen from '../../Assets/section-tag-open-2.png';
+// eslint-disable-next-line no-undef
 const TagCloud = require('TagCloud');
 
 const container = '.skills-cloud';
 const skillsList = [
-  'ReactJS', 'Javascript', 'jQuery', 'SQL', 
-  'Node.js', 'HTML', 'Agile', 'JIRA', 'JSON', 
-  'SASS', 'Bootstrap', 'npm', 'CSS', 'REST', 'GIT', 
+  'ReactJS', 'Javascript', 'jQuery', 'SQL',
+  'Node.js', 'HTML', 'Agile', 'JIRA', 'JSON',
+  'SASS', 'Bootstrap', 'npm', 'CSS', 'REST', 'GIT',
   '_lodash', 'AWS: EC2', 'AWS: S3'
 ];
 
@@ -32,7 +34,7 @@ export default class About extends React.Component {
     super(props);
     this.state = {
       currentPage: this.props.currentPage,
-      page: "about",
+      page: 'about',
       skillsFormation: 'bubble',
       skillsList: 'hide'
     };
@@ -49,10 +51,10 @@ export default class About extends React.Component {
   //   });
   // }
 
-  render(){
+  render() {
     const skillsFormation = this.state.skillsFormation;
-    const skillsList = this.state.skillsList;
-    return(
+    // const skillsList = this.state.skillsList;
+    return (
       <div id="about-component">
         <img src={sectionTagOpen} className={`flavor-tag-open section-tag-flavor-open flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
         <div className="about-text">ABOUT ME</div>
@@ -63,16 +65,16 @@ export default class About extends React.Component {
         </div> */}
         <div className="page-split">
           <div className="about-me-section">
-            <p className="about-me-page-intro"> I'm a Front-End Developer located in the United States. I have serious passion for creating intuitive, dynamic, and aesthetically pleasing user experiences.
-            <br />
-            <br />
-            This website is where I publish my works; an expression of my creativity through design, code, and writing. While you're here, thanks for being a part of it.</p>
+            <p className="about-me-page-intro"> I&apos;m a Front-End Developer located in the United States. I have serious passion for creating intuitive, dynamic, and aesthetically pleasing user experiences.
+              <br />
+              <br />
+              This website is where I publish my works; an expression of my creativity through design, code, and writing. While you&apos;re here, thanks for being a part of it.</p>
           </div>
           <div className="about-me-animation-wrapper">
             <div className={`cloud-wrapper-${skillsFormation}`}>
               <div className={`skills-cloud formation-${skillsFormation}`}>
                 {/* Skills Cloud Content*/}
-              </div> 
+              </div>
               {/* <div className={`list-skills-head-${skillsList}`}>
                 SKILLS
               </div>  */}
@@ -80,7 +82,7 @@ export default class About extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

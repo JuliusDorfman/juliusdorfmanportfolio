@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import About from '../../Pages/About';
 import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
-import Contact from '../../Pages/Contact';
+// import Contact from '../../Pages/Contact';
 import pTagOpen from '../../Assets/p-tag-open-2.png';
 import pTagClose from '../../Assets/p-tag-close-2.png';
 import h1TagOpen from '../../Assets/h1-tag-open-2.png';
@@ -19,32 +20,32 @@ export default class Homepage extends Component {
       navigation: false,
       page: 'homepage',
     };
-  };
+  }
 
 
 
   render() {
-    return(
-      <div id="homepage-component"> 
+    return (
+      <div id="homepage-component">
         <div className="landing-page-wrapper">
-          <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html"/>
+          <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html" />
           <div className="landing-nav-top">
             <button className="nav-inactive"></button>
           </div>
           <div className="landing-intro">
-            <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`}/>
+            <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`} />
             <h1>
               J<span>ulius</span> D<span>orfman</span>
-              <br/>
+              <br />
               <span className="landing-flavor">web developer</span>
             </h1>
-            <img src={h1TagClose} alt="h1-tag-flourish" className={`flavor-tag-close h1-flavor-close flavor-tags-${this.props.toggleHide}`}/>
+            <img src={h1TagClose} alt="h1-tag-flourish" className={`flavor-tag-close h1-flavor-close flavor-tags-${this.props.toggleHide}`} />
             <p className="landing-title">
-            <img src={pTagOpen} alt="p-tag-flourish" className={`flavor-tag-open flavor-tags-${this.props.toggleHide}`}/>
-            <br/>
+              <img src={pTagOpen} alt="p-tag-flourish" className={`flavor-tag-open flavor-tags-${this.props.toggleHide}`} />
+              <br />
               Front End Developer / Software Engineer
-            <br/>
-            <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`}/>
+              <br />
+              <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} />
             </p>
             <button href="#page-rendered" className="contact-me">Contact Me</button>
           </div>
@@ -57,11 +58,11 @@ export default class Homepage extends Component {
         <div className="homepage-components-wrapper">
           <About />
           <Skills />
-          <Work handleCurrentPage={this.props.handleCurrentPage}/>
+          <Work handleCurrentPage={this.props.handleCurrentPage} />
           {/* <Contact /> */}
         </div>
         <footer className="bottom-space"></footer>
-      </div>  
-    )
+      </div>
+    );
   }
 }

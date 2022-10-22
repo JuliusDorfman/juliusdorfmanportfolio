@@ -6,34 +6,37 @@ export default class Work extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    currentPage: this.props.currentPage,
-    page: "work"
-    }
+      // eslint-disable-next-line react/prop-types
+      currentPage: this.props.currentPage,
+      page: 'work'
+    };
   }
 
 
   handleWorkPage = (e) => {
     e.preventDefault();
     let pageValue = e.target.getAttribute('pagevalue');
-    this.setState({currentPage: pageValue}, ()=> {
+    this.setState({ currentPage: pageValue }, () => {
+      // eslint-disable-next-line react/prop-types
       this.props.handleCurrentPage(pageValue);
     });
-  }
+  };
 
 
 
   render() {
     return (
       <div id="work-component">
-          <div className="work-text">WORK</div>
-          <h1><span className="subtext">some of</span> My Work</h1>
+        <div className="work-text">WORK</div>
+        <h1><span className="subtext">some of</span> My Work</h1>
         <div className="work-component-content">
           <div className="work-panels-wrapper">
-          <div id="art-of-twitch" className="work-panel">
-            <img onClick={(e) => this.handleWorkPage(e)} pagevalue={'artoftwitchchat'} src={AOTT} alt="State of Twitch" />
-          </div>
+            <div id="art-of-twitch" className="work-panel">
+              {/* eslint-disable-next-line react/no-unknown-property */}
+              <img onClick={(e) => this.handleWorkPage(e)} pagevalue={'artoftwitchchat'} src={AOTT} alt="State of Twitch" />
+            </div>
             <div className="work-panel">Get Excited...</div>
-           </div> 
+          </div>
           <div className="work-panels-wrapper">
             <div className="work-panel">In Development...</div>
             <div className="work-panel">Stay Tuned...</div>
@@ -44,6 +47,6 @@ export default class Work extends React.Component {
           </div> */}
         </div>
       </div>
-    )
+    );
   }
 }
