@@ -1,1 +1,1 @@
-import { default } from './ArtOfTwitchChat';
+export { default } from './ArtOfTwitchChat';

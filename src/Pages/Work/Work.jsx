@@ -11,6 +11,17 @@ export default class Work extends React.Component {
     }
   }
 
+
+  handleWorkPage = (e) => {
+    e.preventDefault();
+    let pageValue = e.target.getAttribute('pagevalue');
+    this.setState({currentPage: pageValue}, ()=> {
+      this.props.handleCurrentPage(pageValue);
+    });
+  }
+
+
+
   render() {
     return (
       <div id="work-component">
@@ -19,7 +30,7 @@ export default class Work extends React.Component {
         <div className="work-component-content">
           <div className="work-panels-wrapper">
           <div id="art-of-twitch" className="work-panel">
-            <a href="https://state-of-twitch-art.herokuapp.com/" target="_blank" rel="noreferrer"><img src={AOTT} alt="State of Twitch" /></a>
+            <img onClick={(e) => this.handleWorkPage(e)} pagevalue={'artoftwitchchat'} src={AOTT} alt="State of Twitch" />
           </div>
             <div className="work-panel">Get Excited...</div>
            </div> 

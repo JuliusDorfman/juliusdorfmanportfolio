@@ -17,9 +17,11 @@ export default class Homepage extends Component {
     this.state = {
       buttonClass: 'nav-inactive',
       navigation: false,
-      page: 'homepage'
+      page: 'homepage',
     };
   };
+
+
 
   render() {
     return(
@@ -55,10 +57,10 @@ export default class Homepage extends Component {
         <div className="homepage-components-wrapper">
           <About />
           <Skills />
-          <Work />
+          <Work handleCurrentPage={this.props.handleCurrentPage}/>
           {/* <Contact /> */}
-          
         </div>
+        <footer className="bottom-space"></footer>
       </div>  
     )
   }

@@ -23,9 +23,6 @@ export default class FullScreenSidebar extends Component {
     this.setState({currentPage: pageValue}, ()=> {
       this.props.handleCurrentPage(pageValue);
     });
-    // TODO ACTIVE MENU ITEM SHOW WHAT PAGE YOURE ON
-    // e.target.classList.add("active-menu-item")
-    // console.log('classList', e.target.classList);
   };
 
     return( 
@@ -54,8 +51,18 @@ export default class FullScreenSidebar extends Component {
             <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li>
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="contact">Contact</li> */}
           </ul>
-            <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">The floating thingies are bothering me</div></div>
+          { this.props.floaters 
+            ?
+              <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">The floating thingies are bothering me <br />&#128544;</div></div>
+            :
+              <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">I miss the floating thingies <br />&#128512;</div></div>
+          }
         </div>
+        <footer id="footer-component">
+          <div className="footer-content-wrapper">
+            <p>Julius G. Dorfman &copy;</p>
+          </div>
+        </footer>
       </div>
     )
   }

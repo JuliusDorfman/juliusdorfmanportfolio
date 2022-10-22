@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Homepage from './Pages/Homepage';
 import Work from './Pages/Work';
 import About from './Pages/About';
@@ -7,7 +7,8 @@ import Navbar from './Components/Navbar';
 import FullScreenSidebar from './Components/FullScreenSidebar';
 import Skills from './Pages/Skills';
 import Appbackground from './Components/Appbackground';
-import Contact from './Pages/Contact';
+// import Contact from './Pages/Contact';
+import ArtOfTwitchChat  from './Pages/ArtOfTwitchChat';
 import './App.css';
 
 
@@ -83,13 +84,13 @@ class App extends React.Component {
               <Navbar currentPage={currentPage} handleCurrentPage={this.handleCurrentPage} toggleNav={this.toggleNav}/>
             </div> : null}
           <div id="page-rendered">
-            <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} toggleFloaters={this.handleToggleFloaters}/>
+            <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} toggleFloaters={this.handleToggleFloaters} floaters={this.state.floaters}/>
             {(() => {
             switch(this.state.currentPage) {
               case 'homepage':
                 return(
                   <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
-                    <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />
+                    <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage}/>
                   </section>                
                 );
               case 'about':
@@ -107,7 +108,7 @@ class App extends React.Component {
               case 'work':
                 return (
                   <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>  
-                    <Work currentPage={currentPage} pageRender={this.state.pageRender} />
+                    <Work currentPage={currentPage} pageRender={this.state.pageRender} handleCurrentPage={this.handleCurrentPage}/>
                   </section>
               );    
               // case 'contact':
@@ -115,21 +116,22 @@ class App extends React.Component {
               //     <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>  
               //       <Contact currentPage={currentPage} pageRender={this.state.pageRender} />
               //     </section>
-              // );                    
+              // ); 
+              case 'artoftwitchchat':
+                return (
+                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                    <ArtOfTwitchChat currentPage={currentPage} pageRender={this.state.pageRender} />
+                  </section>
+                )                   
               default: 
                   return(
-                    <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} />
+                    <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage}/>
                   );
               }
             })()
           }
           </div>
         </header>
-        <footer id="footer-component">
-            <div className="footer-content-wrapper">
-              <p>Julius G. Dorfman &copy;</p>
-            </div>
-          </footer>
           {this.state.floaters 
           ? 
           <Appbackground />

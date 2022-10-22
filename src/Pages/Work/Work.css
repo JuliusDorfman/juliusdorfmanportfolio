@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   height: 60vh;
-  /* width: 75vw; */
+  margin-top: 150px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -71,16 +71,14 @@
 }
 
 #art-of-twitch {
-  background-position-x: 50%;
-  background-size: 100%;
-  transition: .5s;
+  cursor: pointer;
 }
 
 #art-of-twitch:hover {
   transition: .5s;
 }
 
-#art-of-twitch img, a {
+#art-of-twitch img {
   height: 100%;
 }
 

@@ -12,7 +12,7 @@ export default class Navbar extends Component {
 
   handleClick = (e) => {
     let pageValue = e.target.getAttribute('pagevalue');
-    console.log('nav click', pageValue)
+    // console.log('nav click', pageValue)
     this.setState({currentPage: pageValue}, ()=> {
       this.props.handleCurrentPage(pageValue);
       this.props.toggleNav();
