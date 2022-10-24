@@ -89,7 +89,7 @@ export const Appbackground = () => {
             value: 20,
           },
           opacity: {
-            value: .1,
+            value: .08,
           },
           shape: {
             type: 'circle',

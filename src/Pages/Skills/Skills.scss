@@ -201,6 +201,120 @@
 }
 
 
+
+/* Skills Layout */
+
+.skills-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.skills-header {
+  position: relative;
+  display: block;
+  text-align: right;
+  background: linear-gradient(to left, #0b2247 25%, #425779 25% 50%, #758298 50% 75%, ghostwhite 75% 100%);
+  margin: 0;
+  color: ghostwhite;
+  padding: 1px 120px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  z-index: 1;
+  /* background: url('/assets/images/taipei101_flattened_blue.jpg'); */
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* Copied Skill */
+.skills-intro>h1 {
+  font-size: 1.5rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.skill-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  min-height: 150px;
+}
+
+
+.skills-head {
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: 'Comfortaa', cursive;
+  background: #758298;
+}
+
+.skills-head>p {
+  margin: 0;
+}
+
+.skills-head>img {
+  width: 60px;
+}
+
+.skills-details {
+  display: inherit;
+  justify-content: space-around;
+  text-align: center;
+  opacity: .9;
+}
+
+.skills-details ul {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.skills-details ul li {
+  position: relative;
+  flex: 1 0 auto;
+  padding: .8rem;
+  background-color: #0b2247;
+  margin: .8rem;
+  min-width: 100px;
+  color: ghostwhite;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Roboto Slab', serif;
+  max-width: 150px;
+}
+
+.skills-details ul span {
+  display: flex;
+  flex-direction: column;
+}
+
+
+ul.skill-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0;
+}
+
+// Skills Layout End
+
+
 /* Skills Bar Styling*/
 
 $color-black: hsl(0, 0%, 5%);

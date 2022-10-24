@@ -46,6 +46,12 @@ class App extends React.Component {
   };
 
   handleCurrentPage = (pageValue) => {
+    
+    window.scrollTo({
+      top: 0,
+      behavior:'smooth'
+    });
+
     if (this.state.currentPage !== pageValue) {
       this.setState({ fullpageAnimation: 'page-out' }, () => {
         setTimeout(() => {
@@ -81,7 +87,7 @@ class App extends React.Component {
           <button id="nav-button" className={`nav-border${this.state.navBorderToggle}`} onClick={this.toggleNav}><div className={`nav-burger ${this.state.burgerClass}`}></div></button>
           {this.state.menuOpen ?
             <div className={`nav-comp-wrap ${fadeClass}`}>
-              <Navbar currentPage={currentPage} handleCurrentPage={this.handleCurrentPage} toggleNav={this.toggleNav} />
+              <Navbar currentPage={currentPage} handleCurrentPage={this.handleCurrentPage} toggleNav={this.toggleNav} floaters={this.state.floaters} toggleFloaters={this.handleToggleFloaters}/>
             </div> : null}
           <div id="page-rendered">
             <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} toggleFloaters={this.handleToggleFloaters} floaters={this.state.floaters} />

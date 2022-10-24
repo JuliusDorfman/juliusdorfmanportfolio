@@ -70,6 +70,65 @@ export default class Skills extends Component {
             </div>
           </div>
         </div>
+{/* 
+        <div className="skills-row">
+            <div className="skills-container resume-container">
+              <ul className="skill-list">
+                <li className="skill-item">
+                  <div className="skills-head">
+                    <h2>Development</h2>
+                  </div>
+                  <div className="skills-details">
+                    <ul>
+                      <span>
+                        <li className="colors">html5 &amp; css3 </li>
+                        <li className="colors">javascript (es6)</li>
+                      </span>
+                      <span>
+                        <li className="colors">jquery</li>
+                        <li className="colors">react</li>
+                      </span>
+                    </ul>
+                  </div>
+                </li>
+                <li className="skill-item">
+                  <div className="skills-head">
+                    <h2>UX</h2>
+                  </div>
+                  <div className="skills-details">
+                    <ul>
+                      <span>
+                        <li className="colors">accessibility</li>
+                        <li className="colors">user workflows</li>
+                      </span>
+                      <span>
+                        <li className="colors">wire framing</li>
+                        <li className="colors">client empathy</li>
+                      </span>
+                    </ul>
+                  </div>
+                </li>
+                <li className="skill-item">
+                  <div className="skills-head">
+                    <h2>DevOps</h2>
+                  </div>
+                  <div className="skills-details">
+                    <ul>
+                      <span>
+                        <li className="colors">big picture project awareness</li>
+                        <li className="colors">cloud services</li>
+                      </span>
+                      <span>
+                        <li className="colors">testing</li>
+                        <li className="colors">version control</li>
+                      </span>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div> */}
+
       </div>
     );
   }

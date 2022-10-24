@@ -55,9 +55,9 @@ export default class FullScreenSidebar extends Component {
           </ul>
           {this.props.floaters
             ?
-            <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">The floating thingies are bothering me <br />&#128544;</div></div>
+            <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Enabled <br />&#128512;</div></div>
             :
-            <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">I miss the floating thingies <br />&#128512;</div></div>
+            <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Disabled <br />&#128544;</div></div>
           }
         </div>
         <footer id="footer-component">
