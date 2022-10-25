@@ -22,6 +22,8 @@ This website is where I publish my works; an expression of my creativity through
 * [![Sass][Sass]][https://sass-lang.com/install]
 * [![JQuery][JQuery.com]][https://jquery.com/]
 
+[![React][React.js]][React-url]
+[![JQuery][JQuery.com]][JQuery-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
