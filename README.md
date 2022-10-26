@@ -4,7 +4,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-### <a href="https://juliusdorfman.com/">Visit www.JuliusDorfman.com</a>
+### <a href="https://juliusdorfman.com/">Visit w<span />ww.JuliusDorfman.com</a>
 
 You've found my portfolio! I'm Julius Dorfman. I engineer ambitious applications and design them with a minimalist aesthetic.
 
