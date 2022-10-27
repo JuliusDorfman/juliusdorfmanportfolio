@@ -1,4 +1,7 @@
 /** App Component **/
+.App {
+ /* cursor: url("./Assets/white-cursor.png"), auto; */
+}
 
 #page-rendered {
   display: flex;
@@ -223,3 +226,36 @@
 .smaller {
   font-size: .5em;
 }
+
+
+
+#cursor-outer {
+  content: '';
+  height: 40px;
+  width: 40px;
+  border: 1px solid transparent;
+  display:inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  border-radius: 50%;
+  transform: translate(-18px, -18px);
+  pointer-events: none;
+}
+
+/* #cursor-trailer {
+  content: '';
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  display: inline;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 999999;
+  border-radius: 50%;
+  transform: translate(-18px, -18px);
+  pointer-events: none;
+  transition: 1s
+} */

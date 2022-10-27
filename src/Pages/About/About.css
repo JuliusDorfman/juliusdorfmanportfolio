@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.about-me-header {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
 .about-text {
   position:absolute;
   top: 0;
@@ -27,6 +31,12 @@
 #about-component > * {
   z-index: 1;
 }
+
+.about-me-section {
+  font-weight: 100;
+  letter-spacing: 0.05em;
+}
+
 .subtext {
   font-size: .75rem;
   color: gray;

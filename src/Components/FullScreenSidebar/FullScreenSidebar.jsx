@@ -41,7 +41,7 @@ export default class FullScreenSidebar extends Component {
             </a>
           </div>
           <div className="initials-name">
-            Julius
+            <span className="bold-weight">J</span><span className="light-weight">ulius</span>
           </div>
           <p className="initials-subscript">Web Developer</p>
         </div>

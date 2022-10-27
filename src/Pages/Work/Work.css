@@ -9,9 +9,19 @@
   overflow: hidden;
 } 
 
+#work-component a, 
+#work-component li, 
+#work-component .smaller, 
+#work-component button,
+#work-component img {
+  /* cursor: url("../../Assets/white_dot.png"), auto!important; */
+ }
+
+
 #work-component > h1{
   position: absolute;
   margin-bottom: 400px;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 

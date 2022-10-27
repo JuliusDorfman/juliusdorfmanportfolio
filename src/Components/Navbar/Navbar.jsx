@@ -63,8 +63,12 @@ export default class Navbar extends Component {
               <div className="floater-button-navbar" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Disabled <br />&#128544;</div></div>
               }
             </li>
-            <li><a href="https://www.linkedin.com/in/juliusgdorfman/" rel="noreferrer" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-            <li></li>
+            <li>
+              <a href="https://www.linkedin.com/in/juliusgdorfman/" rel="noreferrer" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/JuliusDorfman" rel="noreferrer" target="_blank"><i class="fa fa-github-square"></i></a>
+            </li>
           </ul>
         </div>
       </div>

@@ -11,6 +11,13 @@
   transition: .5s;
 }
 
+#FullScreenSidebar a, 
+#FullScreenSidebar li, 
+#FullScreenSidebar .smaller, 
+#FullScreenSidebar button {
+  /* cursor: url("../../Assets/white_dot.png"), auto!important; */
+ }
+
 #FullScreenSidebar-head { 
   position: fixed;
   top: 5vh;

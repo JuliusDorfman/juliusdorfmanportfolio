@@ -21,6 +21,7 @@
   transition: .2s;
   border-radius: 6px;
   height: 40px;
+  letter-spacing: .2em;
   text-decoration: none;
 }
 #homepage-component .contact-me a {
@@ -82,6 +83,7 @@
   font-size: small;
   color: gray;
   font-weight: bold;
+  letter-spacing: .4em;
 }
 
 /* .homepage-components-wrapper > * {
@@ -139,6 +141,7 @@
   opacity: 1;
   transition: .5s;
   width: inherit;
+  
 }
 .fullpage-animations-page-out {
   opacity: 0;

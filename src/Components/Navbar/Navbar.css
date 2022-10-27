@@ -8,6 +8,12 @@
   z-index: 500;
 }
 
+.navbar-component a, 
+.navbar-component li, 
+.navbar-component .smaller, 
+.navbar-component button {
+  cursor: url("../../Assets/white_dot.png"), auto!important;
+ }
 
 
 
@@ -92,6 +98,16 @@
 .initials-name {
   font-size: 1rem;
   font-weight: bolder;
+  font-family: 'Julius Sans One', sans-serif;
+  letter-spacing: 0.095em;
+}
+
+.initials-name > .light-weight {
+  font-weight: 100;
+}
+
+.initials-name > .bold-weight {
+  font-weight: bold;
 }
 
 .initials-subscript {
@@ -167,8 +183,15 @@
   transition: .5s;
 }
 
+.fa-github-square {
+  font-size:70px;
+  color: gray;
+  transition: .5s;
+}
 
-.nav-socials-links:hover .fa-linkedin-square {
+
+.fa-linkedin-square:hover, 
+.fa-github-square:hover  {
   /* font-size: 100px; */
   transition: .5s;
   color: #A7BCD6;
@@ -195,20 +218,23 @@
 
   .nav-socials-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 0;
     font-size: 1rem;
   }
 
   .fa-linkedin-square {
-    font-size:48px;
+    font-size:30px;
+    color: gray;
+  }
+  .fa-github-square {
+    font-size:30px;
     color: gray;
   }
 
-  .nav-socials-links:hover .fa-linkedin-square {
-    /* font-size: 55px; */
+  .fa-linkedin-square:hover, 
+  .fa-github-square:hover  {
     color: #A7BCD6;
-    /* transform: translateY(10px); */
   }
 }

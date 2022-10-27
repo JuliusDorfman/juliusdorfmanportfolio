@@ -26,6 +26,15 @@ class App extends React.Component {
       // pageToRender: this.props.currentPage,
       fullpageAnimation: 'page-in',
       floaters: true,
+      mouseAnim: {
+        mouseX: 0,
+        mouseY: 0,
+        destinationX: 0,
+        destinationY: 0,
+        distanceX: 0,
+        distanceY: 0,
+        key: -1
+      }
     };
   }
 
@@ -72,17 +81,31 @@ class App extends React.Component {
     this.setState({ floaters: floaters });
   };
 
+  handleMouseMove = (e) => {
+    let mouseAnim = {...this.state.mouseAnim}
+    mouseAnim.mouseX = e.pageX
+    mouseAnim.mouseY = e.pageY
+    this.setState({mouseAnim: mouseAnim})
+  }
 
+  handleMouseClick = () => {
+    console.log("hello")
+  }
 
+ 
   render() {
 
     const currentPage = this.state.currentPage;
     const fadeClass = this.state.fadeIn === 'fade-out' ? 'fade-in' : 'fade-out';
     const pageRender = this.state.pageRender;
+    let X = this.state.mouseAnim.mouseX;
+    let Y = this.state.mouseAnim.mouseY;
 
 
     return (
-      <div className="App">
+      <div className="App" onMouseMove={this.handleMouseMove}  onClick={this.handleMouseClick}>
+        <span id="cursor-outer" style={{left:`${X}px`, top: `${Y}px`}}></span>
+        <span id="cursor-trailer"></span>
         <header className="App-header">
           <button id="nav-button" className={`nav-border${this.state.navBorderToggle}`} onClick={this.toggleNav}><div className={`nav-burger ${this.state.burgerClass}`}></div></button>
           {this.state.menuOpen ?
