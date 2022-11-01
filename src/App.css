@@ -244,7 +244,7 @@
   pointer-events: none;
 }
 
-/* #cursor-trailer {
+#cursor-trailer {
   content: '';
   height: 40px;
   width: 40px;
@@ -258,4 +258,4 @@
   transform: translate(-18px, -18px);
   pointer-events: none;
   transition: 1s
-} */
+}

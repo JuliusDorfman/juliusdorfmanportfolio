@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import sectionTagOpen from '../../Assets/section-tag-open-2.png';
+import DigitalCard from '../../Components/DigitalCard';
 import './About.css';
 // import pTagOpen from '../../Assets/p-tag-open-2.png';
 // import pTagClose from '../../Assets/p-tag-close-2.png';
 // import h1TagOpen from '../../Assets/h1-tag-open-2.png';
 // import h1TagClose from '../../Assets/h1-tag-close-2.png';
-import sectionTagOpen from '../../Assets/section-tag-open-2.png';
 // eslint-disable-next-line no-undef
 const TagCloud = require('TagCloud');
 
@@ -52,7 +53,7 @@ export default class About extends React.Component {
   // }
 
   render() {
-    const skillsFormation = this.state.skillsFormation;
+    // const skillsFormation = this.state.skillsFormation;
     // const skillsList = this.state.skillsList;
     return (
       <div id="about-component">
@@ -71,14 +72,12 @@ export default class About extends React.Component {
               This website is where I publish my works; an expression of my creativity through design, code, and writing. While you&apos;re here, thanks for being a part of it.</p>
           </div>
           <div className="about-me-animation-wrapper">
-            <div className={`cloud-wrapper-${skillsFormation}`}>
+            <DigitalCard />
+            {/* <div className={`cloud-wrapper-${skillsFormation}`}>
               <div className={`skills-cloud formation-${skillsFormation}`}>
-                {/* Skills Cloud Content*/}
+                Skills Cloud Content
               </div>
-              {/* <div className={`list-skills-head-${skillsList}`}>
-                SKILLS
-              </div>  */}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

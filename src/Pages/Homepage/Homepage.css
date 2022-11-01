@@ -188,6 +188,7 @@
   transition: .2s;
 }
 
+
 @media (max-width: 1000px) {
   .landing-page-wrapper {
     height: 100vh;

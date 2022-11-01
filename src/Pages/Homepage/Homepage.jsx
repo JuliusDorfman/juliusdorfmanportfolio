@@ -55,11 +55,11 @@ export default class Homepage extends Component {
                 Contact Me
               </a>
             </button>
-          </div>
-          <div className="indication-wrapper">
-            <div></div>
-            <div className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
-            <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
+            <div className="indication-wrapper">
+              <div></div>
+              <div href={'#about-component'} className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
+              <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
+            </div>
           </div>
         </div>
         <div className="homepage-components-wrapper">

@@ -1,0 +1,350 @@
+#digital-card-component {
+  display: block;
+  height: 80%;
+  width: 100%;
+  background: transparent;
+}
+
+.digital-card-component {
+  overflow: hidden;
+  width: fit-content;
+}
+
+.digital-card-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: .75s;
+  cursor: pointer;
+  animation: cardWiggle 5s infinite ease-in-out;
+}
+
+.card-shine {
+  /* content: ''; */
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, .0) 45%, rgba(255, 255, 255, .5) 50%, rgba(0, 0, 0, .0) 55%);
+  z-index: 1;
+  animation: cardShine 5s ease-in-out infinite;
+  transform: translateX(-1000px);
+  transition: .3s;
+}
+
+.digital-card {
+  display: inline-flex;
+  height: 200px;
+  min-width: 350px;
+  background: rgba(5, 5, 10, 1);
+  /* background: rgba(50, 50, 50, 1); */
+  text-align: left;
+  /* color: rgba(220, 220, 220,s 1); */
+  color: white;
+  transition: .75s ease-in-out;
+  overflow: hidden;
+}
+
+.digital-card-back {
+  transform: scaleX(-1);
+  position: absolute;
+  display: flex;
+  height: 200px;
+  min-width: 350px;
+  /* background: rgba(5, 5, 10, 1); */
+  background: rgba(50, 50, 50, 0);
+  text-align: left;
+  color: rgba(220, 220, 220, 1);
+  transition: .75s ease-in-out;
+}
+
+.digital-card:hover {}
+
+.card-content {
+  width: 70%;
+}
+
+.card-initials-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 50px;
+  height: 40px;
+  width: 40px;
+  border-left: 1.5px solid gray;
+  border-right: 1.5px solid gray;
+  border-bottom: 1.5px solid gray;
+}
+
+.card-initials {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: .8em;
+  font-family: 'Julius Sans One', sans-serif;
+  /* color: rgba(70, 70, 70, 1); */
+  color: rgba(170, 170, 170, 1);
+}
+
+.card-initials-background {
+  position: absolute;
+  background: rgba(200, 200, 200, 1);
+  height: inherit;
+  width: inherit;
+}
+
+.card-name {
+  /* margin-top: 5%; */
+}
+
+.card-name p {
+  margin: 10% 0 0 15%;
+  font-size: .7em;
+  /* font-size: 30px; */
+  letter-spacing: .3em;
+  font-family: 'Julius Sans One', sans-serif;
+  line-height: 1.5em;
+}
+
+.mini-space {
+  margin-left: 3px;
+}
+
+.card-name span {
+
+  letter-spacing: .3em;
+}
+
+.card-name>.tagline {
+  font-size: .35em;
+  letter-spacing: .3em;
+  color: darkgray;
+}
+
+.line-wrappers {
+  display: flex;
+  position: absolute;
+  /* width: 30%; */
+  height: 100%;
+  right: 0;
+}
+
+.line-flavor {
+  border-left: 2px solid gray;
+  padding-left: 30px;
+}
+
+.orange-line-flavor {
+  border-left: 2px solid rgb(238, 146, 96);
+  /* border-left: 2px solid rgba(225, 130, 80, .8); */
+  padding-left: 30px;
+}
+
+.blue-line-flavor {
+  border-left: 2px solid rgb(88, 150, 201);
+  /* border-left: 2px solid rgba(70, 120, 160, .8); */
+  padding-left: 30px;
+}
+
+.blue-line-flavor:after {
+  content: '';
+  position: absolute;
+  transform: translate(-200%);
+  background: rgb(88, 150, 201, 0);
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  /* animation: blueElectric 2s linear infinite; */
+}
+
+/* Digital Card Back */
+
+
+
+.line-wrappers-back {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  transition: .75s ease-in-out;
+  transform: scaleX(1);
+  padding-right: 30px;
+}
+
+.orange-line-flavor-back {
+  border-left: 2px solid rgb(238, 146, 96);
+  /* border-left: 2px solid rgba(225, 130, 80, .8); */
+  padding-left: 30px;
+  transition: .75s ease-in-out;
+  transform: scaleX(0);
+}
+
+.blue-line-flavor-back {
+  border-left: 2px solid rgb(88, 150, 201);
+  /* border-left: 2px solid rgba(70, 120, 160, .8); */
+  padding-left: 30px;
+  transition: .75s ease-in-out;
+  transform: scaleX(0);
+}
+
+.digital-card-back-info {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  bottom: 0;
+  right: 5%;
+  /* transform: scaleX(-1); */
+  list-style: none;
+  color: rgba(220, 220, 220, 1);
+  transition: .5s ease-in-out;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 12px;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+
+.digital-card-back-info>* {
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: .25em;
+  /* transform: scaleX(-1); */
+  /* padding-left: 30px; */
+  /* padding-bottom: 48px; */
+}
+
+/* Card Animations */
+@keyframes cardWiggle {
+  0% {
+    transform: rotateX(-2deg) rotateY(-5deg) rotateZ(-1deg);
+  }
+
+  50% {
+    transform: rotateX(3deg) rotateY(1deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(-2deg) rotateY(-5deg) rotateZ(-1deg);
+  }
+}
+
+@keyframes cardShine {
+  0% {
+    transform: translateX(200px)
+  }
+
+  50% {
+    transform: translateX(225px)
+  }
+
+  100% {
+    transform: translateX(200px)
+  }
+}
+
+@keyframes blueElectric {
+  0% {
+    transform: translate(-200%);
+    background: rgb(88, 150, 201, 0);
+    height: 5px;
+    width: 2px;
+    top: 0;
+  }
+  10% {
+    transform: translate(-210%);
+    background: rgb(88, 150, 201);
+    height: 1px;
+    width: 1px;
+    top: 10%;
+  }
+  20% {
+    transform: translate(-190%);
+    background: rgb(88, 150, 201);
+    height: 2px;
+    width: 2px;
+    top: 20%;
+  }
+  30% {
+    transform: translate(-200%);
+    background: rgb(88, 150, 201, 0);
+    height: 5px;
+    width: 1px;
+    top: 10%;
+  }
+  40% {
+    transform: translate(-190%);
+    background: rgb(88, 150, 201);
+    height: 2px;
+    width: 2px;
+    top: 30%;
+  }
+  50% {
+    transform: translate(-200%);
+    background: white;
+    height: 2px;
+    width: 2px;
+    top: 50%;
+  }
+  60% {
+    transform: translate(-210%);
+    background: rgb(88, 150, 201);
+    height: 1px;
+    width: 5px;
+    top: 60%;
+  }
+  70% {
+    transform: translate(-190%);
+    background: rgb(88, 150, 201, 0);
+    height: 1px;
+    width: 2px;
+    top: 80%;
+  }
+  80% {
+    transform: translate(-210%);
+    background: white;
+    height: 2px;
+    width: 0px;
+    top: 70%;
+  }
+  90% {
+    transform: translate(-190%);
+    background: rgb(88, 150, 201, 0);
+    height: 0px;
+    width: 5px;
+    top: 100%;
+  }
+  100% {
+    transform: translate(-200%);
+    background: white;
+    height: 2px;
+    width: 1px;
+    top: 120%;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 550px) {
+  #digital-card-component {
+    min-height: 400px;
+    margin-top: 150px;
+  }
+
+  .digital-card-container {
+    transform: rotateZ(90deg) !important;
+  }
+
+
+  .card-initials {
+    font-size: 1.4em;
+  }
+
+  .card-name p {
+    font-size: 1em;
+  }
+
+  .card-name .tagline {
+    font-size: .5em;
+  }
+}

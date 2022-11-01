@@ -82,15 +82,15 @@ class App extends React.Component {
   };
 
   handleMouseMove = (e) => {
-    let mouseAnim = {...this.state.mouseAnim}
-    mouseAnim.mouseX = e.pageX
-    mouseAnim.mouseY = e.pageY
-    this.setState({mouseAnim: mouseAnim})
+    let mouseAnim = {...this.state.mouseAnim};
+    mouseAnim.mouseX = e.pageX;
+    mouseAnim.mouseY = e.pageY;
+    this.setState({mouseAnim: mouseAnim});
   }
 
-  handleMouseClick = () => {
-    console.log("hello")
-  }
+  // handleMouseClick = () => {
+  //   console.log("hello");
+  // }
 
  
   render() {
@@ -98,14 +98,14 @@ class App extends React.Component {
     const currentPage = this.state.currentPage;
     const fadeClass = this.state.fadeIn === 'fade-out' ? 'fade-in' : 'fade-out';
     const pageRender = this.state.pageRender;
-    let X = this.state.mouseAnim.mouseX;
-    let Y = this.state.mouseAnim.mouseY;
-
+    // const X = this.state.mouseAnim.mouseX;
+    // const Y = this.state.mouseAnim.mouseY;
+    // const menuOpen = this.state.menuOpen;
 
     return (
-      <div className="App" onMouseMove={this.handleMouseMove}  onClick={this.handleMouseClick}>
-        <span id="cursor-outer" style={{left:`${X}px`, top: `${Y}px`}}></span>
-        <span id="cursor-trailer"></span>
+      <div className="App" onMouseMove={this.handleMouseMove}>
+        {/* <span id="cursor-outer" style={{left:`${X}px`, top: `${Y}px`}}></span> */}
+        {/* <span id="cursor-trailer" style={{left:`${X}px`, top: `${Y}px`}}></span> */}
         <header className="App-header">
           <button id="nav-button" className={`nav-border${this.state.navBorderToggle}`} onClick={this.toggleNav}><div className={`nav-burger ${this.state.burgerClass}`}></div></button>
           {this.state.menuOpen ?
