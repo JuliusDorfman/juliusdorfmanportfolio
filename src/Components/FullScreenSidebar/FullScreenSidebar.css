@@ -70,7 +70,7 @@
 transform: translateX(-20vw);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   #FullScreenSidebar {
     display: none;
   }

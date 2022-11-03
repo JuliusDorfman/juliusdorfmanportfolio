@@ -16,8 +16,8 @@ export default class FullScreenSidebar extends Component {
    handlePageClicked = (e) => {
       let pageValue = e.target.getAttribute('pagevalue');
       let scrollDestination = document.querySelector(`#${pageValue}`);
-      console.log("scrollDestination", scrollDestination)
-      console.log('pagevalue', pageValue);
+      // console.log("scrollDestination", scrollDestination)
+      // console.log('pagevalue', pageValue);
       scrollDestination.scrollIntoView()
     };
 
