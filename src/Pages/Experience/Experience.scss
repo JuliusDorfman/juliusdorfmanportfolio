@@ -1,8 +1,7 @@
-#about-component {
+#experience-component {
   display: flex;
   position: relative;
   min-height: 80vh;
-  margin-top: 10vh;
   /* width: 75vw; */
   justify-content: center;
   /* align-items: center; */
@@ -10,11 +9,11 @@
   overflow: hidden;
 }
 
-.about-me-header {
+.experience-header {
   font-family: 'Julius Sans One', sans-serif;
 }
 
-.about-text {
+.experience-text {
   position:absolute;
   top: 0;
   left: 0;
@@ -28,11 +27,11 @@
   user-select: none; /* Standard */
 }
 
-#about-component > * {
+#experience-component > * {
   z-index: 1;
 }
 
-.about-me-section {
+.experience-section {
   font-weight: 100;
   letter-spacing: 0.05em;
 }
@@ -42,14 +41,14 @@
   color: gray;
 }
 
-.about-me-page-intro {
+.experience-page-intro {
   height: 160px;
   padding: 0 10vw;
   font-size: .95rem;
   text-align: left;
 }
 
-#about-component::before {
+#experience-component::before {
   position: absolute;
   left: 7vw;
   top: 15vh;
@@ -60,9 +59,9 @@
   background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
 }
 
-/* About Component Flavor Styles */
+/* experience Component Flavor Styles */
 
-#about-component .section-tag-flavor-open {
+#experience-component .section-tag-flavor-open {
   position: absolute;
   transform: translate(-238px, -200px);
 } 
@@ -80,7 +79,7 @@
   .page-split {
     flex-direction: column;
   }
-  .about-me-animation-wrapper{
+  .experience-animation-wrapper{
     margin-top: 5vh;
   }
 }

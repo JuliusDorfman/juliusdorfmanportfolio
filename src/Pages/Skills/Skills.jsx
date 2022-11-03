@@ -13,7 +13,8 @@ export default class Skills extends Component {
       cx: 80,
       r: 70,
       progActive: false,
-      skillSelected: '',
+      activeBoxSide: '',
+      boxAnimation: true,
     };
 
   }
@@ -27,10 +28,14 @@ export default class Skills extends Component {
   }
 
 
-  handleMouseClick = (e) => {
-    let progActive = this.state.progActive;
-    progActive = progActive ? true : false;
-    this.setState({progActive: progActive});
+  handleBoxAnimation = (e) => {
+    // let progActive = this.state.progActive;
+    // progActive = progActive ? true : false;
+    // this.setState({progActive: progActive});
+    const boxAnimation = this.state.boxAnimation;
+    boxAnimation = boxAnimation ? false : true;
+    console.log(e.target.classList);
+    this.setState({boxAnimation: boxAnimation})
   }
 
 
@@ -40,7 +45,8 @@ export default class Skills extends Component {
     const cy = this.state.cy;
     const r = this.state.r;
     const progActive = this.state.progActive;
-    const skillSelected = this.state.skillSelected;
+    const activeBoxSide = this.state.activeBoxSide;
+    const boxAnimation = this.state.boxAnimation;
 
     return (
       <div id="skills-component">
@@ -64,7 +70,7 @@ export default class Skills extends Component {
           </div> */}
         </span>
         <div className="box-wrapper">
-            <div className="box">
+            <div className={`box box-animate-${boxAnimation} ${activeBoxSide}`}>
               
               <div className="sides software-development" id="front">
                 <div id="front-face">
@@ -138,12 +144,12 @@ export default class Skills extends Component {
                 <div id="right-reverse"></div>
               </div>
 
-              <div className="sides" id="top">
+              <div className={`sides top-animate-${boxAnimation}`} id="top">
                 <div id="top-face"></div>
                 <div id="top-reverse"></div>
               </div>
               
-              <div className="sides" id="bottom">
+              <div className={`sides bottom-animate-${boxAnimation}`} id="bottom">
                 <div id="bottom-face"></div>
                 <div id="bottom-reverse"></div>
               </div>
@@ -152,7 +158,7 @@ export default class Skills extends Component {
           </div>
         <div className="progressbars-container">
           <div className="container__progressbars">
-            <div className={`progressbar progressbar1 progress1-${progActive}`} onClick={this.handleMouseClick}>
+            <div className={`progressbar progressbar1 progress1-${progActive}`} onClick={this.handleBoxAnimation}>
               <div className="progressbar1-spinner"></div>
               <svg className="progressbar__svg">
                 {/* <circle onMouseEnter={this.handleMouseHover} cx={cx} cy={cy} r={r} className="progressbar__svg-circle circle-frontend shadow-frontend"> </circle> */}
@@ -161,7 +167,7 @@ export default class Skills extends Component {
               <span className="progressbar__text shadow-frontend">Frontend</span>
             </div>
 
-            <div className={`progressbar progressbar2 progress2-${progActive}`} onClick={this.handleMouseClick}>
+            <div className={`progressbar progressbar2 progress2-${progActive}`} onClick={this.handleBoxAnimation}>
               <div className="progressbar2-spinner"></div>
               <svg className="progressbar__svg">
                 {/* <circle onMouseEnter={this.handleMouseHover} cx={cx} cy={cy} r={r} className="progressbar__svg-circle circle-backend shadow-backend"> </circle> */}
@@ -170,7 +176,7 @@ export default class Skills extends Component {
               <span className="progressbar__text shadow-backend">Backend</span>
             </div>
 
-            <div className={`progressbar progressbar3 progress3-${progActive}`} onClick={this.handleMouseClick}>
+            <div className={`progressbar progressbar3 progress3-${progActive}`} onClick={this.handleBoxAnimation}>
               <div className="progressbar3-spinner"></div>
               <svg className="progressbar__svg">
                 {/* <circle onMouseEnter={this.handleMouseHover} cx={cx} cy={cy} r={r} className="progressbar__svg-circle circle-passion shadow-passion"> </circle> */}

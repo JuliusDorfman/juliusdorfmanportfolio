@@ -87,6 +87,7 @@ export const Appbackground = () => {
               area: 800,
             },
             value: 20,
+            limit: 30,
           },
           opacity: {
             value: .08,

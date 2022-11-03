@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #141414;
+  background: #090b10;
+  border-right: 2px solid white;
   width: 25vw;
   min-width: 175px;
   transition: .5s;

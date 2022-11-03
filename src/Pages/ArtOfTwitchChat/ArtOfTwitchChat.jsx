@@ -17,6 +17,9 @@ export default class ArtOfTwitchChat extends Component {
   render() {
     return (
       <div id="artoftwitchchat-component" className="product-section">
+        <div className="AOTT-text">ART OF
+          <br />
+          TWITCH CHAT</div>
         <a href="https://art-of-twitch.herokuapp.com/" target="_blank" rel="noreferrer"><h1>Art Of Twitch Chat</h1></a>
         <p>Render Art from your favorite streamer&apos;s chat room.</p>
         <br />
@@ -27,9 +30,12 @@ export default class ArtOfTwitchChat extends Component {
 
           a marriage of <br /><span className="bolded">text-prompted AI Generated Art</span> and <span className="bolded">Twitch.tv!</span>
         </p>
+        <br />
         <a href="https://art-of-twitch.herokuapp.com/" target="_blank" rel="noreferrer">
           <div className="artoftwitchchat-link">Check it out!</div>
         </a>
+        <br />
+        <br />
         <h3>Technologies</h3>
         <p>ReactJS, NodeJS, Python, Amazon Web Services: S3. Deployed on Heroku</p>
         <p>Twitch API, Dreamstudio API</p>

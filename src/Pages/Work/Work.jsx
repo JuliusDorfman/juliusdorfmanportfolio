@@ -1,6 +1,8 @@
 import React from 'react';
 import './Work.css';
-import AOTT from '../../../src/Assets/AOTT.png';
+import Spinner from '../../Components/Spinner/Spinner';
+import ArtOfTwitchChat from '../ArtOfTwitchChat';
+import AOTT from '../../../src/Assets/AOTT-1.png';
 
 export default class Work extends React.Component {
   constructor(props) {
@@ -8,45 +10,103 @@ export default class Work extends React.Component {
     this.state = {
       // eslint-disable-next-line react/prop-types
       currentPage: this.props.currentPage,
-      page: 'work'
+      page: 'work',
+      projectSlides: {
+        AOTT: false
+      }
     };
   }
 
 
   handleWorkPage = (e) => {
     e.preventDefault();
-    let pageValue = e.target.getAttribute('pagevalue');
-    this.setState({ currentPage: pageValue }, () => {
-      // eslint-disable-next-line react/prop-types
-      this.props.handleCurrentPage(pageValue);
-    });
+    let projectValue = e.target.getAttribute('projectvalue');
+    let projectSlides = {
+      AOTT: false,
+    };
+
+    projectSlides[projectValue] = true;
+    this.setState({ projectSlides: projectSlides });
   };
 
+  handleReturnButton = () => {
+    let projectSlides = {
+      AOTT: false,
+    }
+    this.setState({ projectSlides: projectSlides })
+  }
+
+  // handleWorkPage = (e) => {
+  //   e.preventDefault();
+  //   let pageValue = e.target.getAttribute('pagevalue');
+  //   this.setState({ currentPage: pageValue }, () => {
+  //     // eslint-disable-next-line react/prop-types
+  //     this.props.handleCurrentPage(pageValue);
+  //   });
+  // };
 
 
   render() {
+
+    let projectSlides = this.state.projectSlides;
+
     return (
-      <div id="work-component">
+      <div id='work-component'>
         <div className="work-text">WORK</div>
         <h1><span className="subtext">some of</span> My Work</h1>
-        <div className="work-component-content">
-          <div className="work-panels-wrapper">
-            <div id="art-of-twitch" className="work-panel">
-              {/* eslint-disable-next-line react/no-unknown-property */}
-              <img onClick={(e) => this.handleWorkPage(e)} pagevalue={'artoftwitchchat'} src={AOTT} alt="State of Twitch" />
+        <div className={`work-component-content work-slides-${projectSlides.AOTT}`}>
+          <div id="art-of-twitch"  className="work-panel-container">
+            <div className="img-wrapper">
+              <img src={AOTT} alt="State of Twitch" />
             </div>
-            <div className="work-panel">Get Excited...</div>
+            <div className="work-panel-details">
+              <h3>
+                Art of Twitch
+              </h3>
+              <p>
+                Web Application
+                <br />
+              </p>
+              <div
+                className="panel-info"
+                onClick={this.handleWorkPage}
+                projectvalue='AOTT'
+              >
+                <p>Project Details</p>
+              </div>
+            </div>
           </div>
-          <div className="work-panels-wrapper">
-            <div className="work-panel">In Development...</div>
-            <div className="work-panel">Stay Tuned...</div>
+          <div className="work-panel-container">
+
           </div>
-          {/* <div className="indication-wrapper">
-            <div></div>
-            <div className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
-          </div> */}
+          <div className="work-panel-container">
+
+          </div>
+          <div className="work-panel-container">
+            <div className="img-wrapper">
+              <Spinner />
+              {/* <img onClick={this.handleWorkPage} pagevalue={'artoftwitchchat'} src={AOTT} alt="State of Twitch" /> */}
+            </div>
+            <div className="work-panel-details">
+              <h3>
+                Coming Soon...
+              </h3>
+              <p>
+                Web Application
+                <br />
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+        <div className="work-pages-container">
+
+          <div className={`AOTT-slide-${projectSlides.AOTT}`}>
+            {/* <div className={`AOTT-slide-false`}> */}
+            <div className="return-button" onClick={this.handleReturnButton}><span>&lt;</span><br />back</div>
+            <ArtOfTwitchChat returnbutton={this.handleReturnButton}/>
+          </div>
+        </div>
+      </div >
     );
   }
 }

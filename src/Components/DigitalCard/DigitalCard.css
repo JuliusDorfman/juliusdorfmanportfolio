@@ -331,6 +331,17 @@
     margin-top: 150px;
   }
 
+  .digital-card-component {
+    height: 350px;
+  }
+
+  .line-wrappers {
+    height: 57%;
+  }
+
+  .card-shine {
+    height: 83%;
+  }
   .digital-card-container {
     transform: rotateZ(90deg) !important;
   }

@@ -25,7 +25,7 @@ class App extends React.Component {
       pageRender: 'not-rendered',
       // pageToRender: this.props.currentPage,
       fullpageAnimation: 'page-in',
-      floaters: true,
+      floaters: false,
       mouseAnim: {
         mouseX: 0,
         mouseY: 0,
@@ -75,7 +75,8 @@ class App extends React.Component {
     }
   };
 
-  handleToggleFloaters = () => {
+  handleToggleFloaters = (e) => {
+    e.preventDefault();
     let floaters = this.state.floaters ? false : true;
 
     this.setState({ floaters: floaters });
@@ -103,7 +104,8 @@ class App extends React.Component {
     // const menuOpen = this.state.menuOpen;
 
     return (
-      <div className="App" onMouseMove={this.handleMouseMove}>
+      <div className="App">
+      {/* <div className="App" onMouseMove={this.handleMouseMove}> */}
         {/* <span id="cursor-outer" style={{left:`${X}px`, top: `${Y}px`}}></span> */}
         {/* <span id="cursor-trailer" style={{left:`${X}px`, top: `${Y}px`}}></span> */}
         <header className="App-header">
@@ -122,6 +124,12 @@ class App extends React.Component {
                     <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} />
                   </section>
                 );
+              case 'expertise':
+                return (
+                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                    <Work currentPage={currentPage} pageRender={this.state.pageRender} handleCurrentPage={this.handleCurrentPage} />
+                  </section>
+                );                
               case 'about':
                 return (
                   <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>

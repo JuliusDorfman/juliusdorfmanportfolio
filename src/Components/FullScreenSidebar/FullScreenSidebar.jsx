@@ -13,19 +13,29 @@ export default class FullScreenSidebar extends Component {
     };
   }
 
-  render() {
-    const handlePageClicked = (e) => {
+   handlePageClicked = (e) => {
       let pageValue = e.target.getAttribute('pagevalue');
-      console.log(' ');
-      if (pageValue === 'homepage') {
-        if (window.pageYOffset > 200) {
-          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        }
-      }
-      this.setState({ currentPage: pageValue }, () => {
-        this.props.handleCurrentPage(pageValue);
-      });
+      let scrollDestination = document.querySelector(`#${pageValue}`);
+      console.log("scrollDestination", scrollDestination)
+      console.log('pagevalue', pageValue);
+      scrollDestination.scrollIntoView()
     };
+
+
+
+  render() {
+    // const handlePageClicked = (e) => {
+    //   let pageValue = e.target.getAttribute('pagevalue');
+    //   console.log(' ');
+    //   if (pageValue === 'homepage') {
+    //     if (window.pageYOffset > 200) {
+    //       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    //     }
+    //   }
+    //   this.setState({ currentPage: pageValue }, () => {
+    //     this.props.handleCurrentPage(pageValue);
+    //   });
+    // };
 
     return (
       <div id="FullScreenSidebar" className={`sidebar-${this.props.toggleHide}`}>
@@ -47,11 +57,16 @@ export default class FullScreenSidebar extends Component {
         </div>
         <div id="fullScreenSidebar-links">
           <ul>
-            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="homepage">Home</li>
-            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="about">About</li>
-            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="skills">My Skills</li>
-            <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li>
+            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="homepage-component">Home</li>
+            {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="homepage">Home</li> */}
+            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="expertise-component">Expertise</li>
+            {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="about">About</li> */}
+            {/* <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="skills-component">My Skills</li> */}
+            {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="skills">My Skills</li> */}
+            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="work-component">Work</li>
+            {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li> */}
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="contact">Contact</li> */}
+            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="experience-component">Experience</li>
           </ul>
           {this.props.floaters
             ?

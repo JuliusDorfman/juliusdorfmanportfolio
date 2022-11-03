@@ -12,14 +12,22 @@ export default class Navbar extends Component {
   }
 
 
-  handleClick = (e) => {
+  handlePageClicked = (e) => {
     let pageValue = e.target.getAttribute('pagevalue');
-    // console.log('nav click', pageValue)
-    this.setState({ currentPage: pageValue }, () => {
-      this.props.handleCurrentPage(pageValue);
-      this.props.toggleNav();
-    });
+    let scrollDestination = document.querySelector(`#${pageValue}`);
+    console.log("scrollDestination", scrollDestination)
+    console.log('pagevalue', pageValue);
+    scrollDestination.scrollIntoView()
   };
+
+  // handleClick = (e) => {
+  //   let pageValue = e.target.getAttribute('pagevalue');
+  //   // console.log('nav click', pageValue)
+  //   this.setState({ currentPage: pageValue }, () => {
+  //     this.props.handleCurrentPage(pageValue);
+  //     this.props.toggleNav();
+  //   });
+  // };
 
 
   render() {
@@ -44,23 +52,28 @@ export default class Navbar extends Component {
         </div>
         <div className="navigation-links-wrapper">
           <ul className="navigation-links">
-            <li pagevalue="home" onClick={(e) => { this.handleClick(e); }}>Home</li>
-            <li pagevalue="about" onClick={(e) => { this.handleClick(e); }}>About</li>
-            <li pagevalue="skills" onClick={(e) => { this.handleClick(e); }}>My Skills</li>
-            <li pagevalue="work" onClick={(e) => { this.handleClick(e); }}>Work</li>
+            <li pagevalue="homepage-component" onClick={this.handlePageClicked}>Home</li>
+            {/* <li pagevalue="home" onClick={(e) => { this.handleClick(e); }}>Home</li> */}
+            <li pagevalue="expertise-component" onClick={this.handlePageClicked}>Expertise</li>
+            {/* <li pagevalue="about" onClick={(e) => { this.handleClick(e); }}>About</li> */}
+            {/* <li pagevalue="skills-component" onClick={(e) => { this.handleClick(e); }}>My Skills</li> */}
+            {/* <li pagevalue="skills" onClick={(e) => { this.handleClick(e); }}>My Skills</li> */}
+            <li pagevalue="work-component" onClick={this.handlePageClicked}>Work</li>
+            {/* <li pagevalue="work" onClick={(e) => { this.handleClick(e); }}>Work</li> */}
             {/* <li value="contact">Contact</li> */}
+            <li pagevalue="experience-component" onClick={this.handlePageClicked}>Experience</li>
             {/* <li value="blog">Blog</li> */}
           </ul>
         </div>
         <div className="nav-socials-wrapper">
           <ul className="nav-socials-links">
-            <li>          
-              { console.log(this.props) }
+            <li>
+              {/* { console.log(this.props) } */}
               {this.props.floaters
-              ?
-              <div className="floater-button-navbar" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Enabled <br />&#128512;</div></div>
-              :
-              <div className="floater-button-navbar" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Disabled <br />&#128544;</div></div>
+                ?
+                <div className="floater-button-navbar" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Enabled <br />&#128512;</div></div>
+                :
+                <div className="floater-button-navbar" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Disabled <br />&#128544;</div></div>
               }
             </li>
             <li>

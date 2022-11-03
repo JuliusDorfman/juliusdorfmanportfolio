@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import About from '../../Pages/About';
 import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
+import Expertise from '../Expertise/Expertise';
+import Experience from '../Experience/Experience';
 // import Contact from '../../Pages/Contact';
 import pTagOpen from '../../Assets/p-tag-open-2.png';
 import pTagClose from '../../Assets/p-tag-close-2.png';
@@ -47,26 +49,34 @@ export default class Homepage extends Component {
               <br />
               <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} />
             </p>
-            <button href="https://www.linkedin.com/in/juliusgdorfman/"
-              target="_blank" rel="noreferrer"
-              className="contact-me">
-              <a href="https://www.linkedin.com/in/juliusgdorfman/"
-                target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/juliusgdorfman/"
+              target="_blank" rel="noreferrer">
+              <button href="https://www.linkedin.com/in/juliusgdorfman/"
+                target="_blank" rel="noreferrer"
+                className="contact-me">
                 Contact Me
-              </a>
-            </button>
+              </button>
+            </a>
             <div className="indication-wrapper">
               <div></div>
               <div href={'#about-component'} className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
               <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
             </div>
           </div>
+          <div className="homepage-text">
+            HELLO 
+            <br />
+            WORLD
+          </div>
         </div>
+        <div className="background-spacer"></div>
         <div className="homepage-components-wrapper">
-          <About />
-          <Skills />
+          <Expertise />
+          {/* <About /> */}
+          {/* <Skills /> */}
           <Work handleCurrentPage={this.props.handleCurrentPage} />
           {/* <Contact /> */}
+          <Experience />
         </div>
         <footer className="bottom-space"></footer>
       </div>

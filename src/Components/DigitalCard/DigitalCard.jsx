@@ -3,7 +3,7 @@ import './DigitalCard.css';
 
 export default function DigitalCard() {
 
-  // let digitalCardContainer = document.getElementsByClassName('digital-card-container')[0]
+  let digitalCardContainer = document.getElementsByClassName('digital-card-container')[0]
   let digitalCard = document.getElementsByClassName('digital-card')[0]
   let digitalCardBack = document.getElementsByClassName('digital-card-back')[0]
   let lineWrapperBack = document.getElementsByClassName('line-wrappers-back')[0]
@@ -13,7 +13,7 @@ export default function DigitalCard() {
   let cardShine = document.getElementsByClassName("card-shine")[0]
 
   const handleCardFlip = () => {
-    // console.log("clicked");
+    console.log("clicked");
     if (digitalCard.style.transform === "scaleX(-1)") {
       digitalCard.style.transform = "scaleX(1)";
       digitalCardBack.style.transform = "scaleX(-1)";

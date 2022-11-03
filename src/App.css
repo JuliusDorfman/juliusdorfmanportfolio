@@ -1,5 +1,11 @@
+/* Global */
+html {
+  scroll-behavior: smooth;
+}
+
 /** App Component **/
 .App {
+  overflow: hidden;
  /* cursor: url("./Assets/white-cursor.png"), auto; */
 }
 
@@ -27,6 +33,7 @@
   align-items: center;
   transition: all .5s ease-in-out;
   cursor: pointer;
+  /* visibility: hidden; */
 }
 
 .nav-border {
@@ -103,7 +110,7 @@
 
 .bottom-space {
   height: 20vh;
-  background-color: #121214;
+  background-color: #0f111a;
 }
 
 /* Global Colors */
@@ -162,7 +169,7 @@
 }
 
 .App-header {
-  background-color: #121214;
+  background-color: #0f111a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -258,4 +265,10 @@
   transform: translate(-18px, -18px);
   pointer-events: none;
   transition: 1s
+}
+
+@media (max-width: 480px) {
+  #nav-button {
+    visibility: initial;
+  }
 }

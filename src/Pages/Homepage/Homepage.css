@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
 }
+
 /* 
 .welcome-text {
   content: "WELCOME";
@@ -12,9 +13,29 @@
   z-index: 0;
   font-weight: bolder;
 } */
+.homepage-text {
+  position: absolute;
+  text-align: left;
+  top: 0;
+  line-height: .9em;
+  left: 0;
+  font-size: 25rem;
+  color: rgba(167, 188, 214, .02);
+  white-space: nowrap;
+  z-index: 0 !important;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* St */
+}
 
 #homepage-component .contact-me {
-  margin-top: 10vh;;
+  margin-top: 10vh;
+  ;
   box-shadow: none;
   border: 2px solid #A7BCD6;
   background: transparent;
@@ -23,11 +44,9 @@
   height: 40px;
   letter-spacing: .2em;
   text-decoration: none;
-}
-#homepage-component .contact-me a {
   color: #A7BCD6;
-  text-decoration: none;
 }
+
 
 #homepage-component .contact-me button {
   display: flex;
@@ -43,6 +62,7 @@
   color: ghostwhite;
   cursor: pointer;
 }
+
 #homepage-component .contact-me:hover a {
   color: ghostwhite;
 }
@@ -53,11 +73,13 @@
   font-size: 17px;
   font-weight: bolder;
   transform: translate(-15px, -7px);
-  transition: .5s;;
+  transition: .5s;
+  ;
 }
 
 .landing-page-wrapper {
-  height: 75vh;
+  height: 95vh;
+  border-bottom: 2px solid white;
 }
 
 .landing-nav-top {
@@ -70,8 +92,8 @@
   font-family: 'Julius Sans One', sans-serif;
 }
 
-.landing-intro h1 span{
-  font-size: 2rem;  
+.landing-intro h1 span {
+  font-size: 2rem;
 }
 
 .landing-intro .landing-flavor {
@@ -106,11 +128,11 @@
   -o-user-select: none;
 }
 
-.vertical-orientation-left{
+.vertical-orientation-left {
   margin: 5vh 0 5vh 5vw;
 }
 
-.vertical-orientation-right{
+.vertical-orientation-right {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -130,9 +152,17 @@
 }
 
 @keyframes scrollBounce {
-  0% {transform: translateY(5vh)}
-  50% {transform: translateY(-5vh)}
-  100% {transform: translateY(5vh)}
+  0% {
+    transform: translateY(5vh)
+  }
+
+  50% {
+    transform: translateY(-5vh)
+  }
+
+  100% {
+    transform: translateY(5vh)
+  }
 }
 
 /* Fullpage Animations */
@@ -141,8 +171,9 @@
   opacity: 1;
   transition: .5s;
   width: inherit;
-  
+
 }
+
 .fullpage-animations-page-out {
   opacity: 0;
   transition: .5s;
@@ -167,6 +198,7 @@
 .landing-intro .h1-flavor-open {
   transform: translate(-5vw, 20px);
 }
+
 .landing-intro .h1-flavor-close {
   transform: translate(-5vw, -30px);
 }
