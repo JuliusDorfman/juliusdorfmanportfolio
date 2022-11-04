@@ -103,9 +103,10 @@
 }
 
 .accordian-expand-button {
-  color: black;
-  transform: translateY(-3px);
   cursor: pointer;
+  color: black;
+  font-weight: 900;
+  transform: translateY(-3px);
 }
 
 .accordian-content {

@@ -38,7 +38,6 @@ class Experience extends Component {
         <div className="experience-text">Experience</div>
         <h1 className="experience-header"><span className="subtext">growing </span>Professional Experience</h1>
         <p className="experience-page-intro">
-          page intro
         </p>
         <div className="experience-section">
           <div className="accordian">
