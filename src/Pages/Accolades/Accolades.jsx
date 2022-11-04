@@ -11,11 +11,34 @@ export default class Accolades extends Component {
       // eslint-disable-next-line react/prop-types
       currentPage: this.props.currentPage,
       page: 'accolades',
+      reference: {
+        reference1: false,
+        reference2: false,
+        reference3: false,
+      }
     };
+  }
+
+
+  handleShowReference = (e) => {
+    let referenceValue = e.target.getAttribute("refvalue");
+
+    let reference = {
+      reference1: this.state.reference.reference1,
+      reference2: this.state.reference.reference2,
+      reference3: this.state.reference.reference3,
+    }
+
+    reference[referenceValue] = reference[referenceValue] ? false : true;
+
+    this.setState({reference: reference }, () => {
+      // console.log(this.state.reference)
+    });
 
   }
 
   render() {
+    const quoteReference = this.state.reference;
     return (
       <section id='accolades-component'>
 
@@ -35,10 +58,10 @@ export default class Accolades extends Component {
               Send me an email or contact me via instant message!
             </h6>
             <footer>
-            <ul className="footer-links">
-              <li><a href="https://www.linkedin.com/in/juliusgdorfman/" target="_blank" rel='noreferrer'>linkedin</a></li>
-              <li><a href="https://github.com/JuliusDorfman" target="_blank" rel='noreferrer'>github</a></li>
-            </ul>
+              <ul className="footer-links">
+                <li><a href="https://www.linkedin.com/in/juliusgdorfman/" target="_blank" rel='noreferrer'>linkedin</a></li>
+                <li><a href="https://github.com/JuliusDorfman" target="_blank" rel='noreferrer'>github</a></li>
+              </ul>
             </footer>
           </div>
 
@@ -54,11 +77,21 @@ export default class Accolades extends Component {
                 He patiently waited for me to access documents and photos that needed uploading, and then promised results first thing on Monday.
                 All of the website changes were completed to a T and documents uploaded before I checked on Monday at 6:30 am.
               </p>
-              <p>
-                - Bambi Fletcher
-                <br />
-                Matrix Client
-              </p>
+              <div className="attributed-to">
+                <p>
+                  - Bambi Fletcher
+                  <br />
+                  Matrix Client
+                </p>
+                <div className="reference-button">
+                  <svg refvalue="reference1" onClick={this.handleShowReference} viewBox="0 0 512 512">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
+                  </svg>
+                </div>
+              </div>
+              <img className={`quote-${quoteReference.reference1}`} src={imatrix1} alt="reference-1" />
+              <img className={`quote-${quoteReference.reference2}`} src={imatrix2} alt="reference-2" />
+              <img className={`quote-${quoteReference.reference3}`} src={imatrix3} alt="reference-3" />
             </div>
             <div className="accolades accolade-2">
               <span className="quotes">
@@ -70,11 +103,18 @@ export default class Accolades extends Component {
                 Julius is one of the technicians at iMatrix. He listened carefully to all of our changes
                 and applied them accurately and in real time. Great job, Julius!
               </p>
-              <p>
-                - Glen Matejka
-                <br />
-                Matrix Client
-              </p>
+              <div className="attributed-to">
+                <p>
+                  - Glen Matejka
+                  <br />
+                  Matrix Client
+                </p>
+                <div className="reference-button">
+                  <svg refvalue="reference2" onClick={this.handleShowReference} viewBox="0 0 512 512">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
+                  </svg>
+                </div>
+              </div>
             </div>
             <div className="accolades accolade-3">
               <span className="quotes">
@@ -86,14 +126,20 @@ export default class Accolades extends Component {
                 Julius WAS AWESOME!!! Prompt, fast, couteous, service. Every instruction was followed
                 perfect!!!!!
               </p>
-              <p>
-                - Bambi Fletcher
-                <br />
-                Matrix Client
-              </p>
+              <div className="attributed-to">
+                <p>
+                  - Bambi Fletcher
+                  <br />
+                  Matrix Client
+                </p>
+                <div className="reference-button">
+                  <svg refvalue="reference3" onClick={this.handleShowReference} viewBox="0 0 512 512">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
+                  </svg>
+                </div>
+              </div>
             </div>
             <div className="accolade-4">
-
             </div>
           </div>
         </div>

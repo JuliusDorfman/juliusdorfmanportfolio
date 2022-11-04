@@ -45,13 +45,16 @@
   background: black;
 }
 
-.contact-action>h4 {
-  font-size: 1.7em;
-}
-
 .contact-action>h4,
 .contact-action>h6 {
   padding: 0 0 0 40px;
+}
+
+.contact-action>h4 {
+  font-size: 1.7em;
+}
+.contact-action>h6 {
+  padding-right: 20px;
 }
 
 .accolades-text {
@@ -159,31 +162,78 @@
   color: white;
 }
 
+.attributed-to {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.attributed-to>* {
+  width: 50%;
+}
+
+.reference-button svg {
+  display: block;
+  height: 40px;
+  margin: auto;
+  padding: 3px 10px;
+  margin-top: 15px;
+  fill: white;
+  cursor: pointer;
+}
+
+
+.quote-false {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(105vw);
+  transition: .5s;
+  z-index: 100;
+}
+
+.quote-true {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-55vw);
+  transition: .5s;
+  z-index: 100;
+}
 
 @media (max-width: 1000px) {
-  
+
   #accolades-component {
     height: 130vh;
   }
-  
+
   .accolades {
     font-size: .61em;
   }
-  
+
   .accolades-content {
     flex-direction: column-reverse;
   }
-  
+
   .accolades-content>div {
     width: 100%;
   }
 
 
-.footer-links>li:before {
-  top: 30px;
+  .footer-links>li:before {
+    top: 30px;
+  }
+
+  .quote-true {
+    transform: translateX(0);
+    width: 100vw;
+  }
+
+  .quote-false {
+    width: 100vw;
+  }
 }
 
-}
 @media (max-width: 500px) {
   .accolades {
     font-size: .81em;
@@ -192,5 +242,5 @@
   .footer-links>li:before {
     top: 22px;
   }
-  
+
 }
