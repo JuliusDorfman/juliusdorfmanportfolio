@@ -138,7 +138,7 @@ class Experience extends Component {
                       </svg>
                       California, USA
                     </span>
-                    <span><a href="https://www.guildmortgage.com" target="_blank" rel="noreferrer"> &nbsp; guildmortgage.com</a></span>
+                    <span><a href="https://imatrix.com/" target="_blank" rel="noreferrer"> &nbsp; imatrix.com</a></span>
                   </div>
                   <div className="job-description">
                     Developing websites for clients and private businesses practices in Healthcare. Often On-call and live programming while building rapport directly with website owner.
