@@ -6,6 +6,7 @@ import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
 import Expertise from '../Expertise/Expertise';
 import Experience from '../Experience/Experience';
+import Accolades from '../Accolades/Accolades';
 // import Contact from '../../Pages/Contact';
 import pTagOpen from '../../Assets/p-tag-open-2.png';
 import pTagClose from '../../Assets/p-tag-close-2.png';
@@ -37,7 +38,7 @@ export default class Homepage extends Component {
           <div className="landing-intro">
             <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`} />
             <h1>
-              J<span>ulius</span> D<span>orfman</span>
+              <span className="bolded">J</span>ulius <span className="bolded">D</span>orfman
               <br />
               <span className="landing-flavor">web developer</span>
             </h1>
@@ -77,8 +78,9 @@ export default class Homepage extends Component {
           <Work handleCurrentPage={this.props.handleCurrentPage} />
           {/* <Contact /> */}
           <Experience />
+          <Accolades />
         </div>
-        <footer className="bottom-space"></footer>
+        {/* <footer className="bottom-space"></footer> */}
       </div>
     );
   }

@@ -171,7 +171,211 @@
 }
 
 .passion-development {
+  position: relative;
   border-right: none;
+  width: 50%;
+  text-align: center;
+  padding: 0;
+  min-height: 250px;
+  overflow: hidden;
+}
+
+// .passion-development > h5 {
+//   padding-top: 2%;
+// }
+// Blob & Puddle
+
+.blob-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 7%;
+  left: 0;
+}
+
+.animated-blob {
+  position: relative;
+  height: 35%;
+  width: 100%;
+}
+
+#blob-1 {
+  fill: white;
+}
+
+.animated-blob svg {
+  // position: absolute;
+  height: 140px;
+  width: 100px;
+  top: 0;
+  left: 0;
+
+}
+
+.animated-blob svg g {
+  height: 50%;
+  width: 50%;
+}
+
+.puddle-wrapper {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  transform: rotate(45deg);
+}
+
+.puddle-wrapper svg {
+  width: 155%;
+}
+
+.animated-blob>span {
+  position: absolute;
+  z-index: 1;
+  color: black;
+  top: 4em;
+  left: 11em;
+  font-size: .45em;
+  animation: spinningElements 2s infinite ease-in
+}
+
+.puddle-wrapper>span {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  left: 50%;
+  top: 30%;
+}
+
+.passion-development .spinning-div {
+  position: absolute;
+  animation: spinningElements 5s infinite reverse ease-in;
+  font-size: .45em;
+  top: 85%;
+  left: 55%;
+}
+
+
+@keyframes spinningElements {
+
+  0% {
+    transform: rotateZ(0) translateX(-20px);
+  }
+
+  50% {
+    transform: rotateZ(290deg) translateX(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg) translateX(-20px);
+  }
+}
+
+// Cogs 
+
+
+#cogs-container {
+  position: relative;
+  width: 230px;
+  height: 100%;
+  margin: 20px auto;
+  // overflow:hidden;
+  // box-shadow: 0 0 200px darkslategray;
+}
+
+.spoke {
+  background-color: grey;
+  position: absolute;
+  height: 78px;
+  width: 14px;
+  margin-left: -7px;
+  margin-top: -8.5px;
+  left: 50%;
+  border-radius: 5px;
+  z-index: 10;
+  transform: rotateZ(10deg);
+}
+
+.spoke+.spoke {
+  transform: rotateZ(55deg);
+}
+
+.spoke+.spoke+.spoke {
+  transform: rotateZ(-35deg);
+}
+
+.spoke+.spoke+.spoke+.spoke {
+  transform: rotateZ(100deg);
+}
+
+.cog {
+  position: absolute;
+  background-color: grey;
+  width: 60px;
+  height: 60px;
+  // width: 150px;
+  // height: 150px;
+  border-radius: 50%;
+  z-index: 10;
+  // margin-left: 12%;
+  left: 48px;
+  animation: spin 10s infinite linear;
+}
+
+.cog+.cog {
+  position: absolute;
+  animation-delay: .19s;
+  animation: spin2 10s infinite linear;
+  margin-top: 0px;
+  margin-left: 30%;
+  // margin-left:100px;
+}
+
+.hole {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #0F111A;
+  border-radius: 50%;
+  z-index: 3000;
+  box-shadow: inset 0 0 15px 1px #B2CCCA;
+}
+
+.droplet {
+  position: absolute;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+// Cogs End
+
+
+
+.passion-development:before {
+  display: none;
+}
+
+.passion-development:after {
+  display: none;
 }
 
 @media (max-width:1000px) {
@@ -232,6 +436,22 @@
     top: 90%;
   }
 
+  .blob-wrapper {
+    top: 2%;
+  }
+
+  .animated-blob {
+    width: 112%;
+  }
+
+  .animated-blob span {
+    top: 6em;
+    left: 49%;
+  }
+
+  .puddle-wrapper > span {
+    left: 56%;
+  }
 
 }
 

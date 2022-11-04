@@ -95,7 +95,6 @@
   width: 100%;
   opacity: 0;
   transition: .5s;
-  
 }
 
 .work-panel-container:hover .project-blur {

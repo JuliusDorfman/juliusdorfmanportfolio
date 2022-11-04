@@ -16,6 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      pageLoading: false,
       menuOpen: false,
       burgerOpen: false,
       burgerClass: '',
@@ -108,45 +109,45 @@ class App extends React.Component {
       {/* <div className="App" onMouseMove={this.handleMouseMove}> */}
         {/* <span id="cursor-outer" style={{left:`${X}px`, top: `${Y}px`}}></span> */}
         {/* <span id="cursor-trailer" style={{left:`${X}px`, top: `${Y}px`}}></span> */}
-        <header className="App-header">
+        <div className="site">
           <button id="nav-button" className={`nav-border${this.state.navBorderToggle}`} onClick={this.toggleNav}><div className={`nav-burger ${this.state.burgerClass}`}></div></button>
           {this.state.menuOpen ?
-            <div className={`nav-comp-wrap ${fadeClass}`}>
+            <header className={`nav-comp-wrap ${fadeClass}`}>
               <Navbar currentPage={currentPage} handleCurrentPage={this.handleCurrentPage} toggleNav={this.toggleNav} floaters={this.state.floaters} toggleFloaters={this.handleToggleFloaters}/>
-            </div> : null}
+            </header> : null}
           <div id="page-rendered">
             <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} toggleFloaters={this.handleToggleFloaters} floaters={this.state.floaters} />
             {(() => {
               switch (this.state.currentPage) {
               case 'homepage':
                 return (
-                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                  <div className={`fullpage-animations-${this.state.fullpageAnimation}`}>
                     <Homepage currentPage={currentPage} pageRender={pageRender} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} />
-                  </section>
+                  </div>
                 );
               case 'expertise':
                 return (
-                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                  <div className={`fullpage-animations-${this.state.fullpageAnimation}`}>
                     <Work currentPage={currentPage} pageRender={this.state.pageRender} handleCurrentPage={this.handleCurrentPage} />
-                  </section>
+                  </div>
                 );                
               case 'about':
                 return (
-                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                  <div className={`fullpage-animations-${this.state.fullpageAnimation}`}>
                     <About currentPage={currentPage} pageRender={this.state.pageRender} handleCurrentPage={this.handleCurrentPage} />
-                  </section>
+                  </div>
                 );
               case 'skills':
                 return (
-                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                  <div className={`fullpage-animations-${this.state.fullpageAnimation}`}>
                     <Skills currentPage={currentPage} pageRender={this.state.pageRender} />
-                  </section>
+                  </div>
                 );
               case 'work':
                 return (
-                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                  <div className={`fullpage-animations-${this.state.fullpageAnimation}`}>
                     <Work currentPage={currentPage} pageRender={this.state.pageRender} handleCurrentPage={this.handleCurrentPage} />
-                  </section>
+                  </div>
                 );
                 // case 'contact':
                 //   return (
@@ -156,9 +157,9 @@ class App extends React.Component {
                 // ); 
               case 'artoftwitchchat':
                 return (
-                  <section className={`fullpage-animations-${this.state.fullpageAnimation}`}>
+                  <div className={`fullpage-animations-${this.state.fullpageAnimation}`}>
                     <ArtOfTwitchChat currentPage={currentPage} pageRender={this.state.pageRender} />
-                  </section>
+                  </div>
                 );
               default:
                 return (
@@ -168,7 +169,7 @@ class App extends React.Component {
             })()
             }
           </div>
-        </header>
+        </div>
         {this.state.floaters
           ?
           <Appbackground />

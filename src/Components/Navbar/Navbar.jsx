@@ -62,6 +62,7 @@ export default class Navbar extends Component {
             {/* <li pagevalue="work" onClick={(e) => { this.handleClick(e); }}>Work</li> */}
             {/* <li value="contact">Contact</li> */}
             <li pagevalue="experience-component" onClick={this.handlePageClicked}>Experience</li>
+            <li pagevalue="accolades-component" onClick={this.handlePageClicked}>Accolades</li>
             {/* <li value="blog">Blog</li> */}
           </ul>
         </div>

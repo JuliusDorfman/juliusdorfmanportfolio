@@ -6,9 +6,12 @@ html {
 /** App Component **/
 .App {
   overflow: hidden;
- /* cursor: url("./Assets/white-cursor.png"), auto; */
+  /* cursor: url("./Assets/white-cursor.png"), auto; */
 }
 
+.App *::selection {
+  background: #F56AF0;
+}
 #page-rendered {
   display: flex;
   height: 100%;
@@ -168,7 +171,7 @@ html {
   }
 }
 
-.App-header {
+.site {
   background-color: #0f111a;
   min-height: 100vh;
   display: flex;

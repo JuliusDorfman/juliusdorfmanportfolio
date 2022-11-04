@@ -67,6 +67,7 @@ export default class FullScreenSidebar extends Component {
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li> */}
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="contact">Contact</li> */}
             <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="experience-component">Experience</li>
+            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="accolades-component">Accolades</li>
           </ul>
           {this.props.floaters
             ?

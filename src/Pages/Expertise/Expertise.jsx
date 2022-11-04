@@ -1,27 +1,51 @@
 import React, { Component } from 'react'
 import vscodeImg from '../../Assets/vscode_bg.png';
 import "./Expertise.scss";
-
+import KUTE from 'kute.js';
 
 export default class Expertise extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      yearsPassed: 0
+      yearsPassed: 0,
+
     }
+
   }
 
 
-  componentDidMount() {
+  componentDidMount = () => {
     const startYear = 2017;
     const getDate = new Date();
     const currentYear = getDate.getFullYear();
     const yearsPassed = currentYear - startYear;
     this.setState({ yearsPassed: yearsPassed });
+
+    window.addEventListener('scroll', this.handleScroll);
+
+    // const blobAnim = KUTE.fromTo(
+    //   '#blob-1',
+    //   { path: '#blob-1' },
+    //   { path: '#blob-2' },
+    //   { repeat: 999, duration: 1000, yoyo: true }
+    // )
+
+    // blobAnim.start();
+    // const puddleAnim = KUTE.fromTo(
+    //   '#puddle-1',
+    //   { path: '#puddle-1' },
+    //   { path: '#puddle-2' },
+    //   { repeat: 999, duration: 3000, yoyo: true }
+    // )
+    // puddleAnim.start();
+  }
+
+  componentWillUnmount = () => {
   }
 
   render() {
     let yearsPassed = this.state.yearsPassed;
+    // console.log(yearsPassed);
     return (
       <section id="expertise-component">
         <div className="expertise-text">EXPERTISE</div>
@@ -54,17 +78,65 @@ export default class Expertise extends Component {
 
           <div className="passion-development">
             <h5>
-              <span>Passion</span>
+              {/* <span>Passion</span> */}
               <br />
-              <span></span>
             </h5>
+
+            <div className="blob-wrapper">
+              <div className="animated-blob">
+                <span> &lt;div&gt;</span>
+                <svg viewBox="0 0 900 600" width="900" height="600">
+                  <g transform="translate(478.11343086651533 363.21997531693387)">
+                    <path id="blob-1" d="M133.8 -276.1C156.6 -218.6 146.7 -148.8 173.5 -100.7C200.2 -52.7 263.6 -26.3 286.6 13.2C309.5 52.8 292 105.7 259.5 143.8C227 181.9 179.5 205.3 133.8 224.7C88 244.1 44 259.5 12.6 237.7C-18.8 215.8 -37.5 156.6 -102.5 148.3C-167.4 140 -278.6 182.5 -325 166.2C-371.5 150 -353.2 75 -322.8 17.6C-292.3 -39.8 -249.7 -79.7 -219.1 -123.4C-188.5 -167.1 -170 -214.8 -135.5 -265.5C-101 -316.3 -50.5 -370.1 2.5 -374.5C55.5 -378.8 111 -333.6 133.8 -276.1">
+                    </path>
+                  </g>
+                  <g transform="translate(495.8264597002918 310.34036268771354)" style={{ visibility: "hidden" }}>
+                    <path id="blob-2" d="M110.5 -207.4C150.3 -168.4 194.7 -153.2 201.8 -122.6C209 -92 179 -46 201.2 12.8C223.5 71.7 297.9 143.3 280.5 156.2C263.1 169 153.8 123.1 91.7 96.6C29.7 70.1 14.8 63.2 -28.4 112.4C-71.7 161.6 -143.3 267 -194.3 287.1C-245.2 307.1 -275.5 241.8 -301.8 179.7C-328.1 117.7 -350.6 58.8 -364.6 -8.1C-378.6 -75 -384.1 -150 -340.9 -182.8C-297.6 -215.5 -205.6 -206.1 -140.6 -230.6C-75.7 -255.1 -37.8 -313.5 -1.3 -311.4C35.3 -309.2 70.7 -246.4 110.5 -207.4">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <div id="cogs-container">
+              {/* <span className="droplet"></span> */}
+              <div className="cog">
+                <div className="spoke"></div>
+                <div className="spoke"></div>
+                <div className="spoke"></div>
+                <div className="spoke"></div>
+                <div className="hole"></div>
+              </div>
+              <div className="cog">
+                <div className="spoke"></div>
+                <div className="spoke"></div>
+                <div className="spoke"></div>
+                <div className="spoke"></div>
+                <div className="hole"></div>
+              </div>
+            </div>
             <p></p>
+            <div className="puddle-wrapper">
+              <div className="animated-puddle">
+                <svg viewBox="0 0 900 600" width="900" height="600">
+                  <g transform="translate(478.11343086651533 363.21997531693387)">
+                    <path id="puddle-1" d="M133.8 -276.1C156.6 -218.6 146.7 -148.8 173.5 -100.7C200.2 -52.7 263.6 -26.3 286.6 13.2C309.5 52.8 292 105.7 259.5 143.8C227 181.9 179.5 205.3 133.8 224.7C88 244.1 44 259.5 12.6 237.7C-18.8 215.8 -37.5 156.6 -102.5 148.3C-167.4 140 -278.6 182.5 -325 166.2C-371.5 150 -353.2 75 -322.8 17.6C-292.3 -39.8 -249.7 -79.7 -219.1 -123.4C-188.5 -167.1 -170 -214.8 -135.5 -265.5C-101 -316.3 -50.5 -370.1 2.5 -374.5C55.5 -378.8 111 -333.6 133.8 -276.1">
+                    </path>
+                  </g>
+                  <g transform="translate(495.8264597002918 310.34036268771354)" style={{ visibility: "hidden" }}>
+                    <path id="puddle-2" d="M110.5 -207.4C150.3 -168.4 194.7 -153.2 201.8 -122.6C209 -92 179 -46 201.2 12.8C223.5 71.7 297.9 143.3 280.5 156.2C263.1 169 153.8 123.1 91.7 96.6C29.7 70.1 14.8 63.2 -28.4 112.4C-71.7 161.6 -143.3 267 -194.3 287.1C-245.2 307.1 -275.5 241.8 -301.8 179.7C-328.1 117.7 -350.6 58.8 -364.6 -8.1C-378.6 -75 -384.1 -150 -340.9 -182.8C-297.6 -215.5 -205.6 -206.1 -140.6 -230.6C-75.7 -255.1 -37.8 -313.5 -1.3 -311.4C35.3 -309.2 70.7 -246.4 110.5 -207.4">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <span className="spinning-div">&lt;/div&gt;</span>
           </div>
 
           {/* <div></div> */}
 
         </div>
-        <img className="vscode-img" src={vscodeImg} alt="vscode-flavor"/>
+        <img className="vscode-img" src={vscodeImg} alt="vscode-flavor" />
       </section>
     )
   }

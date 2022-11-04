@@ -25,7 +25,7 @@ export default class ArtOfTwitchChat extends Component {
 
   render() {
     return (
-      <div id="artoftwitchchat-component" className="product-section">
+      <section id="artoftwitchchat-component" className="product-section">
         <div className="AOTT-text">ART OF
           <br />
           TWITCH CHAT</div>
@@ -85,7 +85,7 @@ export default class ArtOfTwitchChat extends Component {
             </div>
           </div>
         </div>
-      </div >
+      </section >
     );
   }
 }

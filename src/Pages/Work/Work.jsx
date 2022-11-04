@@ -58,7 +58,7 @@ export default class Work extends React.Component {
     let projectSlides = this.state.projectSlides;
 
     return (
-      <div id='work-component'>
+      <section id='work-component'>
         <div className="work-text">WORK</div>
         <h1><span className="subtext">some of</span> My Work</h1>
         <div className={`work-component-content work-slides-${projectSlides.AOTT}`}>
@@ -115,7 +115,7 @@ export default class Work extends React.Component {
           </div>
 
         </div>
-      </div >
+      </section >
     );
   }
 }
