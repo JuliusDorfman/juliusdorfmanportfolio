@@ -90,10 +90,11 @@
   text-align: left;
   padding: 0 0 0 10vw;
   font-family: 'Julius Sans One', sans-serif;
+  letter-spacing: .5em;
 }
 
-.landing-intro {
-  
+.landing-intro .bolded{
+  font-size: 1.5em;
 }
 
 .landing-intro h1 span {
