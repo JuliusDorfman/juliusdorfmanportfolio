@@ -22,7 +22,7 @@
   font-size: 25rem;
   color: rgba(167, 188, 214, .02);
   white-space: nowrap;
-  z-index: 0 !important;
+  z-index: -1;
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
