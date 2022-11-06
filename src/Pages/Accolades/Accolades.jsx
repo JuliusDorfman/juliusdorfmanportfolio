@@ -105,7 +105,7 @@ export default class Accolades extends Component {
               </p>
               <div className="attributed-to">
                 <p>
-                  - Glen Matejka
+                  - Ken Zierler
                   <br />
                   Matrix Client
                 </p>
@@ -128,7 +128,7 @@ export default class Accolades extends Component {
               </p>
               <div className="attributed-to">
                 <p>
-                  - Bambi Fletcher
+                  - Glen Matejka
                   <br />
                   Matrix Client
                 </p>
