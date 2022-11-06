@@ -119,7 +119,7 @@
   color: white;
   font-weight: 400;
   background: #270901;
-  z-index: 1;
+  z-index: -1;
   height: 200px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -232,7 +232,7 @@
 }
 
 .imatrix-logo-wrapper {
-  // width: 40%;
+  width: 40%;
   margin: auto 0;
 }
 

@@ -9,6 +9,7 @@ import Skills from './Pages/Skills';
 import Appbackground from './Components/Appbackground';
 // import Contact from './Pages/Contact';
 import ArtOfTwitchChat from './Pages/ArtOfTwitchChat';
+import AOS from "aos";
 import './App.css';
 
 
@@ -93,7 +94,9 @@ class App extends React.Component {
   // handleMouseClick = () => {
   //   console.log("hello");
   // }
-
+  componentDidMount = () => {
+    AOS.init({ duration: 2000, once: true });
+  }
  
   render() {
 

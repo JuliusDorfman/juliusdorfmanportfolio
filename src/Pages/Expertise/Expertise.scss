@@ -217,17 +217,6 @@
   width: 50%;
 }
 
-.puddle-wrapper {
-  position: absolute;
-  top: 0;
-  left: -50%;
-  transform: rotate(45deg);
-}
-
-.puddle-wrapper svg {
-  width: 155%;
-}
-
 .animated-blob>span {
   position: absolute;
   z-index: 1;
@@ -235,30 +224,23 @@
   top: 4em;
   left: 11em;
   font-size: .45em;
-  animation: spinningElements 2s infinite ease-in
+  animation: spinningElements 3s infinite ease-in
 }
 
-.puddle-wrapper>span {
-  position: absolute;
-  z-index: 1;
-  color: white;
-  left: 50%;
-  top: 30%;
-}
 
-.passion-development .spinning-div {
-  position: absolute;
-  animation: spinningElements 5s infinite reverse ease-in;
-  font-size: .45em;
-  top: 85%;
-  left: 55%;
-}
+// .passion-development .spinning-div {
+//   position: absolute;
+//   animation: spinningElements 5s infinite reverse ease-in;
+//   font-size: .45em;
+//   top: 85%;
+//   left: 55%;
+// }
 
 
 @keyframes spinningElements {
 
   0% {
-    transform: rotateZ(0) translateX(-20px);
+    transform: translateX(-20px);
   }
 
   50% {
@@ -266,7 +248,7 @@
   }
 
   100% {
-    transform: rotateZ(360deg) translateX(-20px);
+    transform: translateX(-20px);
   }
 }
 

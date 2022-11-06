@@ -3,7 +3,7 @@ import './DigitalCard.css';
 
 export default function DigitalCard() {
 
-  let digitalCardContainer = document.getElementsByClassName('digital-card-container')[0]
+  // let digitalCardContainer = document.getElementsByClassName('digital-card-container')[0]
   let digitalCard = document.getElementsByClassName('digital-card')[0]
   let digitalCardBack = document.getElementsByClassName('digital-card-back')[0]
   let lineWrapperBack = document.getElementsByClassName('line-wrappers-back')[0]

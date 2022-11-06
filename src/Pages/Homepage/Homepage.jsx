@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-undef
 import React, { Component } from 'react';
-import About from '../../Pages/About';
-import Skills from '../../Pages/Skills';
+// import About from '../../Pages/About';
+// import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
 import Expertise from '../Expertise/Expertise';
 import Experience from '../Experience/Experience';
@@ -50,14 +50,19 @@ export default class Homepage extends Component {
               <br />
               <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} />
             </p>
-            <a href="https://www.linkedin.com/in/juliusgdorfman/"
-              target="_blank" rel="noreferrer">
+            <div className="button-wrapper">
               <button href="https://www.linkedin.com/in/juliusgdorfman/"
                 target="_blank" rel="noreferrer"
                 className="contact-me">
-                Contact Me
+                <a href="https://www.linkedin.com/in/juliusgdorfman/"
+                  target="_blank" rel="noreferrer">
+                  Contact Me
+                </a>
+                <span className="glow-wrapper">
+                  <span className="glow" />
+                </span>
               </button>
-            </a>
+            </div>
             <div className="indication-wrapper">
               <div></div>
               <div href={'#about-component'} className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
@@ -65,7 +70,7 @@ export default class Homepage extends Component {
             </div>
           </div>
           <div className="homepage-text">
-            HELLO 
+            HELLO
             <br />
             WORLD
           </div>

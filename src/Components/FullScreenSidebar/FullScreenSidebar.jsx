@@ -69,12 +69,12 @@ export default class FullScreenSidebar extends Component {
             <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="experience-component">Experience</li>
             <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="accolades-component">Accolades</li>
           </ul>
-          {this.props.floaters
+          {/* {this.props.floaters
             ?
             <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Enabled <br />&#128512;</div></div>
             :
             <div className="floater-button" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Disabled <br />&#128544;</div></div>
-          }
+          } */}
         </div>
         <footer id="footer-component">
           <div className="footer-content-wrapper">

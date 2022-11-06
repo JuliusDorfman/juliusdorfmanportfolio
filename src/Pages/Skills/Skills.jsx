@@ -32,7 +32,7 @@ export default class Skills extends Component {
     // let progActive = this.state.progActive;
     // progActive = progActive ? true : false;
     // this.setState({progActive: progActive});
-    const boxAnimation = this.state.boxAnimation;
+    let boxAnimation = this.state.boxAnimation;
     boxAnimation = boxAnimation ? false : true;
     console.log(e.target.classList);
     this.setState({boxAnimation: boxAnimation})
