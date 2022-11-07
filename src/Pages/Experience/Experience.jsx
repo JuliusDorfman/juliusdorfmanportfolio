@@ -35,8 +35,8 @@ class Experience extends Component {
     let contentActive = this.state.contentActive;
     return (
       <section id="experience-component">
-        <div className="experience-text">Experience</div>
-        <h1 className="experience-header"><span className="subtext">growing </span>Professional Experience</h1>
+        <div data-aos="fade-left" data-aos-duration="3000" className="experience-text">Experience</div>
+        <h1 className="experience-header"><span data-aos="fade-right" className="subtext">growing </span><span data-aos="fade-up">Professional Experience</span></h1>
         <p className="experience-page-intro">
         </p>
         <div className="experience-section">
@@ -54,7 +54,7 @@ class Experience extends Component {
                 <div className="firstItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
               </div>
             </div>
-            <div
+            <div data-aos="fade-up" data-aos-duration="3000"
               className={`accordian-content content-${contentActive.firstItem}`}>
               <div className="accordian-details">
                 <div className="company-info">
@@ -94,7 +94,7 @@ class Experience extends Component {
                 <div className="secondItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
               </div>
             </div>
-            <div
+            <div data-aos="fade-up" data-aos-duration="3000"
               className={`accordian-content content-${contentActive.secondItem}`}>
               <div className="accordian-details">
                 <div className="company-info">
@@ -131,7 +131,7 @@ class Experience extends Component {
                 <div className="thirdItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
               </div>
             </div>
-            <div
+            <div data-aos="fade-up" data-aos-duration="3000"
               className={`accordian-content content-${contentActive.thirdItem}`}>
               <div className="accordian-details">
                 <div className="company-info">

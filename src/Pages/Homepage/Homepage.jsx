@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-undef
 import React, { Component } from 'react';
+import TweenMax from "gsap";
 // import About from '../../Pages/About';
 // import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
@@ -15,6 +16,7 @@ import h1TagClose from '../../Assets/h1-tag-close-2.png';
 import htmlTag from '../../Assets/html-tag-open-2.png';
 import sectionTagClose from '../../Assets/section-tag-close-2.png';
 import './Homepage.css';
+import { getActiveElement } from '@testing-library/user-event/dist/utils';
 
 export default class Homepage extends Component {
   constructor(props) {
@@ -27,9 +29,24 @@ export default class Homepage extends Component {
   }
 
 
+
+  componentDidMount = () => {
+  }
+
+  componentWillUnmount = () => {
+  }
+
+
+
   render() {
+    
+
     return (
       <div id="homepage-component">
+        <canvas id="mouse-trail">
+
+          {/* test */}
+        </canvas>
         <div className="landing-page-wrapper">
           <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html" />
           <div className="landing-nav-top">
@@ -37,11 +54,11 @@ export default class Homepage extends Component {
           </div>
           <div className="landing-intro">
             <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`} />
-            <h1>
+            <h1 data-aos="fade-right">
               <span className="bolded">J</span>ulius <span className="bolded">D</span>orfman
               <br />
-              <span className="landing-flavor">web developer</span>
             </h1>
+            <span data-aos="fade-up" className="landing-flavor">web developer</span>
             <img src={h1TagClose} alt="h1-tag-flourish" className={`flavor-tag-close h1-flavor-close flavor-tags-${this.props.toggleHide}`} />
             <p className="landing-title">
               <img src={pTagOpen} alt="p-tag-flourish" className={`flavor-tag-open flavor-tags-${this.props.toggleHide}`} />
@@ -69,7 +86,7 @@ export default class Homepage extends Component {
               <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
             </div>
           </div>
-          <div className="homepage-text">
+          <div data-aos="fade-left" data-aos-duration="3000" className="homepage-text">
             HELLO
             <br />
             WORLD

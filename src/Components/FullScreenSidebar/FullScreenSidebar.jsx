@@ -50,24 +50,24 @@ export default class FullScreenSidebar extends Component {
               </p>
             </a>
           </div>
-          <div className="initials-name">
+          <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000" className="initials-name">
             <span className="bold-weight">J</span><span className="light-weight">ulius</span>
           </div>
-          <p className="initials-subscript">Web Developer</p>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000" className="initials-subscript">Web Developer</p>
         </div>
         <div id="fullScreenSidebar-links">
           <ul>
-            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="homepage-component">Home</li>
+            <li data-aos="fade-right" data-aos-duration="1000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="homepage-component">Home</li>
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="homepage">Home</li> */}
-            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="expertise-component">Expertise</li>
+            <li data-aos="fade-right" data-aos-duration="1500" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="expertise-component">Expertise</li>
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="about">About</li> */}
             {/* <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="skills-component">My Skills</li> */}
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="skills">My Skills</li> */}
-            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="work-component">Work</li>
+            <li data-aos="fade-right" data-aos-duration="2000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="work-component">Work</li>
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li> */}
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="contact">Contact</li> */}
-            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="experience-component">Experience</li>
-            <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="accolades-component">Accolades</li>
+            <li data-aos="fade-right" data-aos-duration="2500" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="experience-component">Experience</li>
+            <li data-aos="fade-right" data-aos-duration="3000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="accolades-component">Accolades</li>
           </ul>
           {/* {this.props.floaters
             ?

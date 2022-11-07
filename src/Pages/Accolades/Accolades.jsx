@@ -42,10 +42,10 @@ export default class Accolades extends Component {
     return (
       <section id='accolades-component'>
 
-        <h1>Accolades</h1>
+        <h1 data-aos="fade-up">Accolades</h1>
         <div></div>
         <p></p>
-        <div className="accolades-text">
+        <div data-aos="fade-left" data-aos-duration="3000" className="accolades-text">
           ACCOLADES
         </div>
 

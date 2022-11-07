@@ -59,10 +59,10 @@ export default class Work extends React.Component {
 
     return (
       <section id='work-component'>
-        <div className="work-text">WORK</div>
-        <h1><span className="subtext">some of</span> My Work</h1>
+        <div data-aos="fade-left" data-aos-duration="3000" className="work-text">WORK</div>
+        <h1><span data-aos="fade-right" className="subtext">some of</span> <span data-aos="fade-up">My Work</span></h1>
         <div className={`work-component-content work-slides-${projectSlides.AOTT}`}>
-          <div id="art-of-twitch" className="work-panel-container" data-aos="fade-up">
+          <div id="art-of-twitch" className="work-panel-container" data-aos="fade-right">
             <div className="img-wrapper">
               <img src={AOTT} alt="State of Twitch" />
               <div className="project-blur"><span projectvalue='AOTT' onClick={this.handleWorkPage}>Art of Twitch</span></div>
@@ -90,7 +90,7 @@ export default class Work extends React.Component {
           <div className="work-panel-container">
 
           </div>
-          <div id="work-tbd" className="work-panel-container"  data-aos="fade-up">
+          <div id="work-tbd" className="work-panel-container"  data-aos="fade-left">
             <div className="img-wrapper">
               <Spinner />
               {/* <img onClick={this.handleWorkPage} pagevalue={'artoftwitchchat'} src={AOTT} alt="State of Twitch" /> */}
