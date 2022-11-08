@@ -3,6 +3,7 @@ import './Work.css';
 import Spinner from '../../Components/Spinner/Spinner';
 import ArtOfTwitchChat from '../ArtOfTwitchChat';
 import AOTT from '../../../src/Assets/AOTT-1.png';
+import FlowingWater from '../../Components/FlowingWater/FlowingWater';
 
 export default class Work extends React.Component {
   constructor(props) {
@@ -85,10 +86,10 @@ export default class Work extends React.Component {
             </div>
           </div>
           <div className="work-panel-container">
-
+            <FlowingWater />
           </div>
           <div className="work-panel-container">
-
+            <FlowingWater />
           </div>
           <div id="work-tbd" className="work-panel-container"  data-aos="fade-left">
             <div className="img-wrapper">

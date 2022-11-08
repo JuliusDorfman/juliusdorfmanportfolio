@@ -54,7 +54,7 @@ class Experience extends Component {
                 <div className="firstItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="3000"
+            <div 
               className={`accordian-content content-${contentActive.firstItem}`}>
               <div className="accordian-details">
                 <div className="company-info">
@@ -94,7 +94,7 @@ class Experience extends Component {
                 <div className="secondItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="3000"
+            <div 
               className={`accordian-content content-${contentActive.secondItem}`}>
               <div className="accordian-details">
                 <div className="company-info">
@@ -131,7 +131,7 @@ class Experience extends Component {
                 <div className="thirdItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
               </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="3000"
+            <div 
               className={`accordian-content content-${contentActive.thirdItem}`}>
               <div className="accordian-details">
                 <div className="company-info">
