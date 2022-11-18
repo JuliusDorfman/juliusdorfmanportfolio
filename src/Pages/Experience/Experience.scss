@@ -17,7 +17,9 @@
   content: "";
   height: 70%;
   width: 3px;
-  background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
+  background: linear-gradient(rgb(248, 248, 255) 25%, rgb(248, 248, 255) 25%, #FBA089 50%, #FBA089 50%, #F75026 75%, #B12906 75%, #270901 100%);
+  // background: linear-gradient(#270901 25%, #B12906 25%, #F75026 50%, #FBA089 50%, #FBA089 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
+  // background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
 }
 
 .experience-header {
@@ -104,9 +106,25 @@
 
 .accordian-expand-button {
   cursor: pointer;
-  color: black;
+  color: aliceblue;
   font-weight: 900;
-  transform: translateY(-3px);
+  height: 30px;
+  width: 30px;
+  font-size: 32px;
+  line-height: .8;
+  box-shadow: 0 0 5px 4px aliceblue;
+  background: #270901;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.accordian-expand-button p {
+  margin: 0 0 0px 1.5px;
+  pointer-events: none;
+  line-height: 24px;
 }
 
 .accordian-content {
@@ -114,13 +132,13 @@
   justify-content: center;
   width: 70%;
   text-align: left;
-  padding: 0 3%;
+  padding: 0 0 0 3%;
   margin: 0 0 5% 0;
   color: white;
   font-weight: 400;
   background: #270901;
   z-index: -1;
-  height: 200px;
+  height: 250px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
@@ -129,12 +147,31 @@
 
 .content-false {
   height: 10px;
+  padding: 0;
 }
 
 .accordian-details {
   padding: 3% 0;
   max-width: 85%;
   // min-width: 70%;
+}
+
+.accordian-false {
+  opacity: 0;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.accordian-true {
+  opacity: 1;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }
 
 .company-info {
@@ -184,7 +221,7 @@
 
 .company-logo {
   height: 40%;
-  margin: 5% 0 0 0;
+  margin: auto 5% auto 0;
   transition: .5s;
 
 }
@@ -195,11 +232,19 @@
 
 }
 
+.logo-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: white;
+}
+
 .guildmortgage-logo-wrapper {
-  width: 25%;
+  width: 70%;
   margin: auto 0;
   transition: .5s;
-
 }
 
 .guildmortgage-logo-wrapper>img {
@@ -214,15 +259,20 @@
   transition: .5s !important;
 }
 
-.supply-pro-logo-wrapper {
-  width: 40%;
-  margin: auto 0;
+.supplypro-logo-container {
+  width: 48%;
 }
 
-.supply-pro-logo-wrapper>img {
+.supplypro-logo-wrapper {
+  width: 88%;
+  margin: auto 0;
+  transition: .5s;
+}
+
+.supplypro-logo-wrapper>img {
   width: 100%;
   height: initial;
-  transition: .5s !important;
+  transition: .5s;
 }
 
 .supplyPro-false {
@@ -231,9 +281,15 @@
   transition: .5s !important;
 }
 
+.imatrix-logo-container {
+  width: 64%;
+}
+
 .imatrix-logo-wrapper {
-  width: 40%;
+  width: 88%;
   margin: auto 0;
+  transition: .5s;
+
 }
 
 .imatrix-logo-wrapper>img {
@@ -253,23 +309,73 @@
     flex-direction: column;
   }
 
-  .supply-pro-logo-wrapper {
-    width: 100%;
+  .company-logo {
+    height: initial;
+    margin: 5% 0 0 0;
   }
 
   .imatrix-logo-wrapper {
-    width: 100%;
+    width: 55%;
   }
 
   .experience-animation-wrapper {
     margin-top: 5vh;
   }
 
+  .accordian-content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .accordian-details {
+    padding-left: 3%;
+  }
+
+  .guildmortgage-logo-wrapper {
+    width: 35%;
+  }
+  
+  .supplypro-logo-wrapper {
+    width: 55%;
+  }
+
+  .logo-container {
+    width: 100%;
+    align-items: flex-start;
+  }
+
   .content-true {
-    height: 250px;
+    height: 400px;
   }
 
   .job-technologies ul li {
     margin: 1.5%;
+  }
+}
+
+
+
+@media (max-width:600px) {
+
+  .company-logo {
+    height: initial;
+  }
+
+  .content-true {
+    height: 320px;
+  }
+
+  .guildmortgage-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .guildmortgage-logo-wrapper>img {
+    width: 70%;
+  }
+
+  .imatrix-logo-wrapper {
+    width: 70%;
   }
 }

@@ -39,51 +39,49 @@ export default class Homepage extends Component {
 
 
   render() {
-    
+
 
     return (
       <div id="homepage-component">
-        <canvas id="mouse-trail">
+        {/* <canvas id="mouse-trail">
 
-          {/* test */}
-        </canvas>
+        </canvas> */}
         <div className="landing-page-wrapper">
-          <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html" />
-          <div className="landing-nav-top">
+          {/* <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html" /> */}
+          {/* <div className="landing-nav-top">
             <button className="nav-inactive"></button>
-          </div>
+          </div> */}
           <div className="landing-intro">
-            <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`} />
+            {/* <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`} /> */}
             <h1 data-aos="fade-right">
               <span className="bolded">J</span>ulius <span className="bolded">D</span>orfman
               <br />
             </h1>
             <span data-aos="fade-up" className="landing-flavor">web developer</span>
-            <img src={h1TagClose} alt="h1-tag-flourish" className={`flavor-tag-close h1-flavor-close flavor-tags-${this.props.toggleHide}`} />
+            {/* <img src={h1TagClose} alt="h1-tag-flourish" className={`flavor-tag-close h1-flavor-close flavor-tags-${this.props.toggleHide}`} /> */}
             <p className="landing-title">
-              <img src={pTagOpen} alt="p-tag-flourish" className={`flavor-tag-open flavor-tags-${this.props.toggleHide}`} />
+              {/* <img src={pTagOpen} alt="p-tag-flourish" className={`flavor-tag-open flavor-tags-${this.props.toggleHide}`} /> */}
               <br />
-              Front End Developer / Software Engineer
+              Full Stack Developer / Software Engineer
               <br />
-              <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} />
+              {/* <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} /> */}
             </p>
             <div className="button-wrapper">
-              <button href="https://www.linkedin.com/in/juliusgdorfman/"
+              <a href="https://www.linkedin.com/in/juliusgdorfman/"
                 target="_blank" rel="noreferrer"
                 className="contact-me">
-                <a href="https://www.linkedin.com/in/juliusgdorfman/"
-                  target="_blank" rel="noreferrer">
+                <p>
                   Contact Me
-                </a>
+                </p>
                 <span className="glow-wrapper">
                   <span className="glow" />
                 </span>
-              </button>
+              </a>
             </div>
             <div className="indication-wrapper">
               <div></div>
               <div href={'#about-component'} className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
-              <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" />
+              {/* <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" /> */}
             </div>
           </div>
           <div data-aos="fade-left" data-aos-duration="3000" className="homepage-text">

@@ -52,26 +52,36 @@
   padding: 0;
   background: rgba(255, 255, 255, .6);
   border: 0;
+  pointer-events: auto;
 }
 
-.contact-me a {
+.contact-me>p {
   display: inline-block;
   height: 100%;
+  margin: 0;
   width: 100%;
   background-color: #B72E31;
   box-shadow: 0 0 0 3px #B72E31;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
   color: white;
   text-decoration: none;
-  line-height: 2.3em;
+  line-height: 45px;
   transition: .7s;
+  letter-spacing: .1em;
+  font-family: 'Julius Sans One';
 }
 
-.button-wrapper:hover .contact-me a {
-  transform: translateX(-30px);
+
+
+.button-wrapper:hover .contact-me p {
   transition: .7s;
+  transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
 }
 
 .glow-wrapper {
@@ -84,13 +94,18 @@
   overflow: hidden;
   z-index: -1;
   transform: translate(0px, 0px);
-  /* transform: translate(250px, -250px); */
+  /*transform: translate(250px, -250px);
+  */
   opacity: 0;
-  transition: .5s;
-
+  transition: .7s;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -ms-transition: .7s;
+  -o-transition: .7s;
+  pointer-events: none;
 }
 
-.glow {
+.glow-wrapper>.glow {
   position: absolute;
   display: inline;
   right: 0;
@@ -100,22 +115,40 @@
   background: white;
   box-shadow: 0 0 3px 3px #fff, 0 0 60px 30px #fff, 0 0 100px 60px #932527, 0 0 140px 90px #FF2E32;
   z-index: 10;
-  transition: .5s;
-  transform: translate(0px, 0);
-  /* transform: translate(-250px, 250px); */
+  transition: .7s;
+  /*transform: translate(0px, 0);
+  */
+  /*transform: translate(-250px, 250px);
+  -webkit-transform: translate(0px, 0);
+  -moz-transform: translate(0px, 0);
+  -ms-transform: translate(0px, 0);
+  -o-transform: translate(0px, 0);
+  */
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -ms-transition: .7s;
+  -o-transition: .7s;
+  -webkit-transition: .7s;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .button-wrapper:hover .contact-me .glow-wrapper {
   height: 600px;
   width: 600px;
-  transform: translate(250px, -250px);
+  transition: .7s;
   opacity: 1;
-  transition: .5s;
+  transform: translate(250px, -250px);
+  -webkit-transform: translate(250px, -250px);
+  -moz-transform: translate(250px, -250px);
+  -ms-transform: translate(250px, -250px);
+  -o-transform: translate(250px, -250px);
 }
 
 .button-wrapper:hover .contact-me .glow {
   transform: translate(-250px, 250px);
   animation: glowing 5s infinite ease-out;
+  -webkit-animation: glowing 5s infinite ease-out;
 }
 
 @keyframes glowing {
@@ -182,6 +215,24 @@
   height: 95vh;
   border-bottom: 2px solid white;
 }
+/* 
+.landing-page-wrapper:before {
+  content: '<h1>';
+  position: absolute;
+  top: 240px;
+  left: 56px;
+  font-size: 12px;
+  color: slategray;
+}
+
+.landing-page-wrapper:after {
+  content: '</h1>';
+  position: absolute;
+  top: 350px;
+  left: 56px;
+  font-size: 12px;
+  color: slategray;
+} */
 
 .landing-nav-top {
   height: 20vh;
@@ -192,6 +243,21 @@
   padding: 0 0 0 10vw;
   font-family: 'Julius Sans One', sans-serif;
   letter-spacing: .5em;
+}
+
+/* .landing-intro h1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30vw;
+  width: 1px;
+  height: inherit;
+  background: red;
+} */
+
+.landing-intro h1 {
+  margin-top: 0;
+  padding-top: 250px;
 }
 
 .landing-intro .bolded {
@@ -272,8 +338,12 @@
   }
 
   100% {
-    transform: translateY(5vh)
-  }
+    transform: translateY(5vh);
+    -webkit-transform: translateY(5vh);
+    -moz-transform: translateY(5vh);
+    -ms-transform: translateY(5vh);
+    -o-transform: translateY(5vh);
+}
 }
 
 @keyframes scrollBounce {

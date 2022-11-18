@@ -32,6 +32,7 @@ class Experience extends Component {
   }
 
   render() {
+    let itemState = this.state.itemState;
     let contentActive = this.state.contentActive;
     return (
       <section id="experience-component">
@@ -51,12 +52,14 @@ class Experience extends Component {
                     <span>2020-2022</span>
                   </div>
                 </h6>
-                <div className="firstItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
+                <div className="firstItem accordian-expand-button" onClick={this.handleAccordian}>
+                  <p>&#43;</p>
+                </div>
               </div>
             </div>
-            <div 
+            <div
               className={`accordian-content content-${contentActive.firstItem}`}>
-              <div className="accordian-details">
+              <div className={`accordian-details accordian-${contentActive.firstItem}`}>
                 <div className="company-info">
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -80,7 +83,11 @@ class Experience extends Component {
                   </ul>
                 </div>
               </div>
-              <div className="company-logo guildmortgage-logo-wrapper"><img className={`guild-${contentActive.firstItem}`} src={guildLogo} alt="Guild-Mortgage" /></div>
+              <div className="logo-container guildmortgage-logo-container">
+                <div className="company-logo guildmortgage-logo-wrapper">
+                  <img className={`guild-${contentActive.firstItem}`} src={guildLogo} alt="Guild-Mortgage" />
+                </div>
+              </div>
             </div>
 
             <div className="accordian-item" data-aos="fade-up">
@@ -91,12 +98,14 @@ class Experience extends Component {
                     <span>2019-2020</span>
                   </div>
                 </h6>
-                <div className="secondItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
+                <div className="secondItem accordian-expand-button" onClick={this.handleAccordian}>
+                  <p>&#43;</p>
+                </div>
               </div>
             </div>
-            <div 
+            <div
               className={`accordian-content content-${contentActive.secondItem}`}>
-              <div className="accordian-details">
+              <div className={`accordian-details accordian-${contentActive.secondItem}`}>
                 <div className="company-info">
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -117,7 +126,11 @@ class Experience extends Component {
                   </ul>
                 </div>
               </div>
-              <div className="company-logo supply-pro-logo-wrapper"><img className={`supplyPro-${contentActive.secondItem}`} src={supploproLogo} alt="SupplyPro" /></div>
+
+              <div className="logo-container supplypro-logo-container">
+                <div className="company-logo supplypro-logo-wrapper">
+                  <img className={`supplyPro-${contentActive.secondItem}`} src={supploproLogo} alt="SupplyPro" /></div>
+              </div>
             </div>
 
             <div className="accordian-item" data-aos="fade-up">
@@ -128,12 +141,14 @@ class Experience extends Component {
                     <span>2018-2019</span>
                   </div>
                 </h6>
-                <div className="thirdItem accordian-expand-button" onClick={this.handleAccordian}>&#43;</div>
+                <div className="thirdItem accordian-expand-button" onClick={this.handleAccordian}>
+                  <p>&#43;</p>
+                </div>
               </div>
             </div>
-            <div 
+            <div
               className={`accordian-content content-${contentActive.thirdItem}`}>
-              <div className="accordian-details">
+              <div className={`accordian-details accordian-${contentActive.thirdItem}`}>
                 <div className="company-info">
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -141,7 +156,9 @@ class Experience extends Component {
                     </svg>
                     California, USA
                   </span>
-                  <span><a href="https://imatrix.com/" target="_blank" rel="noreferrer"> &nbsp; imatrix.com</a></span>
+                  <span>
+                    <a href="https://imatrix.com/" target="_blank" rel="noreferrer"> &nbsp; imatrix.com</a>
+                  </span>
                 </div>
                 <div className="job-description">
                   Developing websites for clients and private businesses practices in Healthcare. Often On-call and live programming while building rapport directly with website owner.
@@ -158,7 +175,11 @@ class Experience extends Component {
                   </ul>
                 </div>
               </div>
-              <div className="company-logo imatrix-logo-wrapper"><img className={`iMatrix-${contentActive.thirdItem}`} src={iMatrixLogo} alt="Guild-Mortgage" /></div>
+              <div className="logo-container imatrix-logo-container">
+                <div className="company-logo imatrix-logo-wrapper">
+                  <img className={`iMatrix-${contentActive.thirdItem}`} src={iMatrixLogo} alt="Guild-Mortgage" />
+                </div>
+              </div>
             </div>
 
           </div>

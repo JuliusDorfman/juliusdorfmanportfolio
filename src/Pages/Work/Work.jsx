@@ -86,10 +86,10 @@ export default class Work extends React.Component {
             </div>
           </div>
           <div className="work-panel-container">
-            <FlowingWater />
+            {/* <FlowingWater /> */}
           </div>
           <div className="work-panel-container">
-            <FlowingWater />
+            {/* <FlowingWater /> */}
           </div>
           <div id="work-tbd" className="work-panel-container"  data-aos="fade-left">
             <div className="img-wrapper">

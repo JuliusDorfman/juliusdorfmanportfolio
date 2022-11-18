@@ -26,10 +26,16 @@ export default class ArtOfTwitchChat extends Component {
   render() {
     return (
       <section id="artoftwitchchat-component" className="product-section">
-        <div className="AOTT-text">ART OF
+        <div className="AOTT-text">
+          ART OF
           <br />
-          TWITCH CHAT</div>
-        <a href="https://art-of-twitch.herokuapp.com/" target="_blank" rel="noreferrer"><h1>Art Of Twitch Chat</h1></a>
+          TWITCH CHAT
+        </div>
+        <h1 className="AOTT-title">
+          <a href="https://art-of-twitch.herokuapp.com/" target="_blank" rel="noreferrer">
+            Art Of Twitch Chat
+          </a>
+        </h1>
         <p>Render Art from your favorite Twitch.tv streamer&apos;s chat room.</p>
         <div className="mission-technology">
           <div className="mission">
