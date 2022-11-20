@@ -7,19 +7,19 @@
   align-items: center;
   background: #090b10;
   border-right: 2px solid white;
-  width: 25vw;
+  // width: 25vw;
   min-width: 175px;
   transition: .5s;
 }
 
-#FullScreenSidebar a, 
-#FullScreenSidebar li, 
-#FullScreenSidebar .smaller, 
+#FullScreenSidebar a,
+#FullScreenSidebar li,
+#FullScreenSidebar .smaller,
 #FullScreenSidebar button {
   /* cursor: url("../../Assets/white_dot.png"), auto!important; */
- }
+}
 
-#FullScreenSidebar-head { 
+#FullScreenSidebar-head {
   position: fixed;
   top: 5vh;
 }
@@ -31,7 +31,7 @@
 #FullScreenSidebar ul {
   position: fixed;
   top: 30vh;
-  width: 13vw;
+  // width: 13vw;
   min-width: 150px;
   display: flex;
   justify-content: space-between;
@@ -45,12 +45,13 @@
 
 #FullScreenSidebar ul li {
   border-bottom: 1px solid ghostwhite;
-  font-size: 18px;;
+  font-size: 18px;
+  ;
 }
 
 #FullScreenSidebar ul li:hover {
   cursor: pointer;
-  color:#235391;
+  color: #235391;
 
   transition: .3s;
 }
@@ -67,10 +68,10 @@
 }
 
 .sidebar-fade-out {
-transform: translateX(-20vw);
+  transform: translateX(-20vw);
 }
-
-@media (max-width: 500px) {
+// testing
+@media (max-width: 600px) {
   #FullScreenSidebar {
     display: none;
   }

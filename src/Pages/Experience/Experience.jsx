@@ -48,7 +48,7 @@ class Experience extends Component {
               <div className="accordian-item-title-wrapper">
                 <h6>
                   <div className="accordian-item-title">
-                    <span>Software Engineer @ Guild Mortgage LLC &nbsp;&nbsp;</span>
+                    <span>Software Engineer @ <span className="no-wrap">Guild Mortgage LLC</span> &nbsp;&nbsp;</span>
                     <span>2020-2022</span>
                   </div>
                 </h6>
@@ -94,7 +94,7 @@ class Experience extends Component {
               <div className="accordian-item-title-wrapper">
                 <h6>
                   <div className="accordian-item-title">
-                    <span>Client Support Engineer @ Supply Pro &nbsp;&nbsp;</span>
+                    <span>Client Support Engineer @ <span className="no-wrap">Supply Pro</span> &nbsp;&nbsp;</span>
                     <span>2019-2020</span>
                   </div>
                 </h6>

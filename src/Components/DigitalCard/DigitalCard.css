@@ -324,8 +324,8 @@
 }
 
 /* Media Queries */
-
-@media (max-width: 550px) {
+/* testing */
+@media (max-width: 600px) {
   #digital-card-component {
     min-height: 400px;
     margin-top: 150px;

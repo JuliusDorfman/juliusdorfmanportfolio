@@ -233,8 +233,8 @@
     width: 100vw;
   }
 }
-
-@media (max-width: 500px) {
+/* testing */
+@media (max-width: 600px) {
   .accolades {
     font-size: .81em;
   }

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import './FullScreenSidebar.css';
+import './FullScreenSidebar.scss';
 
 
 export default class FullScreenSidebar extends Component {

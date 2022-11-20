@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-undef
 import React, { Component } from 'react';
-import TweenMax from "gsap";
+// import TweenMax from "gsap";
 // import About from '../../Pages/About';
 // import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
@@ -9,14 +9,13 @@ import Expertise from '../Expertise/Expertise';
 import Experience from '../Experience/Experience';
 import Accolades from '../Accolades/Accolades';
 // import Contact from '../../Pages/Contact';
-import pTagOpen from '../../Assets/p-tag-open-2.png';
-import pTagClose from '../../Assets/p-tag-close-2.png';
-import h1TagOpen from '../../Assets/h1-tag-open-2.png';
-import h1TagClose from '../../Assets/h1-tag-close-2.png';
-import htmlTag from '../../Assets/html-tag-open-2.png';
-import sectionTagClose from '../../Assets/section-tag-close-2.png';
-import './Homepage.css';
-import { getActiveElement } from '@testing-library/user-event/dist/utils';
+// import pTagOpen from '../../Assets/p-tag-open-2.png';
+// import pTagClose from '../../Assets/p-tag-close-2.png';
+// import h1TagOpen from '../../Assets/h1-tag-open-2.png';
+// import h1TagClose from '../../Assets/h1-tag-close-2.png';
+// import htmlTag from '../../Assets/html-tag-open-2.png';
+// import sectionTagClose from '../../Assets/section-tag-close-2.png';
+import './Homepage.scss';
 
 export default class Homepage extends Component {
   constructor(props) {
@@ -84,6 +83,84 @@ export default class Homepage extends Component {
               {/* <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" /> */}
             </div>
           </div>
+          <div class="marquee-container marquee-tech">
+            <div class="marquee-wrapper">
+              <div class="marquee">
+                <ul>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>Nodejs</li>
+                  <li>Python</li>
+                  <li>JavaScript</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+                <ul>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>Nodejs</li>
+                  <li>Python</li>
+                  <li>JavaScript</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-container marquee-industry">
+            <div class="marquee-wrapper">
+              <div class="marquee">
+                <ul>
+                  <li>MySQL</li>
+                  <li>MongoDB</li>
+                  <li>AWS</li>
+                  <li>Heroku</li>
+                  <li>npm</li>
+                  <li>Jira</li>
+                  <li>Agile</li>
+                </ul>
+                <ul>
+                  <li>MySQL</li>
+                  <li>MongoDB</li>
+                  <li>AWS</li>
+                  <li>Heroku</li>
+                  <li>npm</li>
+                  <li>Jira</li>
+                  <li>Agile</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-container marquee-interests">
+            <div class="marquee-wrapper">
+              <div class="marquee">
+                <ul>
+                  <li>Piano</li>
+                  <li>Gym</li>
+                  <li>Travel</li>
+                  <li>Food</li>
+                  <li>Dancing</li>
+                  <li>Games</li>
+                  <li>Creating</li>
+                </ul>
+                <ul>
+                  <li>Piano</li>
+                  <li>Gym</li>
+                  <li>Travel</li>
+                  <li>Food</li>
+                  <li>Dancing</li>
+                  <li>Games</li>
+                  <li>Creating</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+
           <div data-aos="fade-left" data-aos-duration="3000" className="homepage-text">
             HELLO
             <br />

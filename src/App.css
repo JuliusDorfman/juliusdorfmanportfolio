@@ -20,6 +20,7 @@ html {
   z-index: 100;
 }
 
+/* Scale Calculations: 1 + ((Z transform value * -1) / perspective */
 
 /* Navigation Styles*/
 #nav-button {
@@ -114,6 +115,10 @@ html {
 .bottom-space {
   height: 20vh;
   background-color: #0f111a;
+}
+
+.no-wrap {
+  white-space: no-wrap;
 }
 
 /* Global Colors */
@@ -269,8 +274,8 @@ html {
   pointer-events: none;
   transition: 1s
 }
-
-@media (max-width: 480px) {
+/* testing */
+@media (max-width: 600px) {
   #nav-button {
     visibility: initial;
   }

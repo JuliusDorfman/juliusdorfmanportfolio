@@ -117,12 +117,14 @@
 }
 
 #work-tbd .img-wrapper {
-  height: 275px
+  height: 275px;
+  overflow: initial;
 }
 
 #work-tbd .img-wrapper>* {
   margin: 65px auto 0 auto;
 }
+
 
 .work-panel-details {
   position: relative;
