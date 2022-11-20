@@ -293,6 +293,7 @@
   opacity: 0;
   transition: .5s;
   width: 30vw;
+  bottom: 300px;
   overflow: hidden;
   -webkit-transition: .5s;
   -moz-transition: .5s;
@@ -302,7 +303,6 @@
 }
 
 .marquee-tech {
-  bottom: 350px;
   left: 10vw;
   animation: 20s marquee-fading infinite linear;
   -webkit-animation: 20s marquee-fading infinite linear;
@@ -310,14 +310,12 @@
 }
 
 .marquee-industry {
-  bottom: 350px;
   left: 10vw;
   animation: 20s marquee-fading-2 infinite linear;
   -webkit-animation: 20s marquee-fading-2 infinite linear;
 }
 
 .marquee-interests {
-  bottom: 350px;
   left: 10vw;
   animation: 20s marquee-fading-3 infinite linear;
   -webkit-animation: 20s marquee-fading-3 infinite linear;
