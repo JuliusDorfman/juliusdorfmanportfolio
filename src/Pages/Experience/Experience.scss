@@ -17,7 +17,7 @@
   content: "";
   height: 70%;
   width: 3px;
-  background: linear-gradient(rgb(248, 248, 255) 25%, rgb(248, 248, 255) 25%, #FBA089 50%, #FBA089 50%, #F75026 75%, #B12906 75%, #270901 100%);
+  background: linear-gradient(rgb(248, 248, 255) 25%, rgb(248, 248, 255) 25%, #F7B2B7 50%, #F7B2B7 50%, #FF0AB6 75%, #8F0064 75%, #29001D 100%);
   // background: linear-gradient(#270901 25%, #B12906 25%, #F75026 50%, #FBA089 50%, #FBA089 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
   // background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
 }
@@ -77,7 +77,7 @@
 .accordian-item {
   width: 80%;
   height: 60px;
-  background: #FB9F89;
+  background: #FFA9E7;
   color: #090B10;
   letter-spacing: .1em;
   padding: 0 2%;
@@ -113,7 +113,7 @@
   font-size: 32px;
   line-height: .8;
   box-shadow: 0 0 5px 4px aliceblue;
-  background: #270901;
+  background: #B72E31;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -136,7 +136,8 @@
   margin: 0 0 5% 0;
   color: white;
   font-weight: 400;
-  background: #270901;
+  background: #090b10;
+  // background: #270901;
   z-index: -1;
   height: 250px;
   border-bottom-left-radius: 20px;
@@ -207,7 +208,7 @@
 .job-technologies ul li {
   float: left;
   margin: 1%;
-  background: #501302;
+  background: #112240;
   border-radius: 15px;
   padding: .5% 1.5%;
   font-size: .8em;
@@ -242,13 +243,14 @@
 }
 
 .guildmortgage-logo-wrapper {
-  width: 70%;
+  width: 100%;
   margin: auto 0;
   transition: .5s;
+  text-align: center;
 }
 
 .guildmortgage-logo-wrapper>img {
-  width: 100%;
+  width: 60%;
   height: initial;
   transition: .5s;
 }
@@ -267,6 +269,7 @@
   width: 88%;
   margin: auto 0;
   transition: .5s;
+  text-align: center;
 }
 
 .supplypro-logo-wrapper>img {
@@ -279,6 +282,10 @@
   width: 0px !important;
   height: 0px !important;
   transition: .5s !important;
+  -webkit-transition: .5s !important;
+  -moz-transition: .5s !important;
+  -ms-transition: .5s !important;
+  -o-transition: .5s !important;
 }
 
 .imatrix-logo-container {
@@ -286,14 +293,15 @@
 }
 
 .imatrix-logo-wrapper {
-  width: 88%;
+  width: 100%;
   margin: auto 0;
   transition: .5s;
-
+  text-align: center;
 }
 
 .imatrix-logo-wrapper>img {
-  width: 100%;
+  width: 80%;
+  max-width: 88%;
   height: initial;
   transition: .5s;
 }

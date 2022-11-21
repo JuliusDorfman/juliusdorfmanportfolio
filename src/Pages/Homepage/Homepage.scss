@@ -52,6 +52,7 @@
   padding: 0;
   background: rgba(255, 255, 255, .6);
   border: 0;
+  line-height: 0;
   pointer-events: auto;
 }
 
@@ -94,8 +95,6 @@
   overflow: hidden;
   z-index: -1;
   transform: translate(0px, 0px);
-  /*transform: translate(250px, -250px);
-  */
   opacity: 0;
   transition: .7s;
   -webkit-transition: .7s;
@@ -116,14 +115,6 @@
   box-shadow: 0 0 3px 3px #fff, 0 0 60px 30px #fff, 0 0 100px 60px #932527, 0 0 140px 90px #FF2E32;
   z-index: 10;
   transition: .7s;
-  /*transform: translate(0px, 0);
-  */
-  /*transform: translate(-250px, 250px);
-  -webkit-transform: translate(0px, 0);
-  -moz-transform: translate(0px, 0);
-  -ms-transform: translate(0px, 0);
-  -o-transform: translate(0px, 0);
-  */
   -webkit-transition: .7s;
   -moz-transition: .7s;
   -ms-transition: .7s;
@@ -292,8 +283,8 @@
   position: absolute;
   opacity: 0;
   transition: .5s;
-  width: 30vw;
-  bottom: 300px;
+  width: 100vw;
+  bottom: 0;
   overflow: hidden;
   -webkit-transition: .5s;
   -moz-transition: .5s;
@@ -336,7 +327,7 @@
   justify-content: center;
   border: 2px solid transparent;
   height: 40px;
-  width: 844px;
+  width: 1204px;
   overflow: hidden;
   background: #090b10;
   text-align: center;
@@ -360,6 +351,10 @@
   list-style: none;
 }
 
+// .marquee-wrapper width 844px = 
+// li width 100px * liNum 10 + 
+// li margin 10px * (liNum 10 * 2 sides) +
+// both sides of border width of .marquee-wrapper 2px
 .marquee ul>* {
   float: left;
   margin: 0 10px;

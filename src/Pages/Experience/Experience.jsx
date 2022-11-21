@@ -44,7 +44,7 @@ class Experience extends Component {
           <div className="accordian">
 
 
-            <div className="accordian-item" data-aos="fade-up">
+            <div className="accordian-item" data-aos="fade-right" data-aos-duration="3000">
               <div className="accordian-item-title-wrapper">
                 <h6>
                   <div className="accordian-item-title">
@@ -90,7 +90,7 @@ class Experience extends Component {
               </div>
             </div>
 
-            <div className="accordian-item" data-aos="fade-up">
+            <div className="accordian-item" data-aos="fade-right" data-aos-duration="3000">
               <div className="accordian-item-title-wrapper">
                 <h6>
                   <div className="accordian-item-title">
@@ -133,7 +133,7 @@ class Experience extends Component {
               </div>
             </div>
 
-            <div className="accordian-item" data-aos="fade-up">
+            <div className="accordian-item" data-aos="fade-right" data-aos-duration="3000">
               <div className="accordian-item-title-wrapper">
                 <h6>
                   <div className="accordian-item-title">

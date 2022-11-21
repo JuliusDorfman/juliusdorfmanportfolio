@@ -31,7 +31,7 @@ export default class Accolades extends Component {
 
     reference[referenceValue] = reference[referenceValue] ? false : true;
 
-    this.setState({reference: reference }, () => {
+    this.setState({ reference: reference }, () => {
       // console.log(this.state.reference)
     });
 
@@ -42,7 +42,10 @@ export default class Accolades extends Component {
     return (
       <section id='accolades-component'>
 
-        <h1 data-aos="fade-up">Accolades</h1>
+        <h1 data-aos="fade-up" data-aos-duration="3000">
+          <span data-aos="fade-right" className="subtext">Proud </span>
+          Accolades
+        </h1>
         <div></div>
         <p></p>
         <div data-aos="fade-left" data-aos-duration="3000" className="accolades-text">

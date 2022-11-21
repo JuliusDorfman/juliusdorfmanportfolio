@@ -10,7 +10,7 @@ import Appbackground from './Components/Appbackground';
 // import Contact from './Pages/Contact';
 import ArtOfTwitchChat from './Pages/ArtOfTwitchChat';
 import AOS from "aos";
-import './App.css';
+import './App.scss';
 
 
 class App extends React.Component {

@@ -30,7 +30,7 @@ export default class Expertise extends Component {
     return (
       <section id="expertise-component">
         <div data-aos="fade-left" data-aos-duration="3000" className="expertise-text">EXPERTISE</div>
-        <h1 className="expertise-header"><span data-aos="fade-right" className="subtext">some of my </span><span data-aos="fade-up">Expertise</span></h1>
+        <h1 className="expertise-header"><span data-aos="fade-right" className="subtext">about my </span><span data-aos="fade-up">Expertise</span></h1>
         <div className="expertise-content-wrapper">
 
           <div className="frontend-development">

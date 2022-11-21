@@ -1,4 +1,13 @@
 /* Global */
+
+// Colors
+$-light-pink-flavor: #F7B2B7;
+$-orchid-flavor: #FFA9E7;
+$-red-action: red;
+$-dark-menu: #090B10;
+$-site-background-pink: #112240;
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -177,7 +186,8 @@ html {
 }
 
 .site {
-  background-color: #0f111a;
+  background-color: #112240;
+  /* background-color: #0f111a; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import './ArtOfTwitchChat.sass';
+import './ArtOfTwitchChat.scss';
 import '../global-pages.sass';
 const twitchIcon = require('../../Assets/twitch-icon.png');
 const aottLarge = require('../../Assets/art-of-twitch-chat.png');
@@ -63,9 +63,24 @@ export default class ArtOfTwitchChat extends Component {
             </div>
           </div>
         </div>
-        <a href="https://art-of-twitch.herokuapp.com/" target="_blank" rel="noreferrer">
-          <div className="artoftwitchchat-link">Check it out!</div>
-        </a>
+
+        <div className="aott-button-wrapper">
+          <a href="https://art-of-twitch.herokuapp.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-me">
+            <p>
+              Check Me Out!
+            </p>
+            <span className="glow-wrapper">
+              <span className="glow" />
+            </span>
+          </a>
+        </div>
+
+
+
+
         <div className="aott-visuals">
           <div className="img-wrapper-gallery">
             <div className="img-wrapper-large">

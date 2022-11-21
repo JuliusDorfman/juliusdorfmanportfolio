@@ -83,7 +83,10 @@ export default class Homepage extends Component {
               {/* <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" /> */}
             </div>
           </div>
-          <div class="marquee-container marquee-tech">
+
+
+          
+          {/* <div class="marquee-container marquee-tech">
             <div class="marquee-wrapper">
               <div class="marquee">
                 <ul>
@@ -94,6 +97,9 @@ export default class Homepage extends Component {
                   <li>JavaScript</li>
                   <li>HTML</li>
                   <li>CSS</li>
+                  <li>jQuery</li>
+                  <li>RPGLE</li>
+                  <li>Bootstrap</li>
                 </ul>
                 <ul>
                   <li>TypeScript</li>
@@ -103,6 +109,9 @@ export default class Homepage extends Component {
                   <li>JavaScript</li>
                   <li>HTML</li>
                   <li>CSS</li>
+                  <li>jQuery</li>
+                  <li>RPGLE</li>
+                  <li>Bootstrap</li>
                 </ul>
               </div>
             </div>
@@ -119,6 +128,9 @@ export default class Homepage extends Component {
                   <li>npm</li>
                   <li>Jira</li>
                   <li>Agile</li>
+                  <li>Documentation</li>
+                  <li>Figma</li>
+                  <li>Client Exp</li>
                 </ul>
                 <ul>
                   <li>MySQL</li>
@@ -128,6 +140,9 @@ export default class Homepage extends Component {
                   <li>npm</li>
                   <li>Jira</li>
                   <li>Agile</li>
+                  <li>Documentation</li>
+                  <li>Figma</li>
+                  <li>Client Exp</li>
                 </ul>
               </div>
             </div>
@@ -140,10 +155,13 @@ export default class Homepage extends Component {
                   <li>Piano</li>
                   <li>Gym</li>
                   <li>Travel</li>
-                  <li>Food</li>
+                  <li>Cooking</li>
                   <li>Dancing</li>
                   <li>Games</li>
                   <li>Creating</li>
+                  <li>Running</li>
+                  <li>Drawing</li>
+                  <li>Streaming</li>
                 </ul>
                 <ul>
                   <li>Piano</li>
@@ -153,10 +171,13 @@ export default class Homepage extends Component {
                   <li>Dancing</li>
                   <li>Games</li>
                   <li>Creating</li>
+                  <li>Running</li>
+                  <li>Drawing</li>
+                  <li>Streaming</li>
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
 
 
 
