@@ -49,7 +49,8 @@
 }
 
 .initials-icon:hover {
-  background: #A7BCD6;
+  background: #b72e31;
+  /* background: #A7BCD6; */
 }
 
 .initials-subscript {
@@ -120,7 +121,8 @@
 }
 
 .icon-card-initials-wrapper:hover>.icon-card-initials {
-  color: black;
+  color: ghostwhite;
+  /* color: black; */
 }
 
 .icon-fill {
