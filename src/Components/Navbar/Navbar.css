@@ -1,11 +1,22 @@
+.navbar-component-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1000;
+}
+
 .navbar-component {
   top: 0;
   height: 100%;
   width: 100%;
   position: fixed;
-  background-color: #1d1d1d;
+  background: #112240;
   transition: .5s;
   z-index: 500;
+  box-shadow: 0 0 15px 15px #112240;
 }
 
 /* .navbar-component a, 
@@ -14,8 +25,12 @@
 .navbar-component button {
   cursor: url("../../Assets/white_dot.png"), auto!important;
  } */
+.background-blur {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 
-
+}
 
 .nav-header {
   display: flex;
@@ -23,7 +38,6 @@
   align-items: center;
   height: 30%;
   background-color: #01020a;
-  box-shadow: 0 0 10px 10px #01020a;
 }
 
 /* Initials */
@@ -46,10 +60,28 @@
   font-weight: bold;
   font-size: 1.25rem;
 }
+
 .nav-comp-wrap {
   position: absolute;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blur-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(10px);
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }
 
 /* 
@@ -87,7 +119,7 @@
   border: 1.5px solid ghostwhite;
 }
 
-.icon-card-initials-wrapper:hover > .icon-card-initials {
+.icon-card-initials-wrapper:hover>.icon-card-initials {
   color: black;
 }
 
@@ -102,11 +134,11 @@
   letter-spacing: 0.095em;
 }
 
-.initials-name > .light-weight {
+.initials-name>.light-weight {
   font-weight: 100;
 }
 
-.initials-name > .bold-weight {
+.initials-name>.bold-weight {
   font-weight: bold;
 }
 
@@ -121,7 +153,6 @@
 .navigation-links-wrapper {
   height: 50%;
   width: 100%;
-  box-shadow: 0 0 5px 10px #1d1d1d;
   z-index: 100;
 }
 
@@ -132,25 +163,27 @@
   list-style: none;
 }
 
-.navigation-links > li {
+.navigation-links>li {
   border-bottom: 1px solid black;
   cursor: pointer;
   padding: 10px;
   transition: .3s;
 }
 
-.navigation-links > li:hover {
-  color:#235391;
-
+.navigation-links>li:hover {
+  color: #235391;
   transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
 }
 
 .nav-socials-wrapper {
   position: absolute;
   width: 100%;
   bottom: 0;
-  padding-bottom: 2%;  
-  box-shadow: 0 0 5px 10px #1d1d1d;
+  padding-bottom: 2%;
 }
 
 .nav-socials-links {
@@ -162,11 +195,31 @@
 
 .fade-in {
   opacity: 1;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
   transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }
-.fade-out{
+
+.fade-out {
   opacity: 0;
+  transform: translateX(100px);
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
   transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  pointer-events: none;
 }
 
 /* Flavor Tags */
@@ -178,20 +231,20 @@
 }
 
 .fa-linkedin-square {
-  font-size:70px;
+  font-size: 70px;
   color: gray;
   transition: .5s;
 }
 
 .fa-github-square {
-  font-size:70px;
+  font-size: 70px;
   color: gray;
   transition: .5s;
 }
 
 
-.fa-linkedin-square:hover, 
-.fa-github-square:hover  {
+.fa-linkedin-square:hover,
+.fa-github-square:hover {
   /* font-size: 100px; */
   transition: .5s;
   color: #A7BCD6;
@@ -201,6 +254,20 @@
 .floater-button-navbar {
   width: 50%;
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .navbar-component {
+    width: 70vw;
+    right: 0;
+  }
+  .fa-linkedin-square {
+    font-size: 40px;
+  }
+
+  .fa-github-square {
+    font-size: 40px;
+  }  
 }
 
 @media (min-width: 1000px) {
@@ -225,16 +292,17 @@
   }
 
   .fa-linkedin-square {
-    font-size:30px;
-    color: gray;
-  }
-  .fa-github-square {
-    font-size:30px;
+    font-size: 30px;
     color: gray;
   }
 
-  .fa-linkedin-square:hover, 
-  .fa-github-square:hover  {
+  .fa-github-square {
+    font-size: 30px;
+    color: gray;
+  }
+
+  .fa-linkedin-square:hover,
+  .fa-github-square:hover {
     color: #A7BCD6;
   }
 }

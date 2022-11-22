@@ -112,7 +112,7 @@ export default class Expertise extends Component {
           {/* <div></div> */}
 
         </div>
-        <img className="vscode-img" src={vscodeImg} alt="vscode-flavor" />
+        {/* <img className="vscode-img" src={vscodeImg} alt="vscode-flavor" /> */}
       </section>
     )
   }

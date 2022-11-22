@@ -12,6 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /** App Component **/
 .App {
   overflow: hidden;
@@ -21,6 +22,7 @@ html {
 .App *::selection {
   background: #F56AF0;
 }
+
 #page-rendered {
   display: flex;
   height: 100%;
@@ -36,7 +38,7 @@ html {
   background-color: rgba(0, 0, 0, .5);
   box-shadow: 0 0 2px 5px rgba(0, 0, 0, .5);
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   top: 5vh;
   right: 10vw;
   height: 50px;
@@ -57,7 +59,6 @@ html {
 .nav-border-transparent {
   border: 2px solid transparent;
 }
-
 
 #nav-button .nav-burger {
   display: flex;
@@ -284,6 +285,13 @@ html {
   pointer-events: none;
   transition: 1s
 }
+
+@media (min-width: 1000px) {
+  #nav-button {
+    display: none;
+  }
+}
+
 /* testing */
 @media (max-width: 600px) {
   #nav-button {

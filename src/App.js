@@ -56,8 +56,12 @@ class App extends React.Component {
     });
   };
 
+  handleCloseMenu = () => {
+    let faded = this.state.fadeIn === 'fade-out' ? 'fade-in' : 'fade-out';
+    this.setState({fadeIn: faded});
+  }
+
   handleCurrentPage = (pageValue) => {
-    
     window.scrollTo({
       top: 0,
       behavior:'smooth'
@@ -114,10 +118,17 @@ class App extends React.Component {
         {/* <span id="cursor-trailer" style={{left:`${X}px`, top: `${Y}px`}}></span> */}
         <div className="site">
           <button id="nav-button" className={`nav-border${this.state.navBorderToggle}`} onClick={this.toggleNav}><div className={`nav-burger ${this.state.burgerClass}`}></div></button>
-          {this.state.menuOpen ?
-            <header className={`nav-comp-wrap ${fadeClass}`}>
-              <Navbar currentPage={currentPage} handleCurrentPage={this.handleCurrentPage} toggleNav={this.toggleNav} floaters={this.state.floaters} toggleFloaters={this.handleToggleFloaters}/>
-            </header> : null}
+            <header className={`nav-comp-wrap`}>
+              <Navbar 
+              currentPage={currentPage} 
+              handleCurrentPage={this.handleCurrentPage} 
+              toggleNav={this.toggleNav} 
+              floaters={this.state.floaters} 
+              toggleFloaters={this.handleToggleFloaters}
+              fadeClass={fadeClass}
+              closeMenu={this.handleCloseMenu}
+              />
+            </header> 
           <div id="page-rendered">
             <FullScreenSidebar currentPage={currentPage} toggleHide={this.state.fadeIn} handleCurrentPage={this.handleCurrentPage} toggleFloaters={this.handleToggleFloaters} floaters={this.state.floaters} />
             {(() => {

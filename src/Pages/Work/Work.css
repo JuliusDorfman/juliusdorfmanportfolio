@@ -275,7 +275,7 @@
   position: absolute;
   transform: translateX(0);
   transition: .5s ease-in-out;
-  width: 80vw;
+  width: 100vw;
   height: 80vh;
   background: #112240;
 }

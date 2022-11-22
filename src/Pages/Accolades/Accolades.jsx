@@ -46,8 +46,6 @@ export default class Accolades extends Component {
           <span data-aos="fade-right" className="subtext">Proud </span>
           Accolades
         </h1>
-        <div></div>
-        <p></p>
         <div data-aos="fade-left" data-aos-duration="3000" className="accolades-text">
           ACCOLADES
         </div>
