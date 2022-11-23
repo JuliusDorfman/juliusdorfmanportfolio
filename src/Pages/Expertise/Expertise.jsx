@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import vscodeImg from '../../Assets/vscode_bg.png';
+import anime from 'animejs/lib/anime.es.js';
 import "./Expertise.scss";
 import "aos/dist/aos.css";
 
@@ -8,9 +9,7 @@ export default class Expertise extends Component {
     super(props);
     this.state = {
       yearsPassed: 0,
-
     }
-
   }
 
 
@@ -20,16 +19,30 @@ export default class Expertise extends Component {
     const currentYear = getDate.getFullYear();
     const yearsPassed = currentYear - startYear;
     this.setState({ yearsPassed: yearsPassed });
+
+    anime({
+      targets: 'animejs',
+      translateX: 250,
+      rotate: '1turn',
+      backgroundColor: '#FFF',
+      duration: 800
+    });
   }
-
-
 
 
   render() {
     let yearsPassed = this.state.yearsPassed;
     return (
       <section id="expertise-component">
+
+
+        {/* <animejs id="animejs" src="anime.min.js">hello world</animejs> */}
+
+
+
+
         <div data-aos="fade-left" data-aos-duration="3000" className="expertise-text">EXPERTISE</div>
+
         <h1 className="expertise-header"><span data-aos="fade-right" className="subtext">about my </span><span data-aos="fade-up">Expertise</span></h1>
         <div className="expertise-content-wrapper">
 
@@ -58,10 +71,25 @@ export default class Expertise extends Component {
           </div>
 
           <div className="passion-development">
-            <h5>
-              {/* <span>Passion</span> */}
+
+            <div className="light-fixture-wrapper">
+              <svg id="light-fixture" preserveAspectRatio="none">
+                <path className="light-fixture-path" d="M 84 278 A 50 50 0 1 1 434 279 C 337 208 186 206 84 277 Z" data-reactid=".0.0.0.0.1"></path>
+              </svg>
+
+              <div className="light-fixture-bulb"></div>
+
+              <svg className="light-fixture-effect">
+                <path className="light-fixture-effect-path"
+                  d="M 2 499 L 240 0 L 494 499 Z">
+                </path>
+              </svg>
+            </div>
+
+            {/* <h5>
+              <span>Passion</span>
               <br />
-            </h5>
+            </h5> */}
 
             <div className="blob-wrapper">
               <div className="animated-blob">

@@ -196,14 +196,13 @@
 
 .img-wrapper-large {
     overflow: hidden;
-    transform: translateX(-10%);
-    -webkit-transform: translateX(-10%);
-    -moz-transform: translateX(-10%);
-    -ms-transform: translateX(-10%);
-    -o-transform: translateX(-10%);
+    position: relative;
 }
 
 .img-wrapper-large>img {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
 }
 
@@ -217,12 +216,12 @@
 }
 
 .indv-img-wrapper {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    text-align: left;
-    height: 100%;
-    width: 100%;
+    // position: relative;
+    // width: 100%;
+    // margin: auto;
+    // text-align: left;
+    // height: 100%;
+    // width: 100%;
 }
 
 .indv-img-wrapper>img {

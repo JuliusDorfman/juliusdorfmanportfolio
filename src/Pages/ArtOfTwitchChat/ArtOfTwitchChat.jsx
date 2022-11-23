@@ -83,9 +83,9 @@ export default class ArtOfTwitchChat extends Component {
 
         <div className="aott-visuals">
           <div className="img-wrapper-gallery">
-            <div className="img-wrapper-large">
+            {/* <div className="img-wrapper-large">
               <img src={aottLarge} alt="Art of twitch chat preview" />
-            </div>
+            </div> */}
             <div className="indv-img-wrapper">
               <img src={img1} alt="ai-generated-psychadelic" />
             </div>

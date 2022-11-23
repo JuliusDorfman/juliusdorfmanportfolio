@@ -186,13 +186,121 @@
   overflow: hidden;
 }
 
+// Swinging light fixture
+
+
+.light-fixture-wrapper {
+  position: relative;
+  width: 200%;
+  height: 200%;
+  top: -100%;
+  left: -14%;
+  z-index: 1;
+  mix-blend-mode: plus-lighter;
+  animation: light-swing 5s infinite alternate;
+  -webkit-animation: light-swing 5s infinite alternate;
+  animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
+}
+
+.light-fixture-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  width: 5px;
+  background: linear-gradient(#411b41 40%, rgb(95, 76, 79) 100%);
+}
+
+#light-fixture {
+  position: absolute;
+  top: 50%;
+  right: 292px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+.light-fixture-path {
+  fill: rgb(95, 76, 79);
+  transform: translate(47%, 25%) scale(0.1);
+  -webkit-transform: translate(47%, 25%) scale(0.1);
+  -moz-transform: translate(47%, 25%) scale(0.1);
+  -ms-transform: translate(47%, 25%) scale(0.1);
+  -o-transform: translate(47%, 25%) scale(0.1);
+}
+
+.light-fixture-bulb {
+  position: absolute;
+  top: 57%;
+  right: 312px;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  background: linear-gradient(#F500F5 40%, pink 100%);
+  border-radius: 50vw;
+  -webkit-border-radius: 50vw;
+  -moz-border-radius: 50vw;
+  -ms-border-radius: 50vw;
+  -o-border-radius: 50vw;
+  z-index: -1;
+}
+
+.light-fixture-effect {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 56px;  
+}
+
+.light-fixture-effect-path {
+  position: absolute;
+  top: 50%;
+  fill: #ffd8d8;
+  transform: translate(30px, 50px);
+  -webkit-transform: translate(30px, 50px);
+  -moz-transform: translate(30px, 50px);
+  -ms-transform: translate(30px, 50px);
+  -o-transform: translate(30px, 50px);
+}
+
+
+@keyframes light-swing {
+  0% {
+    transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+}
+  50% {
+    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+}
+  100% {
+    transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+}
+}
+
+
+// Puddle
+
 .puddle-wrapper {
   position: absolute;
   height: 100%;
   width: 200%;
   top: 25%;
   left: -50%;
-  z-index: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
 }
 
 .puddle-wrapper svg {
@@ -207,6 +315,7 @@
   height: 100%;
   top: 7%;
   left: 0;
+  z-index: -1;
 }
 
 .animated-blob {
@@ -217,12 +326,26 @@
 
 #blob-1 {
   fill: white;
+  pointer-events: none;
 }
 
 #blob-2 {
   fill: rgb(35, 83, 145);
   z-index: -1;
-  transform: rotateZ(90deg)
+  transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  pointer-events: none;
+}
+
+#blobAnim-1 {
+  pointer-events: none;
+}
+
+#blobAnim-2 {
+  pointer-events: none;
 }
 
 #blobAnim-1 path {
@@ -264,6 +387,7 @@
   top: 85%;
   left: 55%;
   z-index: 1;
+  mix-blend-mode: difference;
 }
 
 
@@ -311,19 +435,26 @@
 
 
 #cogs-container {
-  position: relative;
+  position: absolute;
+  top: 75px;
+  right: 40px;
   width: 230px;
   height: 100%;
   margin: 20px auto;
-  // overflow:hidden;
-  // box-shadow: 0 0 200px darkslategray;
+  //overflow:hidden;
+  //box-shadow: 0 0 200px darkslategray;
   transform-style: preserve-3d;
+  z-index: 1;
   transform: rotate3d(10, 0, 0, 20deg);
-  z-index: 5;
+  -webkit-transform: rotate3d(10, 0, 0, 20deg);
+  -moz-transform: rotate3d(10, 0, 0, 20deg);
+  -ms-transform: rotate3d(10, 0, 0, 20deg);
+  -o-transform: rotate3d(10, 0, 0, 20deg);
+  mix-blend-mode: color-burn;  
 }
 
 .spoke {
-  background-color: grey;
+  background-color: #0F111A;
   position: absolute;
   height: 78px;
   width: 14px;
@@ -349,16 +480,17 @@
 
 .cog {
   position: absolute;
-  background-color: grey;
+  background-color: #0F111A;
   width: 60px;
   height: 60px;
-  // width: 150px;
-  // height: 150px;
+  //width: 150px;
+  //height: 150px;
   border-radius: 50%;
   z-index: 10;
-  // margin-left: 12%;
+  //margin-left: 12%;
   left: 48px;
   animation: spin 20s infinite linear;
+  -webkit-animation: spin 20s infinite linear;
 }
 
 .cog+.cog {
@@ -367,7 +499,8 @@
   animation: spin2 20s infinite linear;
   margin-top: 0px;
   margin-left: 30%;
-  // margin-left:100px;
+  //margin-left:100px;
+  -webkit-animation: spin2 20s infinite linear;
 }
 
 .hole {
@@ -378,8 +511,7 @@
   margin-top: 10px;
   background-color: #0F111A;
   border-radius: 50%;
-  z-index: 3000;
-  box-shadow: inset 0 0 1px 1px #B2CCCA;
+  z-index: -1;
 }
 
 .droplet {
@@ -478,6 +610,64 @@
     top: -20px;
   }
 
+  .passion-development {
+    position: relative;
+    padding: 0;
+    width: 100%;
+  }
+
+  #light-fixture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+  }
+
+  .light-fixture-wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 71px;
+    height: 40px;
+    width: 5px;
+    background: #FFA9E7;
+  }
+
+  .light-fixture-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    mix-blend-mode: plus-lighter;
+  }
+
+  .light-fixture-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .light-fixture-effect-path {
+    transform: translate(-168px, 50px);
+    -webkit-transform: translate(-168px, 50px);
+    -moz-transform: translate(-168px, 50px);
+    -ms-transform: translate(-168px, 50px);
+    -o-transform: translate(-168px, 50px);
+  }
+
+  .light-fixture-bulb {
+    left: 64px;
+  }
+
+  // Light Fixture Swing
+
+
+
   .vscode-img {
     top: 90%;
   }
@@ -488,19 +678,29 @@
 
   .animated-blob svg {
     margin-left: 50px;
+    margin-top: 15px;
   }
 
   .animated-blob span {
     margin-top: 15px;
     margin-left: 20px;
-
   }
 
   .puddle-wrapper svg {
     margin-top: -35%;
   }
 
+  #cogs-container {
+    width: 100%;
+  }
 
+  .cog {
+    left: 49%;
+  }
+
+  .cog+.cog {
+    margin-left: 72px;
+  }
 }
 
 
@@ -538,11 +738,28 @@
     left: -13%;
     top: -10px;
   }
-  
+
   .software-development h3:after {
     height: 60px;
     left: -13%;
     top: -20px;
+  }
+
+  .passion-development {
+    padding: 0;
+    width: 100%;
+  }
+
+  .light-fixture-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    mix-blend-mode: plus-lighter;
+  }
+
+  .puddle-wrapper {
+    top: 48%;
   }
 
   .vscode-img {

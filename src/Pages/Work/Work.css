@@ -42,7 +42,8 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(350px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 2rem;
+  padding: 5rem;
   transition: .5s;
 }
 
