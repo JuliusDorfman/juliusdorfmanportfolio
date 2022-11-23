@@ -43,7 +43,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(350px, 1fr));
   grid-gap: 2rem;
-  padding: 5rem;
+  padding: 10rem;
   transition: .5s;
 }
 
@@ -72,7 +72,7 @@
 
 .work-panel-container {
   /* margin: 15% 5% 0% 15%; */
-  margin: 15%;
+  /* margin: 15%; */
 }
 
 .work-panel-container:nth-child(2) {

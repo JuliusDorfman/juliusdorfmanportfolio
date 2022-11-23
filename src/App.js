@@ -107,9 +107,11 @@ class App extends React.Component {
     const currentPage = this.state.currentPage;
     const fadeClass = this.state.fadeIn === 'fade-out' ? 'fade-in' : 'fade-out';
     const pageRender = this.state.pageRender;
-    // const X = this.state.mouseAnim.mouseX;
-    // const Y = this.state.mouseAnim.mouseY;
-    // const menuOpen = this.state.menuOpen;
+    
+    //  const X = this.state.mouseAnim.mouseX;
+    //  const Y = this.state.mouseAnim.mouseY;
+    //  const menuOpen = this.state.menuOpen;
+    
 
     return (
       <div className="App">

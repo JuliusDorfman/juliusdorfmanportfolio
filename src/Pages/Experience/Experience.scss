@@ -77,8 +77,11 @@
 .accordian-item {
   width: 80%;
   height: 60px;
-  background: #FFA9E7;
-  color: #090B10;
+  // background: #FFA9E7;
+  // color: #090B10;
+  background: #00000099;
+    border: 2px solid white;
+    color: white;
   letter-spacing: .1em;
   padding: 0 2%;
   border-radius: .5em;
@@ -107,7 +110,7 @@
 .accordian-expand-button {
   cursor: pointer;
   color: aliceblue;
-  font-weight: 900;
+  font-weight: 400;
   height: 30px;
   width: 30px;
   font-size: 32px;
@@ -149,6 +152,7 @@
 .content-false {
   height: 10px;
   padding: 0;
+  background: #090b10;  
 }
 
 .accordian-details {

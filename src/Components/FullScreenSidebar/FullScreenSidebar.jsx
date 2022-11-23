@@ -12,19 +12,22 @@ export default class FullScreenSidebar extends Component {
       sidebarState: 'visible',
       currentPage: this.props.currentPage,
       wheelDown: false,
+      lastScroll: 0,
     };
   }
 
-  handleWheelDown = (e) => {
-    if (e.deltaY > 0) {
-      this.setState({ wheelDown: true }, () => {
-      })
+  handleScrollDown = (e) => {
+    let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (currentScroll > 0 && this.state.lastScroll <= currentScroll && window.scrollY > 800) {
+      this.setState({ lastScroll: currentScroll });
+      this.setState({ wheelDown: true })
     }
     else {
+      this.setState({ lastScroll: currentScroll });
       this.setState({ wheelDown: false })
     }
-  };
-
+  }
 
 
   handlePageClicked = (e) => {
@@ -32,16 +35,16 @@ export default class FullScreenSidebar extends Component {
     let scrollDestination = document.querySelector(`#${pageValue}`);
     // console.log("scrollDestination", scrollDestination)
     // console.log('pagevalue', pageValue);
-    scrollDestination.scrollIntoView()
+    scrollDestination.scrollIntoView();
   };
 
 
   componentDidMount = () => {
-    window.addEventListener('wheel', this.handleWheelDown)
+    window.addEventListener('scroll', this.handleScrollDown)
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('wheel', this.handleWheelDown)
+    window.removeEventListener('scroll', this.handleScrollDown)
   }
 
 

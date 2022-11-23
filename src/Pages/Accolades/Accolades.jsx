@@ -56,12 +56,13 @@ export default class Accolades extends Component {
             <h4>Available for select freelance opportunities</h4>
             <h6>
               Have an exciting project you need help with?
-              Send me an email or contact me via instant message!
+              Shoot me a message on Linkedin!
             </h6>
             <footer>
               <ul className="footer-links">
                 <li><a href="https://www.linkedin.com/in/juliusgdorfman/" target="_blank" rel='noreferrer'>linkedin</a></li>
                 <li><a href="https://github.com/JuliusDorfman" target="_blank" rel='noreferrer'>github</a></li>
+                <li><a href="https://codepen.io/juliusdorfman" target="_blank" rel='noreferrer'>codepen</a></li>
               </ul>
             </footer>
           </div>

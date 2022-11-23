@@ -48,7 +48,7 @@
 
 #FullScreenSidebar ul {
   position: fixed;
-  // width: 13vw;
+  //width: 13vw;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -62,6 +62,11 @@
   position: relative;
   font-size: 16px;
   margin-left: 40px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;  
 }
 
 #FullScreenSidebar ul li:nth-child(1) {
