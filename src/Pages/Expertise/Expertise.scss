@@ -206,7 +206,7 @@
   content: '';
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50.5%;
   height: 40px;
   width: 5px;
   background: linear-gradient(#411b41 40%, rgb(95, 76, 79) 100%);
@@ -251,7 +251,8 @@
   width: 100%;
   height: 100%;
   top: 50%;
-  left: 56px;  
+  left: 62.5px;
+  z-index: -2;
 }
 
 .light-fixture-effect-path {
@@ -273,21 +274,23 @@
     -moz-transform: rotate(8deg);
     -ms-transform: rotate(8deg);
     -o-transform: rotate(8deg);
-}
+  }
+
   50% {
     transform: rotate(-8deg);
     -webkit-transform: rotate(-8deg);
     -moz-transform: rotate(-8deg);
     -ms-transform: rotate(-8deg);
     -o-transform: rotate(-8deg);
-}
+  }
+
   100% {
     transform: rotate(8deg);
     -webkit-transform: rotate(8deg);
     -moz-transform: rotate(8deg);
     -ms-transform: rotate(8deg);
     -o-transform: rotate(8deg);
-}
+  }
 }
 
 
@@ -450,7 +453,7 @@
   -moz-transform: rotate3d(10, 0, 0, 20deg);
   -ms-transform: rotate3d(10, 0, 0, 20deg);
   -o-transform: rotate3d(10, 0, 0, 20deg);
-  mix-blend-mode: color-burn;  
+  mix-blend-mode: color-burn;
 }
 
 .spoke {
@@ -616,52 +619,58 @@
     width: 100%;
   }
 
-  #light-fixture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    z-index: 1;
-  }
-
-  .light-fixture-wrapper:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 71px;
-    height: 40px;
-    width: 5px;
-    background: #FFA9E7;
-  }
 
   .light-fixture-wrapper {
     position: absolute;
-    width: 100%;
+    top: -50%;
+    left: -55px;
+    width: 300px;
     height: 100%;
     z-index: 0;
     mix-blend-mode: plus-lighter;
   }
 
-  .light-fixture-effect {
+  .light-fixture-wrapper:after {
+    content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    height: 40px;
+    width: 5px;
+    background: #FFA9E7;
+  }
+
+
+  #light-fixture {
+    position: absolute;
+    top: 51%;
+    left: 26%;
+    width: 100px;
+    height: 100px;
     z-index: 1;
   }
 
-  .light-fixture-effect-path {
-    transform: translate(-168px, 50px);
-    -webkit-transform: translate(-168px, 50px);
-    -moz-transform: translate(-168px, 50px);
-    -ms-transform: translate(-168px, 50px);
-    -o-transform: translate(-168px, 50px);
+  .light-fixture-effect {
+    position: absolute;
+    top: 70%;
+    left: 4%;
+    right: 0;
+    width: 100%;
+    height: 150%;
+    z-index: -2;
   }
 
+  .light-fixture-effect-path {
+    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+}
+
   .light-fixture-bulb {
-    left: 64px;
+    left: 48%;
+    top: 67%;
   }
 
   // Light Fixture Swing
@@ -748,14 +757,6 @@
   .passion-development {
     padding: 0;
     width: 100%;
-  }
-
-  .light-fixture-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    mix-blend-mode: plus-lighter;
   }
 
   .puddle-wrapper {
