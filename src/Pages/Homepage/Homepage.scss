@@ -33,6 +33,9 @@
   /* St */
 }
 
+
+
+
 /* Contact Button */
 .button-wrapper {
   bottom: 0;
@@ -54,6 +57,7 @@
   border: 0;
   line-height: 0;
   pointer-events: auto;
+  mix-blend-mode: plus-lighter;
 }
 
 .contact-me>p {

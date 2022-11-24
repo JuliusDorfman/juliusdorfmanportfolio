@@ -62,6 +62,7 @@ export default class Homepage extends Component {
 
     return (
       <div id="homepage-component">
+
         <div className={`fixed-links-wrapper fixed-links-${FixedLinksVisibility}`}>
           <ul className="fixed-links">
             <li>
