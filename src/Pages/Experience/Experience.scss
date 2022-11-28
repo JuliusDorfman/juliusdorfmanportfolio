@@ -80,8 +80,8 @@
   // background: #FFA9E7;
   // color: #090B10;
   background: #00000099;
-    border: 2px solid white;
-    color: white;
+  border: 2px solid white;
+  color: white;
   letter-spacing: .1em;
   padding: 0 2%;
   border-radius: .5em;
@@ -153,7 +153,7 @@
 .content-false {
   height: 10px;
   padding: 0;
-  background: #090b10;  
+  background: #090b10;
 }
 
 .accordian-details {
@@ -173,6 +173,7 @@
 
 .accordian-true {
   opacity: 1;
+  padding-right: 5%;
   transition: .5s;
   -webkit-transition: .5s;
   -moz-transition: .5s;
@@ -252,7 +253,7 @@
   margin: auto 0;
   transition: .5s;
   text-align: center;
-  max-width: 300px;  
+  max-width: 300px;
 }
 
 .guildmortgage-logo-wrapper>img {
@@ -304,7 +305,7 @@
   margin: auto 0;
   transition: .5s;
   text-align: center;
-  max-width: 275px;  
+  max-width: 275px;
 }
 
 .imatrix-logo-wrapper>img {
@@ -350,7 +351,7 @@
   .guildmortgage-logo-wrapper {
     width: 35%;
   }
-  
+
   .supplypro-logo-wrapper {
     width: 55%;
   }

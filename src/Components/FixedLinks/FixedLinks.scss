@@ -1,0 +1,62 @@
+
+.fixed-links-wrapper {
+  position: fixed;
+  top: 70vh;
+  left: 70px;
+  z-index: 4000;
+  fill: white;
+}
+
+.fixed-links-true {
+  opacity: 1;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.fixed-links-false {
+  opacity: 0;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.scroll-progress-bar-wrapper {
+  position: fixed;
+  top: 85vh; 
+  left: 81px;
+  height: 300px;
+  width: 1px;
+  background: white;
+}
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 105vh;
+  left: 80px;
+  height: 200px;
+  width: 3px;
+  background: #B72E31;
+  transition: right .5s linear 0s;
+  z-index: 10;
+}
+
+.fixed-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fixed-links svg {
+  width: 24px;
+  height: 40px;
+  stroke-width: 1px;
+}
+
+.linkedin-icon {
+  margin-bottom: 4px;
+}
