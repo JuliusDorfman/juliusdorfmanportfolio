@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Accolades.css';
+import './Accolades.scss';
 const imatrix1 = require('../../Assets/iMatrix1.png');
 const imatrix2 = require('../../Assets/iMatrix2.png');
 const imatrix3 = require('../../Assets/iMatrix3.png');
@@ -41,15 +41,15 @@ export default class Accolades extends Component {
     const quoteReference = this.state.reference;
     return (
       <section id='accolades-component'>
-
-        <h1 data-aos="fade-up" data-aos-duration="3000">
-          <span data-aos="fade-right" className="subtext">Proud </span>
-          Accolades
-        </h1>
         <div data-aos="fade-left" data-aos-duration="3000" className="accolades-text">
           ACCOLADES
         </div>
-
+        <h1 className="accolades-header cursor-default">
+          <span data-aos="fade-right" className="subtext">
+            Proud
+          </span>
+          <span data-aos="fade-up">Accolades</span>
+        </h1>
         <div className="accolades-content">
 
           <div className="contact-action">

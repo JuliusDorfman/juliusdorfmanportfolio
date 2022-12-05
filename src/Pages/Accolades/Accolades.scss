@@ -14,6 +14,15 @@
   font-family: 'Julius Sans One', sans-serif;
 }
 
+.accolades-header .subtext:before {
+  counter-increment: section 1;
+  content: '0'counter(section) ".";
+  position: absolute;
+  font-size: .75rem;
+  top: -24px;
+  font-family: 'Roboto Mono', monospace;
+}
+
 /* #accolades-component::before {
   content: "";
   position: absolute;
@@ -53,6 +62,7 @@
 .contact-action>h4 {
   font-size: 1.7em;
 }
+
 .contact-action>h6 {
   padding-right: 20px;
 }
@@ -233,6 +243,7 @@
     width: 100vw;
   }
 }
+
 /* testing */
 @media (max-width: 600px) {
   .accolades {

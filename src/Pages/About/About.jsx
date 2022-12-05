@@ -29,11 +29,6 @@ export default class About extends React.Component {
       y: parentBubblePost.top
     }
 
-    // const dx = e.clientX - this.state.X;
-    // const dy = e.clientY - this.state.Y;
-
-    // const X = this.state.X + dx * 0.2;
-    // const Y = this.state.Y + dy * 0.2;
     let X = e.clientX - topLeftPosition.x - 200
     let Y = e.clientY - topLeftPosition.y
     requestAnimationFrame((x, y) => {
@@ -163,7 +158,8 @@ export default class About extends React.Component {
     return (
       <section id="about-component">
         <div data-aos="fade-left" data-aos-duration="3000"
-          className="about-text">ABOUT <br />ME</div>
+          className="about-text">ABOUT <br />ME
+        </div>
         <h1 className="about-me-header cursor-default">
           <span data-aos="fade-right" className="subtext">a little</span>
           <span data-aos="fade-up">About Me</span>
@@ -288,9 +284,7 @@ export default class About extends React.Component {
                         <h3>
                           <span style={{ color: "#9A6B9A" }}>if &nbsp;</span>
                           <span style={{ color: "#E9C502" }}>&#40;&nbsp;</span>
-                          <span style={{ color: "#86BBD8" }}>Julius&nbsp;</span>
-                          <span className="secondary-red">===&nbsp;</span>
-                          <span style={{ color: "#86BBD8" }}>!programming&nbsp;</span>
+                          <span style={{ color: "#86BBD8" }}>!julius.programming&nbsp;</span>
                           <span style={{ color: "#E9C502" }}>&#41;&nbsp;</span>
                           <span style={{ color: "#9A6B9A" }}>&#123;</span>
                           <br />

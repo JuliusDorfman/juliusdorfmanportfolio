@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import './ArtOfTwitchChat.scss';
-import '../global-pages.sass';
 const twitchIcon = require('../../Assets/twitch-icon.png');
 const aottLarge = require('../../Assets/art-of-twitch-chat.png');
 const img1 = require('../../Assets/img1.png');
