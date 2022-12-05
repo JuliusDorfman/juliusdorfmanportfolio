@@ -4,8 +4,11 @@
 $-light-pink-flavor: #F7B2B7;
 $-orchid-flavor: #FFA9E7;
 $-red-action: red;
+$-red-flavor: #8F0002;
+$-blue-flavor: #777DA7;
 $-dark-menu: #090B10;
-$-site-background-pink: #112240;
+$-site-background: #122240;
+
 
 
 html {
@@ -16,6 +19,7 @@ html {
 /** App Component **/
 .App {
   overflow: hidden;
+  counter-reset: section;
   /* cursor: url("./Assets/white-cursor.png"), auto; */
 }
 
@@ -117,6 +121,30 @@ html {
 }
 
 /** Global Styles **/
+
+
+.subtext {
+  position: relative;
+  font-size: .75rem;
+  margin-right: 12px;
+  color: #777DA7;
+}
+
+.subtext:before {
+  color: red;
+  // color: #B72E31;
+  font-family: "Roboto Mono", monospace;
+}
+
+.post-subtext {
+  position: absolute;
+  right: 13.4em;
+}
+
+.red-flavor {
+
+}
+
 .bolded {
   font-weight: bold;
   letter-spacing: .1em;
@@ -153,7 +181,7 @@ html {
 }
 
 .theme-fullscreen-sidebar {
- background-color: #202124;
+  background-color: #202124;
 }
 
 .theme-pages-background {
@@ -206,6 +234,7 @@ html {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -214,7 +243,7 @@ html {
 
 /* Footer Styles */
 
-#footer-component{
+#footer-component {
   display: block;
   position: fixed;
   bottom: 0;
@@ -260,7 +289,7 @@ html {
   height: 40px;
   width: 40px;
   border: 1px solid transparent;
-  display:inline-block;
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;

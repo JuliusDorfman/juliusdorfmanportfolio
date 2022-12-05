@@ -71,17 +71,18 @@ export default class FullScreenSidebar extends Component {
         </div>
         <div id="fullScreenSidebar-links-container">
           <ul className="fullScreenSidebar-links-wrapper">
-            <li data-aos="fade-down" data-aos-duration="1000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="homepage-component">// Home</li>
+            <li data-aos="fade-down" data-aos-duration="1000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="homepage-component"><span style={{color: "#777DA7"}}>//</span>Home</li>
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="homepage">Home</li> */}
-            <li data-aos="fade-down" data-aos-duration="1500" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="expertise-component">// Expertise</li>
-            {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="about">About</li> */}
+            {/* <li data-aos="fade-down" data-aos-duration="1500" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="expertise-component"><span style={{color: "#777DA7"}}>//</span> Expertise</li> */}
+            <li data-aos="fade-down" data-aos-duration="1500" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="about-component"><span style={{color: "#777DA7"}}>//</span> About</li>
+
             {/* <li onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="skills-component">My Skills</li> */}
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="skills">My Skills</li> */}
-            <li data-aos="fade-down" data-aos-duration="2000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="work-component">// Work</li>
+            <li data-aos="fade-down" data-aos-duration="2000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="work-component"><span style={{color: "#777DA7"}}>//</span> Work</li>
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="work">Work</li> */}
             {/* <li onClick={(e) => handlePageClicked(e)} className={`${this.activeMenuItem}`} pagevalue="contact">Contact</li> */}
-            <li data-aos="fade-down" data-aos-duration="2500" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="experience-component">// Experience</li>
-            <li data-aos="fade-down" data-aos-duration="3000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="accolades-component">// Accolades</li>
+            <li data-aos="fade-down" data-aos-duration="2500" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="experience-component"><span style={{color: "#777DA7"}}>//</span> Experience</li>
+            <li data-aos="fade-down" data-aos-duration="3000" onClick={this.handlePageClicked} className={`${this.activeMenuItem}`} pagevalue="accolades-component"><span style={{color: "#777DA7"}}>//</span> Accolades</li>
           </ul>
           {/* {this.props.floaters
             ?

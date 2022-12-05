@@ -1,3 +1,5 @@
+@import "../../_globalstyles";
+
 .navbar-component-wrapper {
   position: fixed;
   top: 0;
@@ -49,7 +51,8 @@
 }
 
 .initials-icon:hover {
-  background: #b72e31;
+  background: $-theme-secondary-red;
+  /* background: #b72e31; */
   /* background: #A7BCD6; */
 }
 

@@ -38,6 +38,7 @@
 
 /* Contact Button */
 .button-wrapper {
+  display: block;
   bottom: 0;
   height: 40px;
   width: 120px;
@@ -48,8 +49,8 @@
 .contact-me {
   display: inline-block;
   background-color: transparent;
-  box-shadow: 0 0 0 6px #B72E31;
-  transform: translate(11px, 11px);
+  box-shadow: 0 0 0 6px #8F0002;
+  transform: translate(40px, 11px);
   height: 100%;
   width: 100%;
   padding: 0;
@@ -57,7 +58,11 @@
   border: 0;
   line-height: 0;
   pointer-events: auto;
-  mix-blend-mode: plus-lighter;
+  //mix-blend-mode: plus-lighter;
+  -webkit-transform: translate(40px, 11px);
+  -moz-transform: translate(40px, 11px);
+  -ms-transform: translate(40px, 11px);
+  -o-transform: translate(40px, 11px);
 }
 
 .contact-me>p {
@@ -65,8 +70,8 @@
   height: 100%;
   margin: 0;
   width: 100%;
-  background-color: #B72E31;
-  box-shadow: 0 0 0 3px #B72E31;
+  background-color: #8F0002;
+  box-shadow: 0 0 0 3px #8F0002;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -144,6 +149,10 @@
   transform: translate(-250px, 250px);
   animation: glowing 5s infinite ease-out;
   -webkit-animation: glowing 5s infinite ease-out;
+  -webkit-transform: translate(-250px, 250px);
+  -moz-transform: translate(-250px, 250px);
+  -ms-transform: translate(-250px, 250px);
+  -o-transform: translate(-250px, 250px);
 }
 
 @keyframes glowing {
@@ -161,101 +170,68 @@
   }
 }
 
-/* 
-#homepage-component .contact-me {
-  margin-top: 10vh;
-  box-shadow: none;
-  border: 2px solid #A7BCD6;
-  background: transparent;
-  transition: .2s;
-  border-radius: 6px;
-  height: 40px;
-  letter-spacing: .2em;
-  text-decoration: none;
-  color: #A7BCD6;
-}
-
-
-#homepage-component .contact-me button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#homepage-component .contact-me:hover {
-  background: #235391;
-  border: 2px solid black;
-  box-shadow: none;
-  transition: .2s;
-  color: ghostwhite;
-  cursor: pointer;
-}
-
-#homepage-component .contact-me:hover a {
-  color: ghostwhite;
-}
-
-#homepage-component .contact-me:active {
-  background-color: #A7BCD6;
-  color: black;
-  font-size: 17px;
-  font-weight: bolder;
-  transform: translate(-15px, -7px);
-  transition: .5s;
-  -webkit-transform: translate(-15px, -7px);
-  -moz-transform: translate(-15px, -7px);
-  -ms-transform: translate(-15px, -7px);
-  -o-transform: translate(-15px, -7px);
-} */
 
 .landing-page-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-/* 
-.landing-page-wrapper:before {
-  content: '<h1>';
-  position: absolute;
-  top: 240px;
-  left: 56px;
-  font-size: 12px;
-  color: slategray;
+.button-container {
+  text-align: left;
+  width: 200px;
+  height: 80px;
+  padding: 24px;
+  background: linear-gradient(145deg, #112346, #0e1e3b);
+  // box-shadow: 50px 50px 100px #060d1a,
+  // -50px -50px 100px #1a3568;
 }
-
-.landing-page-wrapper:after {
-  content: '</h1>';
-  position: absolute;
-  top: 350px;
-  left: 56px;
-  font-size: 12px;
-  color: slategray;
-} */
 
 .landing-nav-top {
   height: 20vh;
 }
 
 .landing-intro {
+  width: 70%;
   text-align: left;
-  padding: 0 0 0 10vw;
+  padding: 24px 48px;
   font-family: 'Julius Sans One', sans-serif;
   letter-spacing: .5em;
+  background: linear-gradient(145deg, #112346, #0e1e3b);
+  box-shadow: 38px 38px 76px #060d1a,
+    -38px -38px 76px #1a3568;
+
+  cursor: default;
 }
 
-/* .landing-intro h1:before {
-  content: '';
+.landing-intro-fragment {
+  position: relative;
+  width: calc(70% + 48px);
+  padding: 0 48px 24px 0px;
+}
+
+.shadow-wrapper {
   position: absolute;
-  top: 0;
-  left: 30vw;
-  width: 1px;
-  height: inherit;
-  background: red;
-} */
+  transform: translateX(-20%);
+  height: 150%;
+  width: 600px;
+  /* overflow: hidden; */
+  z-index: -1;
+}
+
+.shadow {
+  box-shadow: 38px 38px 76px #060d1a,
+    -38px -38px 76px #1a3568;
+  height: 128px;
+  width: 248px;
+  transform: translateX(120px);
+}
 
 .landing-intro h1 {
   margin-top: 0;
-  padding-top: 250px;
 }
 
 .landing-intro .bolded {

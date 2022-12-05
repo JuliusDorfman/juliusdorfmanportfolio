@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import './Navbar.css';
+import './Navbar.scss';
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ export default class Navbar extends Component {
       <div className={`navbar-component-wrapper ${this.props.fadeClass}`}>
         <span className="blur-background"></span>
         <div className={`navbar-component`}>
-          <div className="nav-header">
+          <div className="nav-header cursor-default">
             <div className="nav-icon">
               <div className="initials-icon">
                 <a href="/portfolio" className="icon-card-initials-wrapper" value="portfolio" onClick={this.handleClick}>

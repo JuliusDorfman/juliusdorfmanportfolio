@@ -40,8 +40,6 @@ const FixedLinks = (props: FixedLinksProps) => {
       })
     })
 
-
-
     return () => {
       ctx.revert();
     };

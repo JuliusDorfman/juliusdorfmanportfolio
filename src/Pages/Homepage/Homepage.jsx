@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-undef
 import React, { Component, createRef } from 'react';
 // import TweenMax from "gsap";
-// import About from '../../Pages/About';
+import About from '../../Pages/About';
 // import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
 import Expertise from '../Expertise/Expertise';
@@ -36,7 +36,6 @@ export default class Homepage extends Component {
     } else {
       this.setState({ FixedLinksVisibility: true });
     }
-
   }
 
 
@@ -49,14 +48,14 @@ export default class Homepage extends Component {
     window.removeEventListener('scroll', this.handleNearBottom);
   }
 
- 
+
 
   render() {
     let FixedLinksVisibility = this.state.FixedLinksVisibility;
 
     return (
       <div id="homepage-component">
-        <FixedLinks fixedlinksvisibility={FixedLinksVisibility}/>
+        <FixedLinks fixedlinksvisibility={FixedLinksVisibility} />
         {/* <canvas id="mouse-trail">
 
         </canvas> */}
@@ -65,13 +64,13 @@ export default class Homepage extends Component {
           {/* <div className="landing-nav-top">
             <button className="nav-inactive"></button>
           </div> */}
-          <div className="landing-intro">
+          <div className="landing-intro" data-aos="fade-in" data-aos-duration="3000">
             {/* <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`} /> */}
-            <h1 data-aos="fade-right">
+            <h1>
               <span className="bolded">J</span>ulius <span className="bolded">D</span>orfman
               <br />
             </h1>
-            <span data-aos="fade-up" className="landing-flavor">Web Developer / Software Engineer</span>
+            <span data-aos="fade-in" className="landing-flavor">Web Developer / Software Engineer</span>
             {/* <img src={h1TagClose} alt="h1-tag-flourish" className={`flavor-tag-close h1-flavor-close flavor-tags-${this.props.toggleHide}`} /> */}
             <p className="landing-title">
               {/* <img src={pTagOpen} alt="p-tag-flourish" className={`flavor-tag-open flavor-tags-${this.props.toggleHide}`} /> */}
@@ -80,18 +79,9 @@ export default class Homepage extends Component {
               <br />
               {/* <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} /> */}
             </p>
-            <div className="button-wrapper">
-              <a href="https://www.linkedin.com/in/juliusgdorfman/"
-                target="_blank" rel="noreferrer"
-                className="contact-me">
-                <p>
-                  Contact Me
-                </p>
-                <span className="glow-wrapper">
-                  <span className="glow" />
-                </span>
-              </a>
-            </div>
+
+            <p className="landing-title">
+            </p>
             <div className="indication-wrapper">
               <div></div>
               <div href={'#about-component'} className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
@@ -99,6 +89,26 @@ export default class Homepage extends Component {
             </div>
           </div>
 
+          <div className="landing-intro-fragment">
+            <div className="shadow-wrapper">
+              <div className="shadow"></div>
+            </div>
+
+            <div className="button-container" data-aos="fade-is" data-aos-duration="3000">
+              <div className="button-wrapper">
+                <a href="https://www.linkedin.com/in/juliusgdorfman/"
+                  target="_blank" rel="noreferrer"
+                  className="contact-me">
+                  <p>
+                    Contact Me
+                  </p>
+                  <span className="glow-wrapper">
+                    <span className="glow" />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
 
 
           {/* <div class="marquee-container marquee-tech">
@@ -205,8 +215,8 @@ export default class Homepage extends Component {
         </div>
         <div className="background-spacer"></div>
         <div className="homepage-components-wrapper">
-          <Expertise />
-          {/* <About /> */}
+          {/* <Expertise /> */}
+          <About />
           {/* <Skills /> */}
           <Work handleCurrentPage={this.props.handleCurrentPage} />
           {/* <Contact /> */}

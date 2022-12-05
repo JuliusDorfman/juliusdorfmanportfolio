@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: center;
   background: #11224080;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(7px);
   box-shadow: 0 0 10px 8px #091120;
   //background: #090b10;
   z-index: 20;
@@ -17,6 +17,7 @@
   -moz-transition: .5s;
   -ms-transition: .5s;
   -o-transition: .5s;
+  counter-reset: links;
 }
 
 #FullScreenSidebar a,
@@ -31,7 +32,7 @@
   display: flex;
   top: 8px;
   left: 24px;
-  z-index: 3000;  
+  z-index: 3000;
 }
 
 #fullScreenSidebar-links-container {
@@ -62,38 +63,29 @@
   position: relative;
   font-size: 16px;
   margin-left: 40px;
-  transition: .5s;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;  
+  // transition: .5s;
+  // -webkit-transition: .5s;
+  // -moz-transition: .5s;
+  // -ms-transition: .5s;
+  // -o-transition: .5s;
 }
 
-#FullScreenSidebar ul li:nth-child(1) {
-  content: '1';
+#FullScreenSidebar ul li:before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  counter-increment: links 1;
+  content: '0'counter(links) ".";
+  color: red;
+  font-size: .75em;
+  font-weight: 900;
+  font-family: "Roboto Mono", monospace;
 }
-
-#FullScreenSidebar ul li:nth-child(2) {
-  content: '2';
-}
-
-#FullScreenSidebar ul li:nth-child(3) {
-  content: '3';
-}
-
-#FullScreenSidebar ul li:nth-child(4) {
-  content: '4';
-}
-
-#FullScreenSidebar ul li:nth-child(5) {
-  content: '5';
-}
-
 
 
 #FullScreenSidebar ul li:hover {
   cursor: pointer;
-  color: #B72E31;
+  color: #8F0002;
   transition: .3s;
 }
 
@@ -116,7 +108,7 @@
 /* Fullscreen Sidebar Animations */
 
 .active-menu-item {
-  color: #B72E31
+  color: #8F0002
 }
 
 #fullScreenSidebar-links-container ul li:active {

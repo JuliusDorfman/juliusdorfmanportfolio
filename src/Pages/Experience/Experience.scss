@@ -9,32 +9,61 @@
   overflow: hidden;
 }
 
-#experience-component::before {
+.experience-section::before {
   position: absolute;
-  left: 2vw;
-  top: 15vh;
-  // transform: translateX(-20px);
+  right: 2vw;
   content: "";
   height: 70%;
   width: 3px;
   background: linear-gradient(rgb(248, 248, 255) 25%, rgb(248, 248, 255) 25%, #F7B2B7 50%, #F7B2B7 50%, #FF0AB6 75%, #8F0064 75%, #29001D 100%);
-  // background: linear-gradient(#270901 25%, #B12906 25%, #F75026 50%, #FBA089 50%, #FBA089 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
-  // background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
 }
 
 .experience-header {
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2em;
+  padding: 48px;
+  font-weight: bold;
+  margin-top: 0;
+  width: 100%;
+  box-shadow: -50px 50px 45px #060d1a;
 }
 
-.subtext {
-  font-size: .75rem;
-  color: gray;
+.experience-header:before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 2vw;
+  height: 2px;
+  width: 17vw;
+  background: rgb(167, 188, 214);
 }
+
+.experience-header:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 2vw;
+  height: 2px;
+  width: 17vw;
+  background: rgb(167, 188, 214);
+}
+
+
+.experience-header .subtext:before {
+  counter-increment: section 1;
+  content: '0'counter(section) ".";
+  position: absolute;
+  font-size: .75rem;
+  top: -24px;
+  font-family: 'Roboto Mono', monospace;
+}
+
 
 .experience-text {
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 40px;
   font-size: 25rem;
   color: rgba(167, 188, 214, .04);
   white-space: nowrap;
@@ -116,7 +145,7 @@
   font-size: 32px;
   line-height: .8;
   box-shadow: 0 0 5px 4px aliceblue;
-  background: #B72E31;
+  background: #8F0002;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -257,9 +286,11 @@
 }
 
 .guildmortgage-logo-wrapper>img {
-  width: 60%;
-  height: initial;
-  transition: .5s;
+  // width: 60%;
+  // height: initial;
+  // transition: .5s;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 
 .guild-false {
@@ -373,7 +404,6 @@
 
 
 @media (max-width:600px) {
-
   .company-logo {
     height: initial;
   }

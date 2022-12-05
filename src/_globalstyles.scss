@@ -1,0 +1,77 @@
+  $-text-content-color: #E4DFDA;
+  $-theme-black: #040810;
+  $-theme-main-blue: #102141;
+  $-theme-secondary-blue: #777DA7;
+  $-theme-action-red: red;
+  $-theme-secondary-red: #8F0002;
+
+  /** Global Styles **/
+
+  .cursor-default {
+    cursor: default;
+  }
+
+  .subtext {
+    position: relative;
+    font-size: .75rem;
+    margin-right: 12px;
+    color: #777DA7;
+  }
+
+  .subtext:before {
+    color: red;
+    // color: #B72E31;
+    font-family: "Roboto Mono", monospace;
+  }
+
+  .post-subtext {
+    position: absolute;
+    right: 13.4em;
+  }
+
+  .red-flavor {
+    color: #8F0002;
+  }
+
+  .secondary-red {
+    color: $-theme-secondary-red;
+  }
+
+  .secondary-blue {
+    color: $-theme-secondary-blue;
+  }
+
+  .bolded {
+    font-weight: bold;
+    letter-spacing: .1em;
+  }
+
+  .bottom-space {
+    height: 20vh;
+    background-color: #0f111a;
+  }
+
+  .no-wrap {
+    white-space: no-wrap;
+  }
+
+  /* Global Colors */
+  .theme-text-content {
+    color: #E4DFDA;
+  }
+
+  .theme-black {
+    background-color: #040810;
+  }
+
+  .theme-main-blue {
+    background-color: #102141;
+  }
+
+  .theme-secondary-blue {
+    background-color: #777DA7;
+  }
+
+  .theme-purple {
+    background-color: #8850bf;
+  }
