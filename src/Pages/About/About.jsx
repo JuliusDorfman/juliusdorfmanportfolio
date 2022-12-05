@@ -11,8 +11,8 @@ export default class About extends React.Component {
       skillsFormation: 'bubble',
       skillsList: 'hide',
       selectedRadio: [true, false, false, false],
-      selected: "4",
-      secretKey: [1234],
+      selected: "1",
+      secretKey: [1],
       waves: false,
       X: null,
       Y: null
