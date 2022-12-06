@@ -37,7 +37,7 @@ class Experience extends Component {
     return (
       <section id="experience-component">
         <div data-aos="fade-left" data-aos-duration="3000" className="experience-text">Experience</div>
-        <h1 className="experience-header cursor-default"><span data-aos="fade-right" className="subtext">growing </span><span data-aos="fade-up">Professional Experience</span></h1>
+        <h1 className="experience-header cursor-default"><span data-aos="fade-right" className="subtext">growing </span><span data-aos="fade-up">Experience</span></h1>
         <p className="experience-page-intro">
         </p>
         <div className="experience-section">

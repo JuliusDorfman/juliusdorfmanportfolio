@@ -45,31 +45,42 @@ export default class About extends React.Component {
   }
 
   handleCelebration = () => {
-
-    let randomNumber = Math.floor(Math.random() * 4) + 1;
-    this.setState({ secretFormation: randomNumber })
-
-
-    this.getRandomNumberExcluding = (min, max, excluded) => {
-      let randomNumber = Math.floor(Math.random() * (max - min + 1));
-      while (randomNumber === excluded) {
-        randomNumber = this.getRandomNumberExcluding(min, max, excluded)
+    this.getRandomNumberExcluding = (min, max, excluded, mode) => {
+      if (mode === "face") {
+        let randomNumber = Math.floor(Math.random() * (max - min + 1));
+        while (randomNumber === excluded) {
+          randomNumber = this.getRandomNumberExcluding(min, max, excluded, mode)
+        }
+        return randomNumber;
+      } else if (mode === "formation") {
+        let randomNumber = Math.floor(Math.random() * max - min + 1);
+        while (randomNumber === excluded) {
+          randomNumber = this.getRandomNumberExcluding(min, max, excluded, mode)
+        }
+        return randomNumber;
       }
-      return randomNumber;
     }
 
-
     this.selectRandomSecretFace = () => {
+      let mode = "face"
       const { secretFaces, secretFaceSelected } = this.state;
-      const randomNumber = this.getRandomNumberExcluding(0, secretFaces.length - 1, secretFaceSelected);
+      const randomNumber = this.getRandomNumberExcluding(0, secretFaces.length - 1, secretFaceSelected, mode);
       this.setState({ secretFaceSelected: randomNumber });
     }
 
+    this.selectRandomSecretFormation = () => {
+      let mode = "formation"
+      const { secretFormation } = this.state;
+      const randomNumber = this.getRandomNumberExcluding(0, 4, secretFormation, mode);
+      this.setState({ secretFormation: randomNumber });
+    }
+
     this.selectRandomSecretFace();
-
+    this.selectRandomSecretFormation();
     // Do something with canvas or threejs here
-
   }
+
+
 
   handleRadio = (e) => {
     let options = document.getElementsByClassName("options")[0];
@@ -118,6 +129,7 @@ export default class About extends React.Component {
       secretKey: secretKey
     });
   }
+
 
 
 
