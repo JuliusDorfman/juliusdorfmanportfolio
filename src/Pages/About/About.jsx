@@ -1,3 +1,4 @@
+import { random } from 'animejs';
 import React from 'react';
 import Timmy from '../../Assets/Timmy.jpg';
 import './About.scss';
@@ -13,6 +14,10 @@ export default class About extends React.Component {
       selectedRadio: [true, false, false, false],
       selected: "1",
       secretKey: [1],
+      secretFormation: '',
+      secretFaces: [" ˘ ͜ʖ ˘", "•̀.̫ •́✧",
+        "⚈ ̫ ⚈", "-ω-", " `˙ ͜ʟ˙`"],
+      secretFaceSelected: 2,
       waves: false,
       X: null,
       Y: null
@@ -41,62 +46,30 @@ export default class About extends React.Component {
 
   handleCelebration = () => {
 
-    var canvas = document.querySelector('canvas');
-    var c = canvas.getContext('2d');
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    var mouse = {
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2
-    };
-
-    var isMouseDown = false;
-
-    window.addEventListener("mousemove", function (event) {
-      mouse.x = event.clientX;
-      mouse.y = event.clientY;
-    });
-
-    window.addEventListener("resize", function () {
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
-
-    });
+    let randomNumber = Math.floor(Math.random() * 4) + 1;
+    this.setState({ secretFormation: randomNumber })
 
 
-    window.addEventListener("mousedown", function () {
-      isMouseDown = true;
-    });
+    this.getRandomNumberExcluding = (min, max, excluded) => {
+      let randomNumber = Math.floor(Math.random() * (max - min + 1));
+      while (randomNumber === excluded) {
+        randomNumber = this.getRandomNumberExcluding(min, max, excluded)
+      }
+      return randomNumber;
+    }
 
-    window.addEventListener("mouseup", function () {
-      isMouseDown = false;
-    });
 
-    canvas.addEventListener("touchstart", function () {
-      isMouseDown = true;
-    });
+    this.selectRandomSecretFace = () => {
+      const { secretFaces, secretFaceSelected } = this.state;
+      const randomNumber = this.getRandomNumberExcluding(0, secretFaces.length - 1, secretFaceSelected);
+      this.setState({ secretFaceSelected: randomNumber });
+    }
 
-    canvas.addEventListener("touchmove", function (event) {
-      event.preventDefault();
-      mouse.x = event.touches[0].pageX;
-      mouse.y = event.touches[0].pageY;
-    });
+    this.selectRandomSecretFace();
 
-    canvas.addEventListener("touchend", function () {
-      isMouseDown = false;
-    });
-
+    // Do something with canvas or threejs here
 
   }
-
-  componentDidMount = () => {
-  }
-
-  componentWillUnmount = () => {
-  }
-
 
   handleRadio = (e) => {
     let options = document.getElementsByClassName("options")[0];
@@ -155,6 +128,10 @@ export default class About extends React.Component {
     let { X } = this.state;
     let { Y } = this.state;
     let secretKey = this.state.secretKey.join("");
+    let { secretFormation } = this.state;
+    let { secretFaces } = this.state;
+    let { secretFaceSelected } = this.state;
+
     return (
       <section id="about-component">
         <div data-aos="fade-left" data-aos-duration="3000"
@@ -167,7 +144,7 @@ export default class About extends React.Component {
         <div className="about-me-section">
           <div className="about-me-content-container">
 
-            <div className="interactive-disk">
+            <div className={`interactive-disk secret-formation-${secretFormation}`}>
 
               <div className={`circle waves-${waves}`}>
                 <span className="circle__btn">
@@ -263,7 +240,7 @@ export default class About extends React.Component {
                             I wield
                           </span>
                         </h3>
-                        <p className={`about-me-page-intro selection-anim-${waves} cursor-default`}>
+                        <div className={`about-me-page-intro selection-anim-${waves} cursor-default`}>
                           <br />
                           <br />
                           <ul className="technologies-list">
@@ -275,26 +252,44 @@ export default class About extends React.Component {
                             <li>MongoDB&#47;Distrubuted Databases</li>
                             <li>AWS Services</li>
                           </ul>
-                        </p>
+                        </div>
                       </div>
                     )
                   case "3":
                     return (
                       <div className={`about-content-intro about-content-interests selection-anim-${waves} cursor-default`}>
-                        <h3>
-                          <span style={{ color: "#9A6B9A" }}>if &nbsp;</span>
-                          <span style={{ color: "#E9C502" }}>&#40;&nbsp;</span>
-                          <span style={{ color: "#86BBD8" }}>!julius.programming&nbsp;</span>
-                          <span style={{ color: "#E9C502" }}>&#41;&nbsp;</span>
-                          <span style={{ color: "#9A6B9A" }}>&#123;</span>
-                          <br />
-                        </h3>
+                        {/* <h3> */}
+
+                        {/* </h3> */}
                         <div className={`about-me-page-intro`}>
                           <p>
-                            After hours, I'm an avid gym goer, gamer, and a middling pianist.
+                            <span style={{ color: "#9A6B9A" }}>function&nbsp;</span>
+                            <span style={{ color: "#DCDCAA" }}>hobbiesAfterHours</span>
+                            <span style={{ color: "#E9C502" }}>&#40;&#41;&nbsp;</span>
+                            <span style={{ color: "#9A6B9A" }}>&#123;</span>
                             <br />
+                            <span style={{ color: "#9A6B9A" }}>&nbsp;while&nbsp;</span>
+                            <span style={{ color: "#E9C502" }}>&#40;&nbsp;</span>
+                            <span style={{ color: "#86BBD8" }}>time.afterHours&nbsp;</span>
+                            <span style={{ color: "#E9C502" }}>&#41;&nbsp;</span>
+                            <span style={{ color: "#9A6B9A" }}>&#123;</span>
                             <br />
-                            I also make sure <span className="bolded highlighted-text">this fella</span> lives a life worthy of dreaming about.
+                            <span style={{ color: "#9A6B9A" }}>&nbsp;&nbsp;&nbsp;if &nbsp;</span>
+                            <span style={{ color: "#E9C502" }}>&#40;&nbsp;</span>
+                            <span style={{ color: "#86BBD8" }}>!julius.programming&nbsp;</span>
+                            <span style={{ color: "#E9C502" }}>&#41;&nbsp;</span>
+                            <span style={{ color: "#9A6B9A" }}>&#123;</span>
+                            <br />
+                            <span style={{ color: "#DCDCAA" }}>&nbsp;&nbsp;&nbsp;julius.hobbies = ["<span style={{ color: "#FF3336" }}>gym</span>", "<span style={{ color: "#FF3336" }}>gaming</span>", "<span style={{ color: "#FF3336" }}>piano</span>"];</span>
+                            <br />
+                            <span style={{ color: "#9A6B9A" }}>&nbsp;&nbsp;&nbsp;&#125;</span>
+                            <br />
+                            <span style={{ color: "#DCDCAA" }}>&nbsp;&nbsp;julius.enjoyLife();</span>
+                            <br />
+                            <span style={{ color: "#9A6B9A" }}>&nbsp;&#125;</span>
+                            <br />
+                            <span style={{ color: "#9A6B9A" }}>&#125;</span>
+
                           </p>
                           <br />
                         </div>
@@ -313,27 +308,19 @@ export default class About extends React.Component {
                     if (secretKey === "1234") {
                       return (
                         <div className={`about-content-intro secret-yes selection-anim-${waves} cursor-default`}>
-                          <div className={`about-me-page-intro`}>
+                          <div className="secret-congratulations">
                             You clicked all the buttons! Now click this one.
-                            {/* <div class="celebration-button-box">
-                              <div class="celebration-button-wrapper">
-                                <div class="celebration-button">
-                                  <div class="celebration-button-inner">
-                                  </div>
-                                </div>
-                              </div>
-                            </div> */}
                           </div>
                           <div
                             onClick={this.handleCelebration}
                             className="celebration-button-wrapper">
-                            <div className="celebration-button">•̀.̫ •́✧</div>
+                            <div className="celebration-button">{secretFaces[secretFaceSelected]}</div>
                             <span className="celebration-button__waves-1"></span>
                             <span className="celebration-button__waves-2"></span>
                           </div>
-                          <canvas id="celebration-canvas">
+                          {/* <canvas id="celebration-canvas">
 
-                          </canvas>
+                          </canvas> */}
                         </div>
                       )
                     } else {
@@ -367,7 +354,7 @@ export default class About extends React.Component {
               }
             </div>
           </div>
-        </div>
+        </div >
       </section >
     );
   }
