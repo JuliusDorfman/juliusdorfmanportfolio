@@ -1,9 +1,6 @@
 import React from 'react';
 import './Work.scss';
 import Spinner from '../../Components/Spinner/Spinner';
-import ArtOfTwitchChat from '../ArtOfTwitchChat';
-import AOTT from '../../../src/Assets/AOTT-1.png';
-import FlowingWater from '../../Components/FlowingWater/FlowingWater';
 import AOTC from '../../Assets/AOTC-thumbnail.png'
 
 export default class Work extends React.Component {
@@ -71,7 +68,7 @@ export default class Work extends React.Component {
             <li id="art-of-twitch">
               <div className="project-content">
                 <div>
-                  <div className="project-headers">
+                  <div className="project-headers" data-aos="fade-in" data-aos-duration="3000">
                     <p className="project-overline">Featured Project</p>
                     <h3 className="project-title">Art of Twitch</h3>
                   </div>
@@ -81,13 +78,13 @@ export default class Work extends React.Component {
                     streamers chat a prompt will be passed to a stable-diffusion model
                     and an art piece will be generated.
                   </div>
-                  <ul className="project-tech-list">
+                  <ul className="project-tech-list" data-aos="fade-in" data-aos-duration="3000">
                     <li>ReactJS</li>
                     <li>TypeScript</li>
                     <li>Node.js</li>
                     <li>Python</li>
                   </ul>
-                  <div className="project-links">
+                  <div className="project-links" data-aos="fade-in" data-aos-duration="3000">
                     <a href="https://github.com/JuliusDorfman/twitchplugin" target="_blank" rel="noopener noreferrer">
                       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" strokeWidth="1">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -109,9 +106,122 @@ export default class Work extends React.Component {
                 <img src={AOTC} alt="Art of Twitch Chat" />
               </picture>
             </li>
-            <li></li>
           </ul>
-        </div>
+          <div className="other-projects-wrapper">
+            <h4 data-aos="fade-in" data-aos-duration="3000">Other Projects</h4>
+            <ul className="other-projects-list">
+              <li>
+                <div className="other-project-inner">
+                  <header>
+                    <div className="other-project-top">
+                      <div className="folder">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="feather feather-folder">
+                          <title>Folder</title>
+                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                      </div>
+                      <div className="other-project-links"></div>
+                    </div>
+                    <h3 className="other-project-title">Coming Soon</h3>
+                    <div className="other-project-description">Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Voluptates placeat adipisci non dolorem reiciendis accusantium
+                      cupiditate possimus tenetur et in incidunt doloribus impedit veritatis, ab tempora!
+                      Illum beatae doloremque quo.</div>
+                  </header>
+                  <footer>
+                    <ul>
+                      <li>Tech 1</li>
+                      <li>Tech 2</li>
+                      <li>Tech 3</li>
+                    </ul>
+                  </footer>
+                </div>
+              </li>
+              <li>
+                <div className="other-project-inner">
+                  <header>
+                    <div className="other-project-top">
+                      <div className="folder">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="feather feather-folder">
+                          <title>Folder</title>
+                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                      </div>
+                      <div className="other-project-links"></div>
+                    </div>
+                    <h3 className="other-project-title">Coming Soon</h3>
+                    <div className="other-project-description">Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Voluptates placeat adipisci non dolorem reiciendis accusantium
+                      cupiditate possit. Voluptates placeat adipisci non dolorem reiciendis accusantium
+                      cupiditate possit. Voluptates placeat adipisci non dolorem reiciendis accusantium
+                      cupiditate possimus tenetur et in incidunt doloribus impedit veritatis, ab tempora!
+                      Illum beatae doloremque quo.</div>
+                  </header>
+                  <footer>
+                    <ul>
+                      <li>Tech 1</li>
+                      <li>Tech 2</li>
+                      <li>Tech 3</li>
+                    </ul>
+                  </footer>
+                </div>
+              </li>
+              <li>
+                <div className="other-project-inner">
+                  <header>
+                    <div className="other-project-top">
+                      <div className="folder">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="feather feather-folder">
+                          <title>Folder</title>
+                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                      </div>
+                      <div className="other-project-links"></div>
+                    </div>
+                    <h3 className="other-project-title">Coming Soon</h3>
+                    <div className="other-project-description">Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Voluptates placeat adipisci non dolorem reiciendis accusantium
+                      cupiditate possimus tenetur et in incidunt doloribus impedit veritatis, ab tempora!
+                      Illum beatae ue quo.</div>
+                  </header>
+                  <footer>
+                    <ul>
+                      <li>Tech 1</li>
+                      <li>Tech 2</li>
+                      <li>Tech 3</li>
+                    </ul>
+                  </footer>
+                </div>
+              </li>
+              <li>
+                <div className="other-project-inner">
+                  <header>
+                    <div className="other-project-top">
+                      <div className="folder">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="feather feather-folder">
+                          <title>Folder</title>
+                          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                      </div>
+                      <div className="other-project-links"></div>
+                    </div>
+                    <h3 className="other-project-title">Coming Soon</h3>
+                    <div className="other-project-description">Lorem ipsum dolor sit amet consectetur
+                      adipisicinn incidunt doloribus impedit veritatis, ab tempora!
+                      Illum beatae doloremque quo.</div>
+                  </header>
+                  <footer>
+                    <ul>
+                      <li>Tech 1</li>
+                      <li>Tech 2</li>
+                      <li>Tech 3</li>
+                    </ul>
+                  </footer>
+                </div>
+              </li>
+            </ul>
+          </div >
+        </div >
       </section >
     );
   }

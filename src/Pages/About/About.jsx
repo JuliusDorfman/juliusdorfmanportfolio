@@ -17,7 +17,7 @@ export default class About extends React.Component {
       secretFormation: '',
       secretFaces: [" ˘ ͜ʖ ˘", "•̀.̫ •́✧",
         "⚈ ̫ ⚈", "-ω-", " `˙ ͜ʟ˙`"],
-      secretFaceSelected: 2,
+      secretFaceSelected: 1,
       waves: false,
       X: null,
       Y: null
@@ -228,10 +228,10 @@ export default class About extends React.Component {
                       <div className={`about-content-intro selection-anim-${waves} cursor-default`}>
                         <h3>Hello,</h3>
                         <p className={`about-me-page-intro`}>
-                          My name is Julius. I'm a developer passionate about
+                          My name is Julius. I'm a developer passionate about&nbsp;
                           <span className="bolded highlighted-text">all things web</span>.
                           Fortunately, my hobbies, interests, and career have all culminated in
-                          the accumulation of years of <span className="bolded highlighted-text">front-end, back-end, cloud, and client-facing experience</span>.
+                          the accumulation of years of <span className="bolded highlighted-text">front-end</span>, <span className="bolded highlighted-text">back-end</span>, <span className="bolded highlighted-text">cloud</span>, and <span className="bolded highlighted-text">client-facing experience</span>.
                           <br />
                           <br />
                           This website is where I publish my works; an expression of my creativity through design, code, and writing. While you&apos;re here, <span className="bolded highlighted-text">thank you</span> for being a part of it.
