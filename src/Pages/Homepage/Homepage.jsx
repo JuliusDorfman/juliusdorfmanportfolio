@@ -1,9 +1,6 @@
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line no-undef
 import React, { Component, createRef } from 'react';
 // import TweenMax from "gsap";
 import About from '../../Pages/About';
-// import Skills from '../../Pages/Skills';
 import Work from '../../Pages/Work';
 import Expertise from '../Expertise/Expertise';
 import Experience from '../Experience/Experience';
@@ -22,8 +19,6 @@ export default class Homepage extends Component {
     };
   }
 
-
-
   handleNearBottom = () => {
     let accolades = document.getElementById('accolades-component');
     const viewPort = {
@@ -38,8 +33,6 @@ export default class Homepage extends Component {
     }
   }
 
-
-
   componentDidMount = () => {
     window.addEventListener('scroll', this.handleNearBottom);
   }
@@ -47,8 +40,6 @@ export default class Homepage extends Component {
   componentWillUnmount = () => {
     window.removeEventListener('scroll', this.handleNearBottom);
   }
-
-
 
   render() {
     let FixedLinksVisibility = this.state.FixedLinksVisibility;
@@ -60,32 +51,15 @@ export default class Homepage extends Component {
 
         </canvas> */}
         <div className="landing-page-wrapper">
-          {/* <img className={`flavor-tag-open html-tag-open flavor-tags-${this.props.toggleHide}`} src={htmlTag} alt="flavor-tag-html" /> */}
-          {/* <div className="landing-nav-top">
-            <button className="nav-inactive"></button>
-          </div> */}
-          <div className="landing-intro" data-aos="fade-in" data-aos-duration="3000">
-            {/* <img src={h1TagOpen} alt="h1-tag-flourish" className={`flavor-tag-open h1-flavor-open flavor-tags-${this.props.toggleHide}`} /> */}
-            <h1>
+          <div className="landing-intro">
+            <h1 data-aos="fade-in" data-aos-duration="3000">
               <span className="bolded">J</span>ulius <span className="bolded">D</span>orfman
               <br />
             </h1>
             <span data-aos="fade-in" className="landing-flavor">Web Developer / Software Engineer</span>
-            {/* <img src={h1TagClose} alt="h1-tag-flourish" className={`flavor-tag-close h1-flavor-close flavor-tags-${this.props.toggleHide}`} /> */}
-            <p className="landing-title">
-              {/* <img src={pTagOpen} alt="p-tag-flourish" className={`flavor-tag-open flavor-tags-${this.props.toggleHide}`} /> */}
-              <br />
-              {/* Full Stack Developer / Software Engineer */}
-              <br />
-              {/* <img src={pTagClose} alt="p-tag-flourish" className={`flavor-tag-close flavor-tags-${this.props.toggleHide}`} /> */}
-            </p>
-
-            <p className="landing-title">
-            </p>
             <div className="indication-wrapper">
               <div></div>
               <div href={'#about-component'} className={`vertical-orientation-right flavor-tags-slide-down-${this.props.toggleHide}`}>scroll</div>
-              {/* <img src={sectionTagClose} className={`flavor-tag-close section-tag-flavor-close flavor-tags-${this.props.toggleHide}`} alt="section-tag-flavor" /> */}
             </div>
           </div>
 
@@ -94,8 +68,8 @@ export default class Homepage extends Component {
               <div className="shadow"></div>
             </div>
 
-            <div className="button-container" data-aos="fade-is" data-aos-duration="3000">
-              <div className="button-wrapper">
+            <div className="button-container">
+              <div className="button-wrapper" data-aos="fade-is" data-aos-duration="3000">
                 <a href="https://www.linkedin.com/in/juliusgdorfman/"
                   target="_blank" rel="noreferrer"
                   className="contact-me">
@@ -109,104 +83,6 @@ export default class Homepage extends Component {
               </div>
             </div>
           </div>
-
-
-          {/* <div class="marquee-container marquee-tech">
-            <div class="marquee-wrapper">
-              <div class="marquee">
-                <ul>
-                  <li>TypeScript</li>
-                  <li>React</li>
-                  <li>Nodejs</li>
-                  <li>Python</li>
-                  <li>JavaScript</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>jQuery</li>
-                  <li>RPGLE</li>
-                  <li>Bootstrap</li>
-                </ul>
-                <ul>
-                  <li>TypeScript</li>
-                  <li>React</li>
-                  <li>Nodejs</li>
-                  <li>Python</li>
-                  <li>JavaScript</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>jQuery</li>
-                  <li>RPGLE</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="marquee-container marquee-industry">
-            <div class="marquee-wrapper">
-              <div class="marquee">
-                <ul>
-                  <li>MySQL</li>
-                  <li>MongoDB</li>
-                  <li>AWS</li>
-                  <li>Heroku</li>
-                  <li>npm</li>
-                  <li>Jira</li>
-                  <li>Agile</li>
-                  <li>Documentation</li>
-                  <li>Figma</li>
-                  <li>Client Exp</li>
-                </ul>
-                <ul>
-                  <li>MySQL</li>
-                  <li>MongoDB</li>
-                  <li>AWS</li>
-                  <li>Heroku</li>
-                  <li>npm</li>
-                  <li>Jira</li>
-                  <li>Agile</li>
-                  <li>Documentation</li>
-                  <li>Figma</li>
-                  <li>Client Exp</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="marquee-container marquee-interests">
-            <div class="marquee-wrapper">
-              <div class="marquee">
-                <ul>
-                  <li>Piano</li>
-                  <li>Gym</li>
-                  <li>Travel</li>
-                  <li>Cooking</li>
-                  <li>Dancing</li>
-                  <li>Games</li>
-                  <li>Creating</li>
-                  <li>Running</li>
-                  <li>Drawing</li>
-                  <li>Streaming</li>
-                </ul>
-                <ul>
-                  <li>Piano</li>
-                  <li>Gym</li>
-                  <li>Travel</li>
-                  <li>Food</li>
-                  <li>Dancing</li>
-                  <li>Games</li>
-                  <li>Creating</li>
-                  <li>Running</li>
-                  <li>Drawing</li>
-                  <li>Streaming</li>
-                </ul>
-              </div>
-            </div>
-          </div> */}
-
-
-
-
           <div data-aos="fade-left" data-aos-duration="3000" className="homepage-text">
             HELLO
             <br />
@@ -223,7 +99,6 @@ export default class Homepage extends Component {
           <Experience />
           <Accolades />
         </div>
-        {/* <footer className="bottom-space"></footer> */}
       </div>
     );
   }

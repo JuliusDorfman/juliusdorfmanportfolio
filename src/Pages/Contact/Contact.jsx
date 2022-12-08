@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import './Contact.css';
+import './Contact.scss';
 import htmlTagClose from '../../Assets/html-tag-closed-2.png';
 import formTagOpen from '../../Assets/form-tag-open-2.png';
 import formTagClose from '../../Assets/form-tag-closed-2.png';

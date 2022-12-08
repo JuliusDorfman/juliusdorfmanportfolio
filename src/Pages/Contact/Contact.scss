@@ -1,4 +1,6 @@
-#contact-component{
+@import '../../_globalstyles';
+
+#contact-component {
   display: flex;
   position: relative;
   height: 60vh;
@@ -26,7 +28,7 @@
   width: 100%;
 }
 
-.form-top > * {
+.form-top>* {
   margin: auto;
   width: 100%;
 }
@@ -36,30 +38,35 @@
 }
 
 .contact-text {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   font-size: 25rem;
-  color:rgba(167, 188, 214, .02);
+  color: rgba(167, 188, 214, .02);
   white-space: nowrap;
-  z-index: 0!important;
+  z-index: 0 !important;
   transform: translateY(-10vh);
-  -webkit-user-select: none; /* Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-transform: translateY(-10vh);
+  -moz-transform: translateY(-10vh);
+  -ms-transform: translateY(-10vh);
+  -o-transform: translateY(-10vh);
 }
 
 .contact-form input,
 .contact-form textarea {
-  color: ghostwhite;
-  background:rgb(51, 52, 53);
+  color: $-theme-header-primary-color;
+  background: rgb(51, 52, 53);
   height: 40px;
   margin: 20px 0 20px 0;
   border: 0;
   box-shadow: 0;
   font-size: 1rem;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
@@ -67,7 +74,7 @@
   /* transition: .5s; */
 }
 
-.contact-form textarea { 
+.contact-form textarea {
   resize: vertical;
 }
 
@@ -86,7 +93,7 @@
 .contact-form input::placeholder {
   font-size: 1em;
   color: gray;
-  background:rgb(51, 52, 53)
+  background: rgb(51, 52, 53)
 }
 
 .form-bottom {
@@ -113,14 +120,14 @@
 
 /* Flavor Tags */
 .contact-flavor-tag-open,
-.contact-flavor-tag-close{
+.contact-flavor-tag-close {
   position: relative;
   height: 8px;
   width: 20px;
   transform: translateX(-5vw);
 }
 
-.contact-html-tag-close{
+.contact-html-tag-close {
   position: absolute;
   /* display: inherit; */
   bottom: 0;
@@ -128,14 +135,15 @@
 }
 
 .contact-form-flavor-tag-close,
-.contact-form-flavor-tag-open{
+.contact-form-flavor-tag-open {
   position: absolute;
   left: 5vw;
 }
 
-.contact-form-flavor-tag-open{
+.contact-form-flavor-tag-open {
   top: -1vh;
 }
+
 .contact-form-flavor-tag-close {
   bottom: 0;
 }

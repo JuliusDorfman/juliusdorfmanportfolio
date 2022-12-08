@@ -1,3 +1,5 @@
+@import '../../globalstyles';
+
 #experience-component {
   display: flex;
   position: relative;
@@ -103,7 +105,7 @@
   // color: #090B10;
   background: #00000099;
   border: 2px solid white;
-  color: white;
+  color: $-theme-header-primary-color;
   letter-spacing: .1em;
   padding: 0 2%;
   border-radius: .5em;
@@ -159,7 +161,7 @@
   text-align: left;
   padding: 0 0 0 3%;
   margin: 0 0 5% 0;
-  color: white;
+  color: $-theme-header-primary-color;
   font-weight: 400;
   background: #090b10;
   // background: #270901;

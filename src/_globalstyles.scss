@@ -1,77 +1,113 @@
-  $-text-content-color: #E4DFDA;
-  $-theme-black: #040810;
-  $-theme-main-blue: #102141;
-  $-theme-secondary-blue: #777DA7;
-  $-theme-action-red: red;
-  $-theme-secondary-red: #8F0002;
+$-theme-header-primary-color: ghostwhite;
+$-theme-text-primary-color: #E4DFDA;
+$-theme-black: #040810;
+$-theme-primary-blue: #102141;
+$-theme-secondary-blue: #777DA7;
+$-theme-action-red: red;
+$-theme-secondary-red: #8F0002;
 
-  /** Global Styles **/
 
-  .cursor-default {
-    cursor: default;
-  }
+// /* // Scrollbar Styles and animation */
 
-  .subtext {
-    position: relative;
-    font-size: .75rem;
-    margin-right: 12px;
-    color: #777DA7;
-  }
+::-webkit-scrollbar {
+  width: 1em;
+}
 
-  .subtext:before {
-    color: red;
-    // color: #B72E31;
-    font-family: "Roboto Mono", monospace;
-  }
+::-webkit-scrollbar-track {
+  background: $-theme-primary-blue;
+  margin-block: -.5em;
+  border-radius: 100vw;
+  -webkit-border-radius: 100vw;
+  -moz-border-radius: 100vw;
+  -ms-border-radius: 100vw;
+  -o-border-radius: 100vw;
+}
 
-  .post-subtext {
-    position: absolute;
-    right: 13.4em;
-  }
+::-webkit-scrollbar-thumb {
+  background: $-theme-secondary-blue;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
 
-  .red-flavor {
-    color: #8F0002;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: $-theme-secondary-red;
+}
 
-  .secondary-red {
-    color: $-theme-secondary-red;
-  }
+/** Global Styles **/
 
-  .secondary-blue {
-    color: $-theme-secondary-blue;
-  }
 
-  .bolded {
-    font-weight: bold;
-    letter-spacing: .1em;
-  }
+.cursor-default {
+  cursor: default;
+}
 
-  .bottom-space {
-    height: 20vh;
-    background-color: #0f111a;
-  }
+.subtext {
+  position: relative;
+  font-size: .75rem;
+  margin-right: 12px;
+  color: #777DA7;
+}
 
-  .no-wrap {
-    white-space: no-wrap;
-  }
+.subtext:before {
+  color: red;
+  // color: #B72E31;
+  font-family: "Roboto Mono", monospace;
+}
 
-  /* Global Colors */
-  .theme-text-content {
-    color: #E4DFDA;
-  }
+.post-subtext {
+  position: absolute;
+  right: 13.4em;
+}
 
-  .theme-black {
-    background-color: #040810;
-  }
+.red-flavor {
+  color: #8F0002;
+}
 
-  .theme-main-blue {
-    background-color: #102141;
-  }
+.secondary-red {
+  color: $-theme-secondary-red;
+}
 
-  .theme-secondary-blue {
-    background-color: #777DA7;
-  }
+.secondary-blue {
+  color: $-theme-secondary-blue;
+}
 
-  .theme-purple {
-    background-color: #8850bf;
-  }
+.bolded {
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+
+.italicized {
+  font-style: italic;
+}
+
+.bottom-space {
+  height: 20vh;
+  background-color: #0f111a;
+}
+
+.no-wrap {
+  white-space: no-wrap;
+}
+
+/* Global Colors */
+.theme-text-content {
+  color: #E4DFDA;
+}
+
+.theme-black {
+  background-color: #040810;
+}
+
+.theme-main-blue {
+  background-color: #102141;
+}
+
+.theme-secondary-blue {
+  background-color: #777DA7;
+}
+
+.theme-purple {
+  background-color: #8850bf;
+}

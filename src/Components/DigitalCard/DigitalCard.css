@@ -40,7 +40,7 @@
   /* background: rgba(50, 50, 50, 1); */
   text-align: left;
   /* color: rgba(220, 220, 220,s 1); */
-  color: white;
+  color: ghostwhite;
   transition: .75s ease-in-out;
   overflow: hidden;
 }

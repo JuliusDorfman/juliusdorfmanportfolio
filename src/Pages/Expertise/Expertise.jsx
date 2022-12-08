@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import anime from 'animejs/lib/anime.es.js';
 import "./Expertise.scss";
 import "aos/dist/aos.css";
 
@@ -19,13 +18,6 @@ export default class Expertise extends Component {
     const yearsPassed = currentYear - startYear;
     this.setState({ yearsPassed: yearsPassed });
 
-    anime({
-      targets: 'animejs',
-      translateX: 250,
-      rotate: '1turn',
-      backgroundColor: '#FFF',
-      duration: 800
-    });
   }
 
 
@@ -33,10 +25,6 @@ export default class Expertise extends Component {
     let yearsPassed = this.state.yearsPassed;
     return (
       <section id="expertise-component">
-
-
-        {/* <animejs id="animejs" src="anime.min.js">hello world</animejs> */}
-
 
 
 
@@ -87,11 +75,6 @@ export default class Expertise extends Component {
                 </path>
               </svg>
             </div>
-
-            {/* <h5>
-              <span>Passion</span>
-              <br />
-            </h5> */}
 
             <div className="blob-wrapper">
               <div className="animated-blob">

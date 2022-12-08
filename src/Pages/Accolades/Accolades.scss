@@ -1,3 +1,5 @@
+@import '../../globalstyles';
+
 #accolades-component {
   display: flex;
   position: relative;
@@ -105,7 +107,7 @@
   letter-spacing: .05em;
   text-align: left;
   min-height: 50%;
-  color: white;
+  color: $-theme-header-primary-color;
 }
 
 .accolade-1 {
@@ -169,7 +171,7 @@
 
 .footer-links a {
   text-decoration: none;
-  color: white;
+  color: $-theme-header-primary-color;
 }
 
 .attributed-to {

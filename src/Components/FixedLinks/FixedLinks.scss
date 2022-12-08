@@ -1,3 +1,4 @@
+@import '../../globalstyles';
 
 .fixed-links-wrapper {
   position: fixed;
@@ -55,6 +56,21 @@
   width: 24px;
   height: 40px;
   stroke-width: 1px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.fixed-links svg:hover {
+  stroke: red;
+  // stroke: $-theme-secondary-red;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }
 
 .linkedin-icon {

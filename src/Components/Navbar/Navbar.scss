@@ -114,17 +114,17 @@
   font-size: 40px;
   font-family: 'Julius Sans One', sans-serif;
   /* color: rgba(50, 50, 50, 1); */
-  color: ghostwhite;
+  color: $-theme-header-primary-color;
   transition: .55s;
 }
 
 .icon-card-initials-wrapper:hover {
   cursor: pointer;
-  border: 1.5px solid ghostwhite;
+  border: 1.5px solid $-theme-header-primary-color;
 }
 
 .icon-card-initials-wrapper:hover>.icon-card-initials {
-  color: ghostwhite;
+  color: $-theme-header-primary-color;
   /* color: black; */
 }
 

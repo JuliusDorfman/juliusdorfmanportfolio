@@ -8,7 +8,6 @@ export default class Accolades extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // eslint-disable-next-line react/prop-types
       currentPage: this.props.currentPage,
       page: 'accolades',
       reference: {
@@ -31,9 +30,7 @@ export default class Accolades extends Component {
 
     reference[referenceValue] = reference[referenceValue] ? false : true;
 
-    this.setState({ reference: reference }, () => {
-      // console.log(this.state.reference)
-    });
+    this.setState({ reference: reference });
 
   }
 
@@ -51,7 +48,6 @@ export default class Accolades extends Component {
           <span data-aos="fade-up">Accolades</span>
         </h1>
         <div className="accolades-content">
-
           <div className="contact-action">
             <h4>Available for select freelance opportunities</h4>
             <h6>
