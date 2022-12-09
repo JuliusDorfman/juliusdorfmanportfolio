@@ -73,12 +73,12 @@ export default class Navbar extends Component {
             <ul className="nav-socials-links">
               <li>
                 {/* { console.log(this.props) } */}
-                {this.props.floaters
+                {/* {this.props.floaters
                   ?
                   <div className="floater-button-navbar" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Enabled <br />&#128512;</div></div>
                   :
                   <div className="floater-button-navbar" onClick={this.props.toggleFloaters}><div className="smaller">Animated Background is Disabled <br />&#128544;</div></div>
-                }
+                } */}
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/juliusgdorfman/" rel="noreferrer" target="_blank"><i className="fa fa-linkedin-square"></i></a>
