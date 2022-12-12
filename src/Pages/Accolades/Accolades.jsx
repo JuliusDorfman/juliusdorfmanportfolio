@@ -38,7 +38,7 @@ export default class Accolades extends Component {
     const quoteReference = this.state.reference;
     return (
       <section id='accolades-component'>
-        <div data-aos="fade-left" data-aos-duration="3000" className="accolades-text">
+        {/* <div data-aos="fade-left" data-aos-duration="3000" className="accolades-text">
           ACCOLADES
         </div>
         <h1 className="accolades-header cursor-default">
@@ -46,7 +46,7 @@ export default class Accolades extends Component {
             Proud
           </span>
           <span data-aos="fade-up">Accolades</span>
-        </h1>
+        </h1> */}
         <div className="accolades-content">
           <div className="contact-action">
             <h4>Available for select freelance opportunities</h4>

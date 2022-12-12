@@ -20,15 +20,16 @@ export default class Work extends React.Component {
     super(props);
     this.state = {
       featuredProject: false,
+
     };
     this.featuredProjectVisual = createRef();
     this.featuredProjectContent = createRef();
     this.featuredProjectFullPage = createRef();
     this.featuredProjectWrapper = createRef();
+    this.featuredProjectLoading = createRef();
     this.projectsList = createRef();
     this.tl = gsap.timeline({ paused: true });
   }
-
 
   toggleFeaturedProject = () => {
     if (this.state.featuredProject) {
@@ -36,12 +37,6 @@ export default class Work extends React.Component {
     } else {
       this.tl.reverse();
     }
-
-    // this.tl.from(this.featuredProjectPreview.current, { duration: 1, scale: .8, x: "0" })
-    //   .to(this.featuredProjectPreview.current, { duration: 1, x: "100vw" })
-    //   .from(this.featuredProjectFullPage.current, { duration: 1, scale: .8, x: "-=100" })
-    //   .to(this.featuredProjectFullPage.current, { duration: 1, scale: 1, x: "+=100" });
-
   }
 
   handleFeaturedProjectPage = () => {
@@ -52,6 +47,11 @@ export default class Work extends React.Component {
   }
 
   componentDidMount = () => {
+    this.tl.to(this.featuredProjectLoading.current, {
+      y: "100%",
+      duration: ".75",
+      ease: "power2.inOut"
+    }, 0)
     this.tl.to(this.featuredProjectWrapper.current, {
       boxShadow: "inset 20px 20px 52px #070e1b, inset -20px -20px 52px #193467",
       duration: ".1",
@@ -69,6 +69,11 @@ export default class Work extends React.Component {
       delay: ".5",
       ease: "power2.inOut"
     }, 1);
+    this.tl.to(this.featuredProjectLoading.current, {
+      y: "200%",
+      duration: "2",
+      ease: "power2.inOut"
+    }, 2);
     this.tl.to(this.featuredProjectFullPage.current, {
       y: "-100px",
       duration: ".5",
@@ -104,14 +109,22 @@ export default class Work extends React.Component {
         </h1>
         <div className="projects-list-wrapper">
           <ul ref={this.projectsList} className="featured-projects-list">
+            <span className="loader-wrapper">
+              <span
+                ref={this.featuredProjectLoading}
+                className='projects-animation-loading'></span>
+            </span>
             <li id="art-of-twitch">
               {/* <ArtOfTwitchChat /> */}
               <div ref={this.featuredProjectWrapper} className={`featured-project-display`}>
                 <div ref={this.featuredProjectFullPage}
                   className={`featured-project-expanded`}>
-                  <div className="radio__1">
-                    <input id="radio-1" className={`radio-button radio-button-${featuredProject}`} type="radio" name="radio" value="1" />
-                    <label onClick={this.handleFeaturedProjectPage} htmlFor="radio-1"></label>
+                  <div className="radio__5">
+                    <input
+                      id="radio-5"
+                      className={`radio-button radio-button-${featuredProject}`}
+                      type="radio" name="radio" value="5" />
+                    <label onClick={this.handleFeaturedProjectPage} htmlFor="radio-5"></label>
                   </div>
                   <div className="expanded-project-content">
                     <header>

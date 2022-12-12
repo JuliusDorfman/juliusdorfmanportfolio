@@ -3,17 +3,28 @@
 #accolades-component {
   display: flex;
   position: relative;
-  height: 100vh;
-  /* margin-top: 150px; */
-  flex-direction: column;
+  // min-height: 80vh;
+  // margin-top: 10vh;
+  /* width: 75vw; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: column;
+  overflow: hidden;
 }
 
 #accolades-component>h1 {
   /* position: absolute; */
   /* margin-bottom: 400px; */
   font-family: 'Julius Sans One', sans-serif;
+}
+
+.accolades-header {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0;
+  padding: 32px 0;
+  box-shadow: -0px 50px 45px #060d1a;
 }
 
 .accolades-header .subtext:before {

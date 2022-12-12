@@ -3,14 +3,10 @@
 #experience-component {
   display: flex;
   position: relative;
-  // min-height: 80vh;
-  // margin-top: 10vh;
-  /* width: 75vw; */
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
   overflow: hidden;
-
+  min-height: 1000px;
 }
 
 .experience-header {
@@ -64,360 +60,497 @@
   white-space: nowrap;
   z-index: -1;
   -webkit-user-select: none;
-  /* Safari */
   -moz-user-select: none;
-  /* Firefox */
   -ms-user-select: none;
-  /* IE10+/Edge */
   user-select: none;
-  /* Standard */
 }
 
-.experience-page-intro {
-  height: 160px;
-  padding: 0 10vw;
-  font-size: .95rem;
-  text-align: left;
+.experience-module-container {
+  box-sizing: border-box;
+  max-width: 1000px;
+  min-height: 600px;
+  margin: auto;
 }
 
-.experience-section {
-  font-weight: 100;
-  letter-spacing: 0.05em;
-  min-height: 50vh;
+.experience-module {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  min-width: 1000px;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
-.experience-section * {
+.experience-sidebar-wrapper {
   position: relative;
+  height: inherit;
 }
 
-.accordian {
+.experience-sidebar {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 50%;
-}
-
-.accordian-item {
-  width: 80%;
-  height: 60px;
-  // background: #FFA9E7;
-  // color: #090B10;
-  background: #00000099;
-  border: 2px solid white;
-  color: $-theme-header-primary-color;
-  letter-spacing: .1em;
-  padding: 0 2%;
-  border-radius: .5em;
-}
-
-.accordian-item-title-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.accordian-item-title-wrapper>h6 {
-  width: 90%;
+  justify-content: space-around;
   margin: 0;
-}
-
-.accordian-item-title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.accordian-expand-button {
-  cursor: pointer;
-  color: aliceblue;
-  font-weight: 400;
-  height: 30px;
-  width: 30px;
-  font-size: 32px;
-  line-height: .8;
-  box-shadow: 0 0 5px 4px aliceblue;
-  background: #8F0002;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
-}
-
-.accordian-expand-button p {
-  margin: 0 0 0px 2px;
-  pointer-events: none;
-  line-height: 24px;
-}
-
-.accordian-content {
-  display: flex;
-  justify-content: center;
-  width: 70%;
-  text-align: left;
-  padding: 0 0 0 3%;
-  margin: 0 0 5% 0;
-  color: $-theme-header-primary-color;
-  font-weight: 400;
-  background: #090b10;
-  // background: #270901;
-  z-index: -1;
-  height: 250px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border: 1px solid white;
-  overflow: hidden;
-  transition: .5s;
-}
-
-.content-false {
-  height: 10px;
   padding: 0;
-  background: #090b10;
-}
-
-.accordian-details {
-  padding: 3% 0;
-  max-width: 85%;
-  // min-width: 70%;
-}
-
-.accordian-false {
-  opacity: 0;
-  transition: .5s;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-}
-
-.accordian-true {
-  opacity: 1;
-  padding-right: 5%;
-  transition: .5s;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
-}
-
-.company-info {
-  color: gray;
-  margin-bottom: 10px;
-}
-
-.company-info svg {
-  height: 20px;
-  fill: #FB9F89;
-  padding: 0 10px 0 0;
-}
-
-.company-info a {
-  text-decoration: none;
-  color: gray;
-  font-size: .75em;
-}
-
-.job-technologies ul {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 10px 0;
+  list-style-type: none;
+  height: 100%;
   font-size: 20px;
-  color: lightgray;
-
+  background: linear-gradient(145deg, #0e1e3b, #112346);
+  box-shadow: 44px 44px 67px #060d1a,
+    -44px -44px 67px #1a3568;
 }
 
-.job-technologies ul li:first-child {
-  margin-left: 0;
+.experience-sidebar li {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50vw;
+  background: linear-gradient(145deg, #112346, #0e1e3b);
+  box-shadow: 14px 14px 28px #060d1a, -14px -14px 28px #1a3568;
+  -webkit-border-radius: 50vw;
+  -moz-border-radius: 50vw;
+  -ms-border-radius: 50vw;
+  -o-border-radius: 50vw;
+  cursor: pointer;
 }
 
-.job-technologies ul li {
-  float: left;
-  margin: 1%;
-  background: #112240;
-  border-radius: 15px;
-  padding: .5% 1.5%;
-  font-size: .8em;
-  font-weight: 500;
-}
-
-.job-description {
-  color: lightgray;
-  font-size: .6em;
-}
-
-.company-logo {
-  height: 40%;
-  margin: auto 5% auto 0;
-  transition: .5s;
-
-}
-
-.company-logo>img {
-  height: 100%;
-  transition: .5s;
-
-}
-
-.logo-container {
-  width: 40%;
+.experience-content-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 7;
   height: 100%;
-  background: white;
+  padding: 0 56px 0 0;
+  background: #10214199;
+  box-shadow: inset 44px 44px 67px #060d1a,
+    inset -44px -44px 67px #1a3568;
 }
 
-.guildmortgage-logo-wrapper {
+.company-list {
+  position: relative;
   width: 100%;
-  margin: auto 0;
-  transition: .5s;
-  text-align: center;
-  max-width: 300px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
 }
 
-.guildmortgage-logo-wrapper>img {
-  // width: 60%;
-  // height: initial;
-  // transition: .5s;
-  aspect-ratio: 3/2;
-  object-fit: contain;
-}
-
-.guild-false {
-  width: 0px !important;
-  height: 0px !important;
-  transition: .5s !important;
-}
-
-.supplypro-logo-container {
-  width: 48%;
-}
-
-.supplypro-logo-wrapper {
-  width: 88%;
-  margin: auto 0;
-  transition: .5s;
-  text-align: center;
-  max-width: 230px;
-}
-
-.supplypro-logo-wrapper>img {
+.company-list li {
+  position: absolute;
   width: 100%;
-  height: initial;
+  transition: 3s;
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+}
+
+.contentActive-true {
+  top: 0;
+  left: 0;
+  transition: 3s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.contentActive-false {
+  left: -100vw;
   transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;  
 }
 
-.supplyPro-false {
-  width: 0px !important;
-  height: 0px !important;
-  transition: .5s !important;
-  -webkit-transition: .5s !important;
-  -moz-transition: .5s !important;
-  -ms-transition: .5s !important;
-  -o-transition: .5s !important;
+.experience-sidebar .button-active-true {
+  background: linear-gradient(145deg, #112346, #0e1e3b);
+  box-shadow: inset 14px 14px 28px #060d1a, inset -14px -14px 28px #1a3568;
 }
 
-.imatrix-logo-container {
-  width: 64%;
-}
+// .experience-sidebar .button-active-false {
+//   // background: linear-gradient(145deg, #0e1e3b, #112346);
+//   // box-shadow: 14px 14px 28px #060d1a, -14px -14px 28px #1a3568;
+// }
 
-.imatrix-logo-wrapper {
-  width: 100%;
-  margin: auto 0;
-  transition: .5s;
-  text-align: center;
-  max-width: 275px;
-}
-
-.imatrix-logo-wrapper>img {
+.company-title,
+.company-name,
+.company-date {
+  text-align: left;
   width: 80%;
-  max-width: 88%;
-  height: initial;
-  transition: .5s;
-}
-
-.iMatrix-false {
-  width: 0px !important;
-  height: 0px !important;
-  transition: .5s !important;
-}
-
-@media (max-width:1000px) {
-  .page-split {
-    flex-direction: column;
-  }
-
-  .company-logo {
-    height: initial;
-    margin: 5% 0 0 0;
-  }
-
-  .imatrix-logo-wrapper {
-    width: 55%;
-  }
-
-  .experience-animation-wrapper {
-    margin-top: 5vh;
-  }
-
-  .accordian-content {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .accordian-details {
-    padding-left: 3%;
-  }
-
-  .guildmortgage-logo-wrapper {
-    width: 35%;
-  }
-
-  .supplypro-logo-wrapper {
-    width: 55%;
-  }
-
-  .logo-container {
-    width: 100%;
-    align-items: flex-start;
-  }
-
-  .content-true {
-    height: 400px;
-  }
-
-  .job-technologies ul li {
-    margin: 1.5%;
-  }
+  margin: 20px 0 20px auto;
 }
 
 
 
-@media (max-width:600px) {
-  .company-logo {
-    height: initial;
-  }
-
-  .content-true {
-    height: 320px;
-  }
-
-  .guildmortgage-logo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .guildmortgage-logo-wrapper>img {
-    width: 70%;
-  }
-
-  .imatrix-logo-wrapper {
-    width: 70%;
-  }
+.company-description {
+  text-align: left;
+  width: 80%;
+  margin-left: auto;
+  padding: 0;
+  list-style-type: none;
 }
+
+.company-description li {
+  position: relative;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.company-description li:before {
+  content: '\25B8';
+  position: absolute;
+  left: -24px;
+  top: 0;
+  font-size: 24px;
+  color: $-theme-secondary-red;
+}
+
+// .experience-page-intro {
+//   height: 160px;
+//   padding: 0 10vw;
+//   font-size: .95rem;
+//   text-align: left;
+// }
+
+// .experience-section {
+//   font-weight: 100;
+//   letter-spacing: 0.05em;
+//   min-height: 50vh;
+// }
+
+// .experience-section * {
+//   position: relative;
+// }
+
+// .accordian {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 50%;
+// }
+
+// .accordian-item {
+//   width: 80%;
+//   height: 60px;
+//   // background: #FFA9E7;
+//   // color: #090B10;
+//   background: #00000099;
+//   border: 2px solid white;
+//   color: $-theme-header-primary-color;
+//   letter-spacing: .1em;
+//   padding: 0 2%;
+//   border-radius: .5em;
+// }
+
+// .accordian-item-title-wrapper {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 100%;
+// }
+
+// .accordian-item-title-wrapper>h6 {
+//   width: 90%;
+//   margin: 0;
+// }
+
+// .accordian-item-title {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .accordian-expand-button {
+//   cursor: pointer;
+//   color: aliceblue;
+//   font-weight: 400;
+//   height: 30px;
+//   width: 30px;
+//   font-size: 32px;
+//   line-height: .8;
+//   box-shadow: 0 0 5px 4px aliceblue;
+//   background: #8F0002;
+//   border-radius: 100%;
+//   -webkit-border-radius: 100%;
+//   -moz-border-radius: 100%;
+//   -ms-border-radius: 100%;
+//   -o-border-radius: 100%;
+// }
+
+// .accordian-expand-button p {
+//   margin: 0 0 0px 2px;
+//   pointer-events: none;
+//   line-height: 24px;
+// }
+
+// .accordian-content {
+//   display: flex;
+//   justify-content: center;
+//   width: 70%;
+//   text-align: left;
+//   padding: 0 0 0 3%;
+//   margin: 0 0 5% 0;
+//   color: $-theme-header-primary-color;
+//   font-weight: 400;
+//   background: #090b10;
+//   // background: #270901;
+//   z-index: -1;
+//   height: 250px;
+//   border-bottom-left-radius: 20px;
+//   border-bottom-right-radius: 20px;
+//   border: 1px solid white;
+//   overflow: hidden;
+//   transition: .5s;
+// }
+
+// .content-false {
+//   height: 10px;
+//   padding: 0;
+//   background: #090b10;
+// }
+
+// .accordian-details {
+//   padding: 3% 0;
+//   max-width: 85%;
+//   // min-width: 70%;
+// }
+
+// .accordian-false {
+//   opacity: 0;
+//   transition: .5s;
+//   -webkit-transition: .5s;
+//   -moz-transition: .5s;
+//   -ms-transition: .5s;
+//   -o-transition: .5s;
+// }
+
+// .accordian-true {
+//   opacity: 1;
+//   padding-right: 5%;
+//   transition: .5s;
+//   -webkit-transition: .5s;
+//   -moz-transition: .5s;
+//   -ms-transition: .5s;
+//   -o-transition: .5s;
+// }
+
+// .company-info {
+//   color: gray;
+//   margin-bottom: 10px;
+// }
+
+// .company-info svg {
+//   height: 20px;
+//   fill: #FB9F89;
+//   padding: 0 10px 0 0;
+// }
+
+// .company-info a {
+//   text-decoration: none;
+//   color: gray;
+//   font-size: .75em;
+// }
+
+// .job-technologies ul {
+//   list-style: none;
+//   padding: 0;
+//   margin: 15px 0 10px 0;
+//   font-size: 20px;
+//   color: lightgray;
+
+// }
+
+// .job-technologies ul li:first-child {
+//   margin-left: 0;
+// }
+
+// .job-technologies ul li {
+//   float: left;
+//   margin: 1%;
+//   background: #112240;
+//   border-radius: 15px;
+//   padding: .5% 1.5%;
+//   font-size: .8em;
+//   font-weight: 500;
+// }
+
+// .job-description {
+//   color: lightgray;
+//   font-size: .6em;
+// }
+
+// .company-logo {
+//   height: 40%;
+//   margin: auto 5% auto 0;
+//   transition: .5s;
+
+// }
+
+// .company-logo>img {
+//   height: 100%;
+//   transition: .5s;
+
+// }
+
+// .logo-container {
+//   width: 40%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+//   background: white;
+// }
+
+// .guildmortgage-logo-wrapper {
+//   width: 100%;
+//   margin: auto 0;
+//   transition: .5s;
+//   text-align: center;
+//   max-width: 300px;
+// }
+
+// .guildmortgage-logo-wrapper>img {
+//   // width: 60%;
+//   // height: initial;
+//   // transition: .5s;
+//   aspect-ratio: 3/2;
+//   object-fit: contain;
+// }
+
+// .guild-false {
+//   width: 0px !important;
+//   height: 0px !important;
+//   transition: .5s !important;
+// }
+
+// .supplypro-logo-container {
+//   width: 48%;
+// }
+
+// .supplypro-logo-wrapper {
+//   width: 88%;
+//   margin: auto 0;
+//   transition: .5s;
+//   text-align: center;
+//   max-width: 230px;
+// }
+
+// .supplypro-logo-wrapper>img {
+//   width: 100%;
+//   height: initial;
+//   transition: .5s;
+// }
+
+// .supplyPro-false {
+//   width: 0px !important;
+//   height: 0px !important;
+//   transition: .5s !important;
+//   -webkit-transition: .5s !important;
+//   -moz-transition: .5s !important;
+//   -ms-transition: .5s !important;
+//   -o-transition: .5s !important;
+// }
+
+// .imatrix-logo-container {
+//   width: 64%;
+// }
+
+// .imatrix-logo-wrapper {
+//   width: 100%;
+//   margin: auto 0;
+//   transition: .5s;
+//   text-align: center;
+//   max-width: 275px;
+// }
+
+// .imatrix-logo-wrapper>img {
+//   width: 80%;
+//   max-width: 88%;
+//   height: initial;
+//   transition: .5s;
+// }
+
+// .iMatrix-false {
+//   width: 0px !important;
+//   height: 0px !important;
+//   transition: .5s !important;
+// }
+
+// @media (max-width:1000px) {
+//   .page-split {
+//     flex-direction: column;
+//   }
+
+//   .company-logo {
+//     height: initial;
+//     margin: 5% 0 0 0;
+//   }
+
+//   .imatrix-logo-wrapper {
+//     width: 55%;
+//   }
+
+//   .experience-animation-wrapper {
+//     margin-top: 5vh;
+//   }
+
+//   .accordian-content {
+//     flex-direction: column;
+//     padding: 0;
+//   }
+
+//   .accordian-details {
+//     padding-left: 3%;
+//   }
+
+//   .guildmortgage-logo-wrapper {
+//     width: 35%;
+//   }
+
+//   .supplypro-logo-wrapper {
+//     width: 55%;
+//   }
+
+//   .logo-container {
+//     width: 100%;
+//     align-items: flex-start;
+//   }
+
+//   .content-true {
+//     height: 400px;
+//   }
+
+//   .job-technologies ul li {
+//     margin: 1.5%;
+//   }
+// }
+
+
+
+// @media (max-width:600px) {
+//   .company-logo {
+//     height: initial;
+//   }
+
+//   .content-true {
+//     height: 320px;
+//   }
+
+//   .guildmortgage-logo-wrapper {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+//   .guildmortgage-logo-wrapper>img {
+//     width: 70%;
+//   }
+
+//   .imatrix-logo-wrapper {
+//     width: 70%;
+//   }
+// }

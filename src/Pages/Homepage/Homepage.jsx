@@ -26,7 +26,7 @@ export default class Homepage extends Component {
       bottom: window.pageYOffset + window.innerHeight,
     }
 
-    if (accolades.offsetTop < viewPort.bottom - 500 && accolades.offsetTop > viewPort.top - 100) {
+    if (accolades.offsetTop < viewPort.bottom && accolades.offsetTop > viewPort.top - 100) {
       this.setState({ FixedLinksVisibility: false });
     } else {
       this.setState({ FixedLinksVisibility: true });
