@@ -81,10 +81,10 @@ export default class Navbar extends Component {
                 } */}
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/juliusgdorfman/" rel="noreferrer" target="_blank"><i className="fa fa-linkedin-square"></i></a>
+                <a href="https://www.linkedin.com/in/juliusgdorfman/" rel="noopener noreferrer" target="_blank"><i className="fa fa-linkedin-square"></i></a>
               </li>
               <li>
-                <a href="https://github.com/JuliusDorfman" rel="noreferrer" target="_blank"><i className="fa fa-github-square"></i></a>
+                <a href="https://github.com/JuliusDorfman" rel="noopener noreferrer" target="_blank"><i className="fa fa-github-square"></i></a>
               </li>
             </ul>
           </div>

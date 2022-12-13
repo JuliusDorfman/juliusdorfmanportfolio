@@ -273,6 +273,7 @@
   input {
     display: none;
   }
+
   &~label {
     position: absolute;
     top: 40px;
@@ -330,44 +331,6 @@
       }
     }
   }
-
-
-
-
-
-
-
-
-
-  // .radio__1 {
-
-  //   .label {
-  //     box-shadow: inset 11px 11px 22px #060d1a, inset -11px -11px 22px #1a3568;
-  //     border-radius: 50%;
-  //     -webkit-border-radius: 50%;
-  //     -moz-border-radius: 50%;
-  //     -ms-border-radius: 50%;
-  //     -o-border-radius: 50%;
-  //   }
-
-  //   &:active {
-  //     box-shadow: inset 11px 11px 22px #060d1a, inset -11px -11px 22px #1a3568;
-  //     border-radius: 50%;
-  //     -webkit-border-radius: 50%;
-  //     -moz-border-radius: 50%;
-  //     -ms-border-radius: 50%;
-  //     -o-border-radius: 50%;
-  //   }
-
-  //   &:focus {
-  //     box-shadow: inset 11px 11px 22px #060d1a, inset -11px -11px 22px #1a3568;
-  //     border-radius: 50%;
-  //     -webkit-border-radius: 50%;
-  //     -moz-border-radius: 50%;
-  //     -ms-border-radius: 50%;
-  //     -o-border-radius: 50%;
-  //   }
-  // }
 }
 
 .expanded-project-content {

@@ -1,8 +1,8 @@
-import React, { Component, createRef } from 'react';
+import React, { Component } from 'react';
 // import TweenMax from "gsap";
 import About from '../../Pages/About';
 import Work from '../../Pages/Work';
-import Expertise from '../Expertise/Expertise';
+// import Expertise from '../Expertise/Expertise';
 import Experience from '../Experience/Experience';
 import Accolades from '../Accolades/Accolades';
 import FixedLinks from '../../Components/FixedLinks/FixedLinks.tsx';
@@ -71,7 +71,7 @@ export default class Homepage extends Component {
             <div className="button-container">
               <div className="button-wrapper" data-aos="fade-is" data-aos-duration="3000">
                 <a href="https://www.linkedin.com/in/juliusgdorfman/"
-                  target="_blank" rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="contact-me">
                   <p>
                     Contact Me

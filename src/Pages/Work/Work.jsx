@@ -114,7 +114,7 @@ export default class Work extends React.Component {
                 ref={this.featuredProjectLoading}
                 className='projects-animation-loading'></span>
             </span>
-            <li id="art-of-twitch">
+            <li id="`art-of-twitch`">
               {/* <ArtOfTwitchChat /> */}
               <div ref={this.featuredProjectWrapper} className={`featured-project-display`}>
                 <div ref={this.featuredProjectFullPage}

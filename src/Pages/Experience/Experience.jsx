@@ -1,8 +1,8 @@
 import React from 'react';
 import './Experience.scss';
-const guildLogo = require('../../Assets/Guild-Logo.png');
-const supploproLogo = require('../../Assets/supplypro-logo.png');
-const iMatrixLogo = require('../../Assets/imatrix_logo.png');
+// const guildLogo = require('../../Assets/Guild-Logo.png');
+// const supploproLogo = require('../../Assets/supplypro-logo.png');
+// const iMatrixLogo = require('../../Assets/imatrix_logo.png');
 
 export default class Experience extends React.Component {
   constructor(props) {
@@ -17,9 +17,7 @@ export default class Experience extends React.Component {
   }
 
   handleModule = (e) => {
-    console.log("clicked")
     let itemSelected = e.target.dataset.name;
-    console.log("itemSelected", itemSelected);
     let contentActive = {
       firstItem: false,
       secondItem: false,
@@ -64,13 +62,18 @@ export default class Experience extends React.Component {
             <div className="experience-content-wrapper">
               <ul className="company-list">
                 <li className={`contentActive-${firstItem}`}>
-                  <h3 className="company-title">
-                    Software Engineer
-                  </h3>
-                  <h4 className="company-name">Guild Mortgage</h4>
-                  <p className="company-date">
-                    Apr 2020 - Sept 2022
-                  </p>
+                  <div className="company__title-link">
+                    <h3 className="company__title">
+                      Software Engineer
+                    </h3>
+                    <a className="company__link" href="https://www.guildmortgage.com/" rel="noopener noreferrer">guildmortgage.com</a>
+                  </div>
+                  <div className="company__name-date">
+                    <h4 className="company__name">Guild Mortgage</h4>
+                    <p className="company__date">
+                      Apr 2020 - Sept 2022
+                    </p>
+                  </div>
                   <ul className="company-description">
                     <li>
                       Write modern, scalable, and well-documented code
@@ -87,13 +90,18 @@ export default class Experience extends React.Component {
                   </ul>
                 </li>
                 <li className={`contentActive-${secondItem}`}>
-                  <h3 className="company-name">
-                    Client Support Engineer
-                  </h3>
-                  <h4 className="company-name">Supply Pro</h4>
-                  <p className="company-date">
-                    Jul 2019 - Apr 2020
-                  </p>
+                  <div className="company__title-link">
+                    <h3 className="company__title">
+                      Client Support Engineer
+                    </h3>
+                    <a className="company__link" href="https://supplypro.com/" rel="noopener noreferrer">supplypro.com</a>
+                  </div>
+                  <div className="company__name-date">
+                    <h4 className="company__name">Supply Pro</h4>
+                    <p className="company__date">
+                      Jul 2019 - Apr 2020
+                    </p>
+                  </div>
                   <ul className="company-description">
                     <li>Lead scheduled and impromptu phone assistance with on site engineers or
                       ad hoc contacts to troubleshoot software and hardware failures on inventory
@@ -104,13 +112,18 @@ export default class Experience extends React.Component {
                   </ul>
                 </li>
                 <li className={`contentActive-${thirdItem}`}>
-                  <h3 className="company-name">
-                    Client Technical Support
-                  </h3>
-                  <h4 className="company-name">iMatrix</h4>
-                  <p className="company-date">
-                    Sept 2018 - Jul 2019
-                  </p>
+                  <div className="company__title-link">
+                    <h3 className="company__title">
+                      Client Technical Support
+                    </h3>
+                    <a className="company__link" href="https://imatrix.com/" rel="noopener noreferrer">imatrix.com</a>
+                  </div>
+                  <div className="company__name-date">
+                    <h4 className="company__name">iMatrix</h4>
+                    <p className="company__date">
+                      Sept 2018 - Jul 2019
+                    </p>
+                  </div>
                   <ul className="company-description">
                     <li>Applied JavaScript, HTML5, CSS3, jQuery and proprietary CMS systems to
                       assist clients with live updates or fixes to custom websites</li>

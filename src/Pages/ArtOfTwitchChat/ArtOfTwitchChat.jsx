@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import './ArtOfTwitchChat.scss';
 const twitchIcon = require('../../Assets/twitch-icon.png');
-const aottLarge = require('../../Assets/art-of-twitch-chat.png');
+// const aottLarge = require('../../Assets/art-of-twitch-chat.png');
 const img1 = require('../../Assets/img1.png');
 const img2 = require('../../Assets/img2.png');
 const img3 = require('../../Assets/img3.png');
@@ -79,7 +79,7 @@ export default class ArtOfTwitchChat extends Component {
               <div className="aott-button-wrapper">
                 <a href="https://art-of-twitch.herokuapp.com/"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="contact-me">
                   <p>
                     Check Me Out!
