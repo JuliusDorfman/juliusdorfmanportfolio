@@ -66,7 +66,7 @@ export default class Experience extends React.Component {
                     <h3 className="company__title">
                       Software Engineer
                     </h3>
-                    <a className="company__link" href="https://www.guildmortgage.com/" rel="noopener noreferrer">guildmortgage.com</a>
+                    <a className="company__link" href="https://www.guildmortgage.com/" target="_blank" rel="noopener noreferrer">guildmortgage.com</a>
                   </div>
                   <div className="company__name-date">
                     <h4 className="company__name">Guild Mortgage</h4>
@@ -94,7 +94,7 @@ export default class Experience extends React.Component {
                     <h3 className="company__title">
                       Client Support Engineer
                     </h3>
-                    <a className="company__link" href="https://supplypro.com/" rel="noopener noreferrer">supplypro.com</a>
+                    <a className="company__link" href="https://supplypro.com/" target="_blank" rel="noopener noreferrer">supplypro.com</a>
                   </div>
                   <div className="company__name-date">
                     <h4 className="company__name">Supply Pro</h4>
@@ -116,7 +116,7 @@ export default class Experience extends React.Component {
                     <h3 className="company__title">
                       Client Technical Support
                     </h3>
-                    <a className="company__link" href="https://imatrix.com/" rel="noopener noreferrer">imatrix.com</a>
+                    <a className="company__link" href="https://imatrix.com/" target="_blank" rel="noopener noreferrer">imatrix.com</a>
                   </div>
                   <div className="company__name-date">
                     <h4 className="company__name">iMatrix</h4>
