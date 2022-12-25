@@ -254,15 +254,19 @@ export default class Work extends React.Component {
                       </div>
                       <div className="other-project-links"></div>
                     </div>
-                    <h3 className="other-project-title">COMING SOON: <br /> The Internet's Biggest Billboard</h3>
-                    <div className="other-project-description">A single page application. Users will be able to pay for a space on
+                    <h3 className="other-project-title">Current WIP: <br /> The Internet's Biggest Billboard</h3>
+                    <div className="other-project-description">
+                      Concept for digital advertising space.
+                      <br />
+                      <br />
+                      A single page application. Users will be able to pay for a space on
                       this hotly contested space. The Internet's Biggest Billboard.</div>
                   </header>
                   <footer>
                     <ul>
-                      <li>Tech 1</li>
-                      <li>Tech 2</li>
-                      <li>Tech 3</li>
+                      <li>React</li>
+                      <li>ThreeJS</li>
+                      <li>GSAP</li>
                     </ul>
                   </footer>
                 </div>
@@ -326,16 +330,13 @@ export default class Work extends React.Component {
                       <div className="other-project-links"></div>
                     </div>
                     <h3 className="other-project-title">Coming Soon</h3>
-                    <div className="other-project-description">Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Voluptates placeat adipisci non dolorem reiciendis accusantium
-                      cupiditate possimus tenetur et in incidunt doloribus impedit veritatis, ab tempora!
-                      Illum beatae ue quo.</div>
+                    <div className="other-project-description"></div>
                   </header>
                   <footer>
                     <ul>
-                      <li>Tech 1</li>
+                      {/* <li>Tech 1</li>
                       <li>Tech 2</li>
-                      <li>Tech 3</li>
+                      <li>Tech 3</li> */}
                     </ul>
                   </footer>
                 </div>
@@ -353,15 +354,13 @@ export default class Work extends React.Component {
                       <div className="other-project-links"></div>
                     </div>
                     <h3 className="other-project-title">Coming Soon</h3>
-                    <div className="other-project-description">Lorem ipsum dolor sit amet consectetur
-                      adipisicinn incidunt doloribus impedit veritatis, ab tempora!
-                      Illum beatae doloremque quo.</div>
+                    <div className="other-project-description"></div>
                   </header>
                   <footer>
                     <ul>
-                      <li>Tech 1</li>
+                      {/* <li>Tech 1</li>
                       <li>Tech 2</li>
-                      <li>Tech 3</li>
+                      <li>Tech 3</li> */}
                     </ul>
                   </footer>
                 </div>
