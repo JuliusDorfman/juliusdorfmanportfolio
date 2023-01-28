@@ -331,7 +331,7 @@ export default class Work extends React.Component {
                     </div>
                     <h3 className="other-project-title">WIP: <br />Summerize Me</h3>
                     <div className="other-project-description">
-                      Chat GPT application assistant to assist content consumption.
+                      Chat GPT application to streamline content consumption.
                       <br />
                       <br />
                       Streamline your information instake. Reuse the same configurations for different sources.
