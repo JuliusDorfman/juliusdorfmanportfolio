@@ -254,7 +254,7 @@ export default class Work extends React.Component {
                       </div>
                       <div className="other-project-links"></div>
                     </div>
-                    <h3 className="other-project-title">Current WIP: <br /> The Internet's Biggest Billboard</h3>
+                    <h3 className="other-project-title">WIP: <br /> The Internet's Biggest Billboard</h3>
                     <div className="other-project-description">
                       Concept for digital advertising space.
                       <br />
@@ -329,8 +329,13 @@ export default class Work extends React.Component {
                       </div>
                       <div className="other-project-links"></div>
                     </div>
-                    <h3 className="other-project-title">Coming Soon</h3>
-                    <div className="other-project-description"></div>
+                    <h3 className="other-project-title">WIP: <br />Summerize Me</h3>
+                    <div className="other-project-description">
+                      Chat GPT application assistant to assist content consumption.
+                      <br />
+                      <br />
+                      Streamline your information instake. Reuse the same configurations for different sources.
+                    </div>
                   </header>
                   <footer>
                     <ul>
