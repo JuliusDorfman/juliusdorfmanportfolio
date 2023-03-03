@@ -35,7 +35,10 @@ export default class FullScreenSidebar extends Component {
     let scrollDestination = document.querySelector(`#${pageValue}`);
     // console.log("scrollDestination", scrollDestination)
     // console.log('pagevalue', pageValue);
-    scrollDestination.scrollIntoView();
+    window.scrollTo( {
+      behavior: 'smooth',
+      top: scrollDestination.offsetTop - 100,
+    });
   };
 
 

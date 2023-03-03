@@ -1,0 +1,252 @@
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: #102141;
+  margin-block: -0.5em;
+  border-radius: 100vw;
+  -webkit-border-radius: 100vw;
+  -moz-border-radius: 100vw;
+  -ms-border-radius: 100vw;
+  -o-border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #777DA7;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F0002;
+}
+
+/** Global Styles **/
+.cursor-default {
+  cursor: default;
+}
+
+.subtext {
+  position: relative;
+  font-size: 0.75rem;
+  margin-right: 12px;
+  color: #777DA7;
+}
+
+.subtext:before {
+  color: red;
+  font-family: "Roboto Mono", monospace;
+}
+
+.post-subtext {
+  position: absolute;
+  right: 13.4em;
+}
+
+.red-flavor {
+  color: #8F0002;
+}
+
+.secondary-red {
+  color: #8F0002;
+}
+
+.secondary-blue {
+  color: #777DA7;
+}
+
+.bolded {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.italicized {
+  font-style: italic;
+}
+
+.bottom-space {
+  height: 20vh;
+  background-color: #0f111a;
+}
+
+.no-wrap {
+  white-space: no-wrap;
+}
+
+/* Global Colors */
+.theme-text-content {
+  color: #E4DFDA;
+}
+
+.theme-black {
+  background-color: #040810;
+}
+
+.theme-main-blue {
+  background-color: #102141;
+}
+
+.theme-secondary-blue {
+  background-color: #777DA7;
+}
+
+.theme-purple {
+  background-color: #8850bf;
+}
+
+#contact-component {
+  display: flex;
+  position: relative;
+  height: 60vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-form {
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  transform: translate(-10px);
+}
+
+.form-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-top > * {
+  margin: auto;
+  width: 100%;
+}
+
+.form-top input {
+  width: 100%;
+}
+
+.contact-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 25rem;
+  color: rgba(167, 188, 214, 0.02);
+  white-space: nowrap;
+  z-index: 0 !important;
+  transform: translateY(-10vh);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-transform: translateY(-10vh);
+  -moz-transform: translateY(-10vh);
+  -ms-transform: translateY(-10vh);
+  -o-transform: translateY(-10vh);
+}
+
+.contact-form input,
+.contact-form textarea {
+  color: ghostwhite;
+  background: rgb(51, 52, 53);
+  height: 40px;
+  margin: 20px 0 20px 0;
+  border: 0;
+  box-shadow: 0;
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.contact-form input {
+  /* transition: .5s; */
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-sizing: 0;
+  box-shadow: 0;
+  outline: none;
+  border-bottom: 2px solid;
+  -o-border-image: linear-gradient(0.25turn, rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
+     border-image: linear-gradient(0.25turn, rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
+  /* transition: .5s; */
+  border-image-slice: 1;
+  /* width: 100%; */
+}
+
+.contact-form input::-moz-placeholder {
+  font-size: 1em;
+  color: gray;
+  background: rgb(51, 52, 53);
+}
+
+.contact-form input::placeholder {
+  font-size: 1em;
+  color: gray;
+  background: rgb(51, 52, 53);
+}
+
+.form-bottom {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.form-bottom * {
+  width: 100%;
+}
+
+.form-submit-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.contact-submit {
+  width: 30%;
+}
+
+/* Flavor Tags */
+.contact-flavor-tag-open,
+.contact-flavor-tag-close {
+  position: relative;
+  height: 8px;
+  width: 20px;
+  transform: translateX(-5vw);
+}
+
+.contact-html-tag-close {
+  position: absolute;
+  /* display: inherit; */
+  bottom: 0;
+  left: 7vw;
+}
+
+.contact-form-flavor-tag-close,
+.contact-form-flavor-tag-open {
+  position: absolute;
+  left: 5vw;
+}
+
+.contact-form-flavor-tag-open {
+  top: -1vh;
+}
+
+.contact-form-flavor-tag-close {
+  bottom: 0;
+}/*# sourceMappingURL=Contact.css.map */

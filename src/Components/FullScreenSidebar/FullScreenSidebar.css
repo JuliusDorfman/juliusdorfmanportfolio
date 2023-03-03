@@ -1,0 +1,134 @@
+#FullScreenSidebar {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 80px;
+  flex-direction: row;
+  justify-content: center;
+  background: rgba(17, 34, 64, 0.5019607843);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  box-shadow: 0 0 10px 8px #091120;
+  z-index: 20;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  counter-reset: links;
+}
+
+#FullScreenSidebar a,
+#FullScreenSidebar li,
+#FullScreenSidebar .smaller,
+#FullScreenSidebar button {
+  /* cursor: url("../../Assets/white_dot.png"), auto!important; */
+}
+
+#FullScreenSidebar-head {
+  position: absolute;
+  display: flex;
+  top: 8px;
+  left: 24px;
+  z-index: 3000;
+}
+
+#fullScreenSidebar-links-container {
+  position: relative;
+  margin-top: 24px;
+  margin-left: auto;
+  letter-spacing: 0.1em;
+  width: 100%;
+}
+
+.fullScreenSidebar-links-wrapper {
+  right: 80px;
+}
+
+#FullScreenSidebar ul {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#FullScreenSidebar ul li {
+  position: relative;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+#FullScreenSidebar ul li:before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  counter-increment: links 1;
+  content: "0" counter(links) ".";
+  color: red;
+  font-size: 0.75em;
+  font-weight: 900;
+  font-family: "Roboto Mono", monospace;
+}
+
+#FullScreenSidebar ul li:hover {
+  cursor: pointer;
+  color: #8F0002;
+  transition: 0.3s;
+}
+
+.wheel-true {
+  transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+}
+
+.wheel-false {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+/* Fullscreen Sidebar Animations */
+.active-menu-item {
+  color: #8F0002;
+}
+
+#fullScreenSidebar-links-container ul li:active {
+  /* color: #235391 */
+  color: #A7BCD6;
+}
+
+.sidebar-fade-out {
+  transform: translateX(-20vw);
+}
+
+@media (max-width: 1000px) {
+  #FullScreenSidebar {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #FullScreenSidebar ul li {
+    font-size: 12px;
+  }
+  #FullScreenSidebar-head {
+    top: 20px;
+  }
+  .icon-card-initials {
+    font-size: 24px;
+  }
+  .icon-card-initials-wrapper {
+    height: 40px;
+    width: 40px;
+  }
+}/*# sourceMappingURL=FullScreenSidebar.css.map */

@@ -1,10 +1,106 @@
-@import '../../globalstyles';
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: #102141;
+  margin-block: -0.5em;
+  border-radius: 100vw;
+  -webkit-border-radius: 100vw;
+  -moz-border-radius: 100vw;
+  -ms-border-radius: 100vw;
+  -o-border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #777DA7;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F0002;
+}
+
+/** Global Styles **/
+.cursor-default {
+  cursor: default;
+}
+
+.subtext {
+  position: relative;
+  font-size: 0.75rem;
+  margin-right: 12px;
+  color: #777DA7;
+}
+
+.subtext:before {
+  color: red;
+  font-family: "Roboto Mono", monospace;
+}
+
+.post-subtext {
+  position: absolute;
+  right: 13.4em;
+}
+
+.red-flavor {
+  color: #8F0002;
+}
+
+.secondary-red {
+  color: #8F0002;
+}
+
+.secondary-blue {
+  color: #777DA7;
+}
+
+.bolded {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.italicized {
+  font-style: italic;
+}
+
+.bottom-space {
+  height: 20vh;
+  background-color: #0f111a;
+}
+
+.no-wrap {
+  white-space: no-wrap;
+}
+
+/* Global Colors */
+.theme-text-content {
+  color: #E4DFDA;
+}
+
+.theme-black {
+  background-color: #040810;
+}
+
+.theme-main-blue {
+  background-color: #102141;
+}
+
+.theme-secondary-blue {
+  background-color: #777DA7;
+}
+
+.theme-purple {
+  background-color: #8850bf;
+}
 
 #accolades-component {
   display: flex;
   position: relative;
-  // min-height: 80vh;
-  // margin-top: 10vh;
   /* width: 75vw; */
   justify-content: center;
   /* align-items: center; */
@@ -12,28 +108,28 @@
   overflow: hidden;
 }
 
-#accolades-component>h1 {
+#accolades-component > h1 {
   /* position: absolute; */
   /* margin-bottom: 400px; */
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: "Julius Sans One", sans-serif;
 }
 
 .accolades-header {
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: "Julius Sans One", sans-serif;
   font-size: 2em;
   font-weight: bold;
   margin-top: 0;
   padding: 32px 0;
-  box-shadow: -0px 50px 45px #060d1a;
+  box-shadow: 0px 50px 45px #060d1a;
 }
 
 .accolades-header .subtext:before {
   counter-increment: section 1;
-  content: '0'counter(section) ".";
+  content: "0" counter(section) ".";
   position: absolute;
-  font-size: .75rem;
+  font-size: 0.75rem;
   top: -24px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 /* #accolades-component::before {
@@ -46,7 +142,6 @@
   background: linear-gradient(rgb(35, 83, 145) 25%, rgb(82, 118, 165) 25%, rgb(82, 118, 165) 50%, rgb(167, 188, 214) 50%, rgb(167, 188, 214) 75%, rgb(248, 248, 255) 75%, rgb(248, 248, 255) 100%);
   z-index: 1;
 } */
-
 .accolades-content {
   display: flex;
   flex-direction: row;
@@ -56,10 +151,9 @@
   height: 100%;
 }
 
-.accolades-content>div {
+.accolades-content > div {
   width: 50%;
 }
-
 
 .contact-action {
   height: 640px;
@@ -67,16 +161,16 @@
   background: black;
 }
 
-.contact-action>h4,
-.contact-action>h6 {
+.contact-action > h4,
+.contact-action > h6 {
   padding: 0 0 0 40px;
 }
 
-.contact-action>h4 {
+.contact-action > h4 {
   font-size: 1.7em;
 }
 
-.contact-action>h6 {
+.contact-action > h6 {
   padding-right: 20px;
 }
 
@@ -85,14 +179,13 @@
   top: 0;
   left: 0;
   font-size: 25rem;
-  color: rgba(167, 188, 214, .02);
+  color: rgba(167, 188, 214, 0.02);
   white-space: nowrap;
   z-index: -1;
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
   /* Firefox */
-  -ms-user-select: none;
   /* IE10+/Edge */
   user-select: none;
   /* Standard */
@@ -104,7 +197,7 @@
   grid-template-rows: repeat(2, 320px);
 }
 
-.accolades-grid>* {
+.accolades-grid > * {
   position: relative;
 }
 
@@ -114,11 +207,11 @@
   justify-content: flex-end;
   flex-direction: column;
   padding: 5%;
-  font-size: .57em;
-  letter-spacing: .05em;
+  font-size: 0.57em;
+  letter-spacing: 0.05em;
   text-align: left;
   min-height: 50%;
-  color: $-theme-header-primary-color;
+  color: ghostwhite;
 }
 
 .accolade-1 {
@@ -151,11 +244,11 @@
   /* padding: 0; */
   margin: 0;
   list-style: none;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   z-index: 1;
 }
 
-.footer-links>li {
+.footer-links > li {
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -163,7 +256,7 @@
   z-index: 10;
 }
 
-.footer-links>li:before {
+.footer-links > li:before {
   content: "";
   position: absolute;
   top: 35px;
@@ -172,17 +265,17 @@
   width: 100px;
   background: red;
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.footer-links>li:hover:before {
-  transition: .5s;
+.footer-links > li:hover:before {
+  transition: 0.5s;
   transform: translateY(-10px);
 }
 
 .footer-links a {
   text-decoration: none;
-  color: $-theme-header-primary-color;
+  color: ghostwhite;
 }
 
 .attributed-to {
@@ -191,7 +284,7 @@
   flex-direction: row;
 }
 
-.attributed-to>* {
+.attributed-to > * {
   width: 50%;
 }
 
@@ -205,13 +298,12 @@
   cursor: pointer;
 }
 
-
 .quote-false {
   position: absolute;
   top: 0;
   left: 0;
   transform: translateX(105vw);
-  transition: .5s;
+  transition: 0.5s;
   z-index: 100;
 }
 
@@ -219,7 +311,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 100;
   transform: translateX(-40vw);
   -webkit-transform: translateX(-40vw);
@@ -229,46 +321,35 @@
 }
 
 @media (max-width: 1000px) {
-
   #accolades-component {
     height: 130vh;
   }
-
   .accolades {
-    font-size: .61em;
+    font-size: 0.61em;
   }
-
   .accolades-content {
     flex-direction: column-reverse;
   }
-
-  .accolades-content>div {
+  .accolades-content > div {
     width: 100%;
   }
-
-
-  .footer-links>li:before {
+  .footer-links > li:before {
     top: 30px;
   }
-
   .quote-true {
     transform: translateX(0);
     width: 100vw;
   }
-
   .quote-false {
     width: 100vw;
   }
 }
-
 /* testing */
 @media (max-width: 600px) {
   .accolades {
-    font-size: .80em;
+    font-size: 0.81em;
   }
-
-  .footer-links>li:before {
+  .footer-links > li:before {
     top: 22px;
   }
-
-}
+}/*# sourceMappingURL=Accolades.css.map */

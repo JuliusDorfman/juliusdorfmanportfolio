@@ -19,12 +19,13 @@ export default class About extends React.Component {
       secretFaceSelected: 1,
       waves: false,
       X: null,
-      Y: null
+      Y: null,
+      // retractedDoors: false,
     };
   }
 
   handleMouseMove = (e) => {
-    const speechBubble = document.querySelector(".speech-bubble");
+    // const speechBubble = document.querySelector(".speech-bubble");
     const timmyParent = document.querySelector(".timmy-parent");
     const parentBubblePost = timmyParent.getBoundingClientRect();
 
@@ -129,6 +130,12 @@ export default class About extends React.Component {
     });
   }
 
+  // retractDoors = () => {
+  //   let { retractedDoors } = this.state;
+  //   retractedDoors = (retractedDoors === true) ? false : true;
+  //   this.setState({ retractedDoors: retractedDoors });
+  //   console.log(retractedDoors);
+  // }
 
 
 
@@ -136,12 +143,13 @@ export default class About extends React.Component {
     let { selectedRadio } = this.state;
     let { waves } = this.state;
     let { selected } = this.state;
-    let { X } = this.state;
-    let { Y } = this.state;
+    // let { X } = this.state;
+    // let { Y } = this.state;
     let secretKey = this.state.secretKey.join("");
     let { secretFormation } = this.state;
     let { secretFaces } = this.state;
     let { secretFaceSelected } = this.state;
+    // let { retractedDoors } = this.state;
 
     return (
       <section id="about-component">
@@ -152,7 +160,19 @@ export default class About extends React.Component {
           <span data-aos="fade-right" className="subtext">a little</span>
           <span data-aos="fade-up">About Me</span>
         </h1>
-        <div className="about-me-section">
+        <div className={`about-me-section`}>
+          {/* <div className={`about-me-section__scifi-doors about-me-section__scifi-doors-${retractedDoors}`}>
+            <div onChange={this.handleRadio} className="radio-container radio-container-about">
+              <div className="radio__about">
+                <input id="radio__about__open" name="radio" />
+                <label onClick={this.retractDoors} htmlFor="radio-about"></label>
+              </div>
+            </div>
+            <div className={`about-me-section__scifi-doors__top-left door-retracted-top-left-${retractedDoors}`}></div>
+            <div className={`about-me-section__scifi-doors__top-right door-retracted-top-right-${retractedDoors}`}></div>
+            <div className={`about-me-section__scifi-doors__bottom-left door-retracted-bottom-left-${retractedDoors}`}></div>
+            <div className={`about-me-section__scifi-doors__bottom-right door-retracted-bottom-right-${retractedDoors}`}></div>
+          </div> */}
           <div className="about-me-content-container">
 
             <div className={`interactive-disk secret-formation-${secretFormation}`}>
@@ -307,7 +327,8 @@ export default class About extends React.Component {
                           </div>
                           <span className="timmy__back-1" ></span>
                           <span className="timmy__back-2" ></span>
-                          <span className="speech-bubble" style={{ left: `${X}px`, top: `${Y}px` }}>Hi, I'm Timmy! &#128054;</span>
+                          {/* <span className="speech-bubble" style={{ left: `${X}px`, top: `${Y}px` }}>Hi, I'm Timmy! &#128054;</span> */}
+                          <span className="speech-bubble">Hi, I'm Timmy! &#128054;</span>
 
                         </div>
                       </div>

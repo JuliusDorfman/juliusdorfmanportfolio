@@ -1,8 +1,7 @@
 .spinner-component {
   position: relative;
   display: flex;
-  height: 297px;
-  width: 297px;
+  height: 200px;
   margin: auto;
 }
 
@@ -25,10 +24,8 @@
   opacity: 0.3;
   top: calc(100% + 50px);
   border-radius: 50%;
-  -webkit-animation: spinner-1-shadow 2s linear infinite;
-          animation: spinner-1-shadow 2s linear infinite;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: spinner-1-shadow 2s linear infinite;
+  animation-delay: 1s;
 }
 
 .spinner-1:after {
@@ -39,23 +36,9 @@
   top: 0;
   left: 0;
   border-radius: 4px;
-  background-color: #99304B;
-  -webkit-animation: spinner-1-spin 2s linear infinite;
-          animation: spinner-1-spin 2s linear infinite;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-@-webkit-keyframes spinner-1-shadow {
-  0%, 100% {
-    width: 60px;
-    height: 5px;
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.2, 1);
-    opacity: 1;
-  }
+  background-color: black;
+  animation: spinner-1-spin 2s linear infinite;
+  animation-delay: 1s;
 }
 
 @keyframes spinner-1-shadow {
@@ -67,30 +50,6 @@
   50% {
     transform: scale(1.2, 1);
     opacity: 1;
-  }
-}
-@-webkit-keyframes spinner-1-spin {
-  0% {
-    width: 100%;
-    height: 100%;
-  }
-  17% {
-    border-bottom-right-radius: 3px;
-  }
-  25% {
-    transform: translateY(9px) rotate(22.5deg);
-  }
-  50% {
-    transform: translateY(18px) scale(1, 0.95) rotate(45deg);
-    border-bottom-right-radius: 3px;
-  }
-  75% {
-    transform: translateY(9px) rotate(67.5deg);
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    transform: translateY(0) rotate(90deg);
   }
 }
 @keyframes spinner-1-spin {
@@ -131,30 +90,11 @@
   left: 10px;
   height: 0;
   width: 0;
-  background-color: black;
+  background-color: #F56AF0;
   border-radius: 100%;
-  -webkit-animation: spinner-2-bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
-          animation: spinner-2-bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-
-@-webkit-keyframes spinner-2-bounce {
-  0% {
-    height: 40px;
-    width: 40px;
-    transform: translateY(0px);
-  }
-  97% {
-    height: 38px;
-  }
-  100% {
-    transform: translateY(100px);
-    width: 40px;
-    height: 10px;
-  }
+  animation: spinner-2-bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
+  animation-delay: 2s;
+  animation-direction: alternate;
 }
 
 @keyframes spinner-2-bounce {
@@ -179,56 +119,24 @@
 .spinner-splash:before {
   content: "";
   position: absolute;
-  background-color: #99304B;
+  background-color: #FFADE8;
   border-radius: 100%;
   border-radius: 100% 100% 0% 100%;
   height: 0;
   width: 0;
-  -webkit-animation: spinner-splash-animation-before 4s ease-out infinite;
-          animation: spinner-splash-animation-before 4s ease-out infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation: spinner-splash-animation-before 4s ease-out infinite;
+  animation-delay: 3s;
 }
 
 .spinner-splash:after {
   content: "";
   position: absolute;
-  background-color: #99304B;
+  background-color: #FFADE8;
   border-radius: 100% 100% 100% 0%;
   height: 0;
   width: 0;
-  -webkit-animation: spinner-splash-animation-after 2s ease-out infinite;
-          animation: spinner-splash-animation-after 2s ease-out infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-@-webkit-keyframes spinner-splash-animation-before {
-  0% {
-    height: 40px;
-    width: 40px;
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    transform: translate(-100px, -100px);
-  }
-  90% {
-    opacity: 0;
-    transform: translate(-100px, -100px);
-  }
-  100% {
-    height: 10px;
-    width: 10px;
-    opacity: 0;
-    transform: translate(-100px, -100px);
-  }
+  animation: spinner-splash-animation-after 2s ease-out infinite;
+  animation-delay: 3s;
 }
 
 @keyframes spinner-splash-animation-before {
@@ -256,29 +164,6 @@
     width: 10px;
     opacity: 0;
     transform: translate(-100px, -100px);
-  }
-}
-@-webkit-keyframes spinner-splash-animation-after {
-  0% {
-    height: 30px;
-    width: 30px;
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.8;
-    transform: translate(100px, -75px);
-  }
-  100% {
-    height: 30px;
-    width: 30px;
-    opacity: 0;
-    transform: translate(100px, -75px);
   }
 }
 @keyframes spinner-splash-animation-after {

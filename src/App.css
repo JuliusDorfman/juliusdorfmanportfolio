@@ -1,0 +1,401 @@
+/* Global */
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: #102141;
+  margin-block: -0.5em;
+  border-radius: 100vw;
+  -webkit-border-radius: 100vw;
+  -moz-border-radius: 100vw;
+  -ms-border-radius: 100vw;
+  -o-border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #777DA7;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8F0002;
+}
+
+/** Global Styles **/
+.cursor-default {
+  cursor: default;
+}
+
+.subtext {
+  position: relative;
+  font-size: 0.75rem;
+  margin-right: 12px;
+  color: #777DA7;
+}
+
+.subtext:before {
+  color: red;
+  font-family: "Roboto Mono", monospace;
+}
+
+.post-subtext {
+  position: absolute;
+  right: 13.4em;
+}
+
+.red-flavor {
+  color: #8F0002;
+}
+
+.secondary-red {
+  color: #8F0002;
+}
+
+.secondary-blue {
+  color: #777DA7;
+}
+
+.bolded {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.italicized {
+  font-style: italic;
+}
+
+.bottom-space {
+  height: 20vh;
+  background-color: #0f111a;
+}
+
+.no-wrap {
+  white-space: no-wrap;
+}
+
+/* Global Colors */
+.theme-text-content {
+  color: #E4DFDA;
+}
+
+.theme-black {
+  background-color: #040810;
+}
+
+.theme-main-blue {
+  background-color: #102141;
+}
+
+.theme-secondary-blue {
+  background-color: #777DA7;
+}
+
+.theme-purple {
+  background-color: #8850bf;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/** App Component **/
+.App {
+  overflow: hidden;
+  counter-reset: section;
+  /* cursor: url("./Assets/white-cursor.png"), auto; */
+}
+
+.App *::-moz-selection {
+  background: #F56AF0;
+}
+
+.App *::selection {
+  background: #F56AF0;
+}
+
+#page-rendered {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+  z-index: 100;
+}
+
+/* Scale Calculations: 1 + ((Z transform value * -1) / perspective */
+/* Navigation Styles*/
+#nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2000;
+  top: 5vh;
+  right: 10vw;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  /* visibility: hidden; */
+}
+
+.nav-border {
+  border: 1px solid ghostwhite;
+  border-radius: 5px;
+}
+
+.nav-border-transparent {
+  border: 2px solid transparent;
+}
+
+#nav-button .nav-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 2px;
+  background: ghostwhite;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+#nav-button .nav-burger::before,
+#nav-button .nav-burger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: ghostwhite;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+#nav-button .nav-burger::before {
+  transform: translateY(-12px);
+}
+
+#nav-button .nav-burger::after {
+  transform: translateY(12px);
+}
+
+.nav-active {
+  display: block;
+}
+
+.nav-inactive {
+  display: none;
+}
+
+/* Navigation Animations */
+#nav-button .burgerAnimate {
+  transform: translateX(50px);
+  background: transparent;
+}
+
+#nav-button .burgerAnimate::before {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+
+#nav-button .burgerAnimate::after {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+
+/** Global Styles **/
+.subtext {
+  position: relative;
+  font-size: 0.75rem;
+  margin-right: 12px;
+  color: #777DA7;
+}
+
+.subtext:before {
+  color: red;
+  font-family: "Roboto Mono", monospace;
+}
+
+.post-subtext {
+  position: absolute;
+  right: 13.4em;
+}
+
+.bolded {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.bottom-space {
+  height: 20vh;
+  background-color: #0f111a;
+}
+
+.no-wrap {
+  white-space: no-wrap;
+}
+
+/* Global Colors */
+.theme-gray {
+  background-color: #121214;
+}
+
+.theme-black {
+  background-color: #01020a;
+}
+
+.theme-powder-blue {
+  background-color: #A7BCD6;
+}
+
+.theme-dark-blue {
+  background-color: #235391;
+}
+
+.theme-purple {
+  background-color: #8850bf;
+}
+
+.theme-fullscreen-sidebar {
+  background-color: #202124;
+}
+
+.theme-pages-background {
+  background-color: #3C4042;
+}
+
+/* Fullpage Animations */
+/* 
+.fullpage-animations-page-in {
+  opacity: 1;
+  transition: .5s;
+}
+.fullpage-animations-page-out {
+  opacity: 0;
+  transition: .5s;
+} */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.site {
+  background-color: #112240;
+  /* background-color: #0f111a; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: ghostwhite;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Footer Styles */
+#footer-component {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.5em;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  /* background-color: #121214; */
+}
+
+.footer-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ghostwhite;
+  font-weight: bolder;
+}
+
+.floater-button {
+  position: fixed;
+  left: 2%;
+  bottom: 10%;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+.floater-button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.smaller {
+  font-size: 0.5em;
+}
+
+#cursor-outer {
+  content: "";
+  height: 40px;
+  width: 40px;
+  border: 1px solid transparent;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  border-radius: 50%;
+  transform: translate(-18px, -18px);
+  pointer-events: none;
+}
+
+#cursor-trailer {
+  content: "";
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  display: inline;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 999999;
+  border-radius: 50%;
+  transform: translate(-18px, -18px);
+  pointer-events: none;
+  transition: 1s;
+}
+
+@media (min-width: 1000px) {
+  #nav-button {
+    display: none;
+  }
+}
+/* testing */
+@media (max-width: 600px) {
+  #nav-button {
+    visibility: initial;
+  }
+}/*# sourceMappingURL=App.css.map */

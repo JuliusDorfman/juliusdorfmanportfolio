@@ -13,31 +13,33 @@
   font-family: 'Julius Sans One', sans-serif;
   font-size: 2em;
   font-weight: bold;
+  margin: auto;
   margin-top: 0;
+  width: 50%;
   padding: 32px 0;
   box-shadow: -0px 50px 45px #060d1a;
 }
 
-.experience-header:before {
-  content: "";
-  position: absolute;
-  top: 54px;
-  left: 2vw;
-  height: 2px;
-  width: 17vw;
-  background: rgb(167, 188, 214);
-}
+// .experience-header:before {
+//   content: "";
+//   position: absolute;
+//   top: 54px;
+//   left: 2vw;
+//   height: 2px;
+//   width: 17vw;
+//   background: rgb(167, 188, 214);
+// }
 
 
-.experience-header:after {
-  content: "";
-  position: absolute;
-  top: 54px;
-  right: 2vw;
-  height: 2px;
-  width: 17vw;
-  background: rgb(167, 188, 214);
-}
+// .experience-header:after {
+//   content: "";
+//   position: absolute;
+//   top: 54px;
+//   right: 2vw;
+//   height: 2px;
+//   width: 17vw;
+//   background: rgb(167, 188, 214);
+// }
 
 
 .experience-header .subtext:before {
@@ -281,10 +283,14 @@
 }
 
 @media (max-width: 800px) {
+
+  .experience-header {
+    width: 80%;
+  }
+
   .experience-module-container {
     width: 100%;
   }
-
 
   .experience-module {
     flex-direction: column;
@@ -306,11 +312,12 @@
   .experience-sidebar li {
     padding: 20px 10px;
     vertical-align: middle;
+    min-width: 20%;
   }
 
   .company-list {
     overflow: hidden;
-    height: 500px;
+    height: 550px;
     width: 500px;
   }
 

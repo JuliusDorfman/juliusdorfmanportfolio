@@ -15,9 +15,14 @@ export default class Navbar extends Component {
   handlePageClicked = (e) => {
     let pageValue = e.target.getAttribute('pagevalue');
     let scrollDestination = document.querySelector(`#${pageValue}`);
-    // console.log("scrollDestination", scrollDestination)
-    // console.log('pagevalue', pageValue);
-    scrollDestination.scrollIntoView()
+    
+    scrollDestination.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+
+
     this.props.closeMenu();
   };
 
@@ -57,8 +62,8 @@ export default class Navbar extends Component {
             <ul className="navigation-links">
               <li pagevalue="homepage-component" onClick={this.handlePageClicked}>Home</li>
               {/* <li pagevalue="home" onClick={(e) => { this.handleClick(e); }}>Home</li> */}
-              <li pagevalue="expertise-component" onClick={this.handlePageClicked}>Expertise</li>
-              {/* <li pagevalue="about" onClick={(e) => { this.handleClick(e); }}>About</li> */}
+              {/* <li pagevalue="expertise-component" onClick={this.handlePageClicked}>Expertise</li> */}
+              <li pagevalue="about-component" onClick={this.handlePageClicked}>About</li>
               {/* <li pagevalue="skills-component" onClick={(e) => { this.handleClick(e); }}>My Skills</li> */}
               {/* <li pagevalue="skills" onClick={(e) => { this.handleClick(e); }}>My Skills</li> */}
               <li pagevalue="work-component" onClick={this.handlePageClicked}>Work</li>
