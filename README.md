@@ -5,7 +5,7 @@
 
 ## <a href="https://juliusdorfman.com/">JuliusDorfman.com</a>
 
-You've found my portfolio! I'm Julius Dorfman. Developer and engineer; I love what I do!
+You've found my portfolio! I'm Julius Dorfman. Developing, working with web technologies, engineering solutions; I love what I do!
 
 This website is where I publish my works; an expression of my creativity through design, code, and writing. <br /> This site will hold the bookmarks of my life in: projects, articles, and career history. <br />
 
