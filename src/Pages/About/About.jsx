@@ -161,29 +161,10 @@ export default class About extends React.Component {
           <span data-aos="fade-up">About Me</span>
         </h1>
         <div className={`about-me-section`}>
-          {/* <div className={`about-me-section__scifi-doors about-me-section__scifi-doors-${retractedDoors}`}>
-            <div onChange={this.handleRadio} className="radio-container radio-container-about">
-              <div className="radio__about">
-                <input id="radio__about__open" name="radio" />
-                <label onClick={this.retractDoors} htmlFor="radio-about"></label>
-              </div>
-            </div>
-            <div className={`about-me-section__scifi-doors__top-left door-retracted-top-left-${retractedDoors}`}></div>
-            <div className={`about-me-section__scifi-doors__top-right door-retracted-top-right-${retractedDoors}`}></div>
-            <div className={`about-me-section__scifi-doors__bottom-left door-retracted-bottom-left-${retractedDoors}`}></div>
-            <div className={`about-me-section__scifi-doors__bottom-right door-retracted-bottom-right-${retractedDoors}`}></div>
-          </div> */}
-          <div className="about-me-content-container">
 
-            <div className={`interactive-disk secret-formation-${secretFormation}`}>
-
-              <div className={`circle waves-${waves}`}>
-                <span className="circle__btn">
-                </span>
-                <span className="circle__back-1"></span>
-                <span className="circle__back-2"></span>
-              </div>
-
+          <div className="about-me-navigator-container">
+            <div className="about-me-navigator">
+              {/* Radio Buttons for navigation */}
               <div onChange={this.handleRadio} className="radio-container">
                 <div className="radio__1">
                   <input id="radio-1" className={`radio-${selectedRadio[0]}-selected`} type="radio" name="radio" value="1" defaultChecked disabled={this.state.waves} />
@@ -204,6 +185,22 @@ export default class About extends React.Component {
                   <input id="radio-4" className={`radio-${selectedRadio[3]}-selected`} type="radio" name="radio" value="4" disabled={this.state.waves} />
                   <label htmlFor="radio-4"></label>
                 </div>
+              </div>
+            </div>
+            <div className="retractable-doors">
+              {/* These doors will float 6 doors that will spin and melt */}
+            </div>
+          </div>
+
+          <div className="about-me-content-container">
+
+            <div className={`interactive-disk secret-formation-${secretFormation}`}>
+
+              <div className={`circle waves-${waves}`}>
+                <span className="circle__btn">
+                </span>
+                <span className="circle__back-1"></span>
+                <span className="circle__back-2"></span>
               </div>
 
               <div className="options-wrapper cursor-default">
