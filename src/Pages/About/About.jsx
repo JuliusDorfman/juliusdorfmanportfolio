@@ -130,12 +130,12 @@ export default class About extends React.Component {
     });
   }
 
-  // retractDoors = () => {
-  //   let { retractedDoors } = this.state;
-  //   retractedDoors = (retractedDoors === true) ? false : true;
-  //   this.setState({ retractedDoors: retractedDoors });
-  //   console.log(retractedDoors);
-  // }
+  retractDoors = () => {
+    let { retractedDoors } = this.state;
+    retractedDoors = (retractedDoors === true) ? false : true;
+    this.setState({ retractedDoors: retractedDoors });
+    console.log(retractedDoors);
+  }
 
 
 
@@ -149,7 +149,7 @@ export default class About extends React.Component {
     let { secretFormation } = this.state;
     let { secretFaces } = this.state;
     let { secretFaceSelected } = this.state;
-    // let { retractedDoors } = this.state;
+    let { retractedDoors } = this.state;
 
     return (
       <section id="about-component">
@@ -164,6 +164,22 @@ export default class About extends React.Component {
 
           <div className="about-me-navigator-container">
             <div className="about-me-navigator">
+
+              {/* Button to Open Door */}
+
+              <div
+                className={`door-button door-button-${retractedDoors}`}
+                onClick={this.retractDoors} >
+              </div>
+
+              {/* Doors to Navigation Buttons */}
+              <div className={`retractable-door-1 retracted-${retractedDoors}`}>
+                {/* These doors will float 6 doors that will spin and melt */}
+              </div>
+              <div className={`retractable-door-2 retracted-${retractedDoors}`}>
+                {/* These doors will float 6 doors that will spin and melt */}
+              </div>
+
               {/* Radio Buttons for navigation */}
               <div onChange={this.handleRadio} className="radio-container">
                 <div className="radio__1">
@@ -187,9 +203,7 @@ export default class About extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="retractable-doors">
-              {/* These doors will float 6 doors that will spin and melt */}
-            </div>
+
           </div>
 
           <div className="about-me-content-container">

@@ -180,6 +180,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  box-shadow: 0px 22px 97px black;
 }
 
 .button-container {
@@ -499,40 +500,40 @@
 } */
 /* Indication Text Flavor */
 
-.vertical-orientation-left,
-.vertical-orientation-right {
-  -webkit-writing-mode: vertical-lr;
-  -ms-writing-mode: tb-lr;
-  writing-mode: vertical-lr;
-  -webkit-animation: scrollBounce infinite ease-in-out 10s;
-  animation: scrollBounce infinite ease-in-out 10s;
-  font-style: italic;
-  font-weight: lighter;
-  font-size: 14px;
-  letter-spacing: 8px;
-  -ms-user-select: none;
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-}
+// .vertical-orientation-left,
+// .vertical-orientation-right {
+//   -webkit-writing-mode: vertical-lr;
+//   -ms-writing-mode: tb-lr;
+//   writing-mode: vertical-lr;
+//   -webkit-animation: scrollBounce infinite ease-in-out 10s;
+//   animation: scrollBounce infinite ease-in-out 10s;
+//   font-style: italic;
+//   font-weight: lighter;
+//   font-size: 14px;
+//   letter-spacing: 8px;
+//   -ms-user-select: none;
+//   user-select: none;
+//   -moz-user-select: none;
+//   -khtml-user-select: none;
+//   -webkit-user-select: none;
+//   -o-user-select: none;
+// }
 
-.vertical-orientation-left {
-  margin: 5vh 0 5vh 5vw;
-}
+// .vertical-orientation-left {
+//   margin: 5vh 0 5vh 5vw;
+// }
 
-.vertical-orientation-right {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 5vh 5vw 0vh 0;
-  padding: 50px;
-  backdrop-filter: blur(100px);
-  background: linear-gradient(145deg, #0e1e3b, #112346);
-  box-shadow: 27px 27px 54px #0d1a34,
-    -27px -27px 54px #13284e;
-}
+// .vertical-orientation-right {
+//   position: absolute;
+//   right: 0;
+//   bottom: 0;
+//   margin: 5vh 5vw 0vh 0;
+//   padding: 50px;
+//   backdrop-filter: blur(100px);
+//   background: linear-gradient(145deg, #0e1e3b, #112346);
+//   box-shadow: 27px 27px 54px #0d1a34,
+//     -27px -27px 54px #13284e;
+// }
 
 .indication-wrapper {
   position: absolute;

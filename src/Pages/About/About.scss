@@ -42,6 +42,7 @@ inset -.2rem -.2rem .5rem var(--white);
   width: 50%;
   padding: 32px 0;
   box-shadow: -0px 50px 45px #060d1a;
+  margin-top: 20px;
 }
 
 // .about-me-header:before {
@@ -471,13 +472,15 @@ inset -.2rem -.2rem .5rem var(--white);
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  top: 40px;
   box-sizing: border-box;
-  width: 200px;
+  // width: 200px;
+  width: 100%;
+  height: 100%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   z-index: 1000;
+  top: 0;
   gap: 0.6em;
 }
 
@@ -1196,12 +1199,91 @@ inset -.2rem -.2rem .5rem var(--white);
 
 .about-me-navigator {
   position: absolute;
-  left: 10%;
-  top: 10%;
-  height: 80%;
-  width: 80%;
+  //left: 10%;
+  //top: 10%;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(145deg, #122444, #0f1f3a);
   box-shadow: 54px 112px 63px -7px #040910, -32px -49px 59px 41px rgba(46, 95, 178, 0.3);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  overflow: hidden;
+}
+
+.door-button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 100000;
+  top: 33%;
+  left: 22%;
+}
+
+.door-button-false {
+
+}
+
+.door-button-true {
+  display: none;
+}
+
+.door-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  // background: linear-gradient(-45deg, #FF7073 0%, #9EB7E6 100%);
+  background: red;
+  z-index: 99990;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.door-button::after {
+  content: "";
+  z-index: 99999;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #E00004 0%, #4B7BD2 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+  -webkit-transform: translate3d(0, 0, 0) scale(0.95);
+  -moz-transform: translate3d(0, 0, 0) scale(0.95);
+  -ms-transform: translate3d(0, 0, 0) scale(0.95);
+  -o-transform: translate3d(0, 0, 0) scale(0.95);
+  -webkit-filter: blur(20px);
+}
+
+.door-button:hover::after {
+  filter: blur(30px);
+}
+
+.door-button:hover::before {
+  transform: rotate(-180deg);
+  background: red;
+}
+
+.door-button:active::before {
+  scale: 0.7;
 }
 
 .retractable-doors {
@@ -1211,6 +1293,89 @@ inset -.2rem -.2rem .5rem var(--white);
   height: 100%;
   width: 100%;
 }
+
+.retractable-door-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(145deg, #112346, #0e1e3b);
+  z-index: 10000;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.retractable-door-2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(145deg, #112346, #0e1e3b);
+  z-index: 10000;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.retractable-door-1.retracted-true {
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transform: translate(-100%);
+  -webkit-transform: translate(-100%);
+  -moz-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  -o-transform: translate(-100%);
+}
+
+.retractable-door-1.retracted-false {
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transform: translate(0);
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+}
+
+.retractable-door-2.retracted-true {
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transform: translate(100%);
+  -webkit-transform: translate(100%);
+  -moz-transform: translate(100%);
+  -ms-transform: translate(100%);
+  -o-transform: translate(100%);
+}
+
+.retractable-door-2.retracted-false {
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transform: translate(0);
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+}
+
 
 /* About Component Flavor Styles */
 
