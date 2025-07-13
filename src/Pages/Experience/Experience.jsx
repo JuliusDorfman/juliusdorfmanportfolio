@@ -9,27 +9,44 @@ export default class Experience extends React.Component {
     super(props);
     this.state = {
       contentActive: {
-        firstItem: true,
+        fourthItem: true,
+        firstItem: false,
         secondItem: false,
         thirdItem: false
       }
     }
   }
 
-  handleModule = (e) => {
-    let itemSelected = e.target.dataset.name;
-    let contentActive = {
-      firstItem: false,
-      secondItem: false,
-      thirdItem: false,
-    }
 
-    contentActive[itemSelected] = contentActive[itemSelected] ? false : true;
-    this.setState({ contentActive: contentActive });
+  handleModule = (e) => {
+    const itemSelected = e.target.dataset.name;
+
+    const contentActive = Object.keys(this.state.contentActive).reduce((acc, key) => {
+      acc[key] = false;
+      return acc;
+    }, {});
+
+    contentActive[itemSelected] = true;
+
+    this.setState({ contentActive });
   }
+  // handleModule = (e) => {
+  //   const itemSelected = e.target.dataset.name;
+
+  //   const contentActive = {
+  //     fourthItem: false,
+  //     firstItem: false,
+  //     secondItem: false,
+  //     thirdItem: false,
+  //   };
+
+  //   contentActive[itemSelected] = true;
+
+  //   this.setState({ contentActive });
+  // }
 
   render() {
-    let { firstItem, secondItem, thirdItem } = this.state.contentActive;
+    let { fourthItem, firstItem, secondItem, thirdItem } = this.state.contentActive;
     return (
       <section id="experience-component">
         <div data-aos="fade-left" data-aos-duration="3000" className="experience-text">Experience</div>
@@ -39,6 +56,12 @@ export default class Experience extends React.Component {
           <div className="experience-module">
             <div className="experience-sidebar-wrapper">
               <ul className="experience-sidebar">
+                <li onClick={this.handleModule}
+                  data-name="fourthItem"
+                  className={`button-active-${fourthItem}`}
+                >
+                  Builder.io
+                </li>
                 <li onClick={this.handleModule}
                   data-name="firstItem"
                   className={`button-active-${firstItem}`}
@@ -61,6 +84,31 @@ export default class Experience extends React.Component {
             </div>
             <div className="experience-content-wrapper">
               <ul className="company-list">
+                <li className={`contentActive-${fourthItem}`}>
+                  <div className="company__title-link">
+                    <h3 className="company__title">
+                      Customer Engineer
+                    </h3>
+                    <a className="company__link" href="https://builder.io/" target="_blank" rel="noopener noreferrer">builder.io</a>
+                  </div>
+                  <div className="company__name-date">
+                    <h4 className="company__name">Builder.io</h4>
+                    <p className="company__date">
+                      May 2023 - Jun 2025
+                    </p>
+                  </div>
+                  <ul className="company-description">
+                    <li>Act as primary technical point of contact for Builder.io enterprise clients, resolving integration
+                      issues across React, Next.js, Angular, Vue, Hydrogen, and Svelte. </li>
+                    <li>Work directly in customer codebases to identify and resolve bugs, optimize performance, and
+                      improve developer experience. </li>
+                    <li>Draft technical documentation and internal resources to support new features, SDK releases,
+                      and advanced implementation use cases.  </li>
+                    <li>Led onboarding and implementation sessions with enterprise clients, providing tailored
+                      technical guidance and ensuring resolution of critical issues within SLA-defined response
+                      windows. </li>
+                  </ul>
+                </li>
                 <li className={`contentActive-${firstItem}`}>
                   <div className="company__title-link">
                     <h3 className="company__title">
